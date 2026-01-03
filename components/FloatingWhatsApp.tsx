@@ -1,0 +1,39 @@
+import React from 'react';
+import { MessageCircle } from 'lucide-react';
+
+const FloatingWhatsApp: React.FC = () => {
+  const phoneNumber = '972547202011';
+  const message = 'היי עדן, אשמח לשמוע פרטים נוספים';
+  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
+  return (
+    <div className="fixed bottom-6 left-6 z-50 flex items-center gap-3 animate-float-slow">
+       {/* Button */}
+      <a
+        href={whatsappUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="bg-[#25D366] text-white p-3 md:p-4 rounded-full shadow-lg shadow-green-500/20 hover:shadow-green-500/50 hover:scale-110 transition-all duration-300 flex items-center justify-center group relative z-20"
+        aria-label="Chat on WhatsApp"
+      >
+        <MessageCircle size={28} fill="white" className="text-white" />
+      </a>
+
+      {/* Text Label - Always visible now as requested, with light background */}
+      <a 
+        href={whatsappUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="bg-white/90 backdrop-blur-sm text-slate-900 px-4 py-2 rounded-xl shadow-lg border border-white/20 transform transition-all hover:scale-105 origin-left"
+      >
+        <span className="text-sm font-bold whitespace-nowrap">
+          שלחו עכשיו וואטסאפ
+        </span>
+        {/* Little triangle pointing to button */}
+        <div className="absolute top-1/2 -left-2 w-0 h-0 border-t-[6px] border-t-transparent border-r-[8px] border-r-white/90 border-b-[6px] border-b-transparent -translate-y-1/2"></div>
+      </a>
+    </div>
+  );
+};
+
+export default FloatingWhatsApp;

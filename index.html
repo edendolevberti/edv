@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EDV - Eden Dolev Video</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+      /* Force Heebo globally with high specificity */
+      body, html, button, input, select, textarea, .font-sans, h1, h2, h3, h4, h5, h6, p, a, span, div, li {
+        font-family: 'Heebo', sans-serif !important;
+      }
+      
+      body {
+        background-color: #0f172a; /* Slate 900 */
+        color: #ffffff;
+      }
+
+      /* Custom scrollbar */
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #1e293b;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: linear-gradient(to bottom, #8b5cf6, #ec4899, #3b82f6);
+        border-radius: 5px;
+      }
+      
+      /* Animation Keyframes */
+      @keyframes float {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-20px); }
+        100% { transform: translateY(0px); }
+      }
+      .animate-float {
+        animation: float 6s ease-in-out infinite;
+      }
+      .animate-float-delayed {
+        animation: float 7s ease-in-out infinite;
+        animation-delay: 2s;
+      }
+      .animate-float-slow {
+        animation: float 8s ease-in-out infinite;
+        animation-delay: 1s;
+      }
+      
+      @keyframes blob {
+        0% { transform: translate(0px, 0px) scale(1); }
+        33% { transform: translate(30px, -50px) scale(1.1); }
+        66% { transform: translate(-20px, 20px) scale(0.9); }
+        100% { transform: translate(0px, 0px) scale(1); }
+      }
+      .animate-blob {
+        animation: blob 7s infinite;
+      }
+      .animation-delay-2000 {
+        animation-delay: 2s;
+      }
+      .animation-delay-4000 {
+        animation-delay: 4s;
+      }
+
+      /* 
+         Carousel Logic:
+         Mobile: Image (200px) + Gap (16px) = 216px * 7 items = 1512px
+         Desktop: Image (250px) + Gap (16px) = 266px * 7 items = 1862px
+      */
+      :root {
+        --scroll-dist: -1512px;
+      }
+      @media (min-width: 768px) {
+        :root {
+          --scroll-dist: -1862px;
+        }
+      }
+
+      @keyframes scroll-left {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(var(--scroll-dist)); }
+      }
+      
+      .animate-scroll {
+        animation: scroll-left 30s linear infinite;
+        width: max-content; /* Ensure container fits all items */
+      }
+      .animate-scroll:hover {
+        animation-play-state: paused;
+      }
+
+      /* Button Gradient Animation */
+      @keyframes gradient-xy {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+      }
+      .animate-gradient {
+        background: linear-gradient(120deg, #2563eb, #9333ea, #db2777, #2563eb); 
+        background-size: 300% 300%;
+        animation: gradient-xy 5s ease-in-out infinite;
+      }
+      .animate-gradient:hover {
+        filter: brightness(1.1);
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
