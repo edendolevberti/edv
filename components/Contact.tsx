@@ -1,8 +1,55 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { SOCIAL_LINKS } from '../constants';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
 
 const Contact: React.FC = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    phone: '',
+    email: '',
+    service: '',
+    description: ''
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { id, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [id]: value
+    }));
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+
+    // Helper to get service text with specific emoji
+    const getServiceDisplay = (val: string) => {
+      switch(val) {
+        case 'video': return 'וידאו 🎥';
+        case 'posts': return 'עיצוב פוסטים 🎨';
+        case 'both': return 'וידאו + עיצוב 🚀';
+        case 'other': return 'אחר 💎';
+        default: return 'לא נבחר ❓';
+      }
+    };
+
+    const intro = "היי עדן, פניה חדשה מהאתר EDV 👋";
+    const nameLine = `👤 *שם מלא:* ${formData.name || 'לא צוין'}`;
+    const phoneLine = `📱 *טלפון:* ${formData.phone || 'לא צוין'}`;
+    const emailLine = `📧 *אימייל:* ${formData.email || 'לא צוין'}`;
+    const serviceLine = `🛠️ *שירות:* ${getServiceDisplay(formData.service)}`;
+    const contentLine = `✍️ *הודעה:* \n${formData.description || 'ללא תוכן נוסף'}`;
+
+    const fullMessage = `${intro}\n\n${nameLine}\n${phoneLine}\n${emailLine}\n${serviceLine}\n\n${contentLine}`;
+
+    // Properly encode the Hebrew and Emojis
+    const encodedText = encodeURIComponent(fullMessage);
+    const phoneNumber = '972547202011';
+    
+    // Use api.whatsapp.com/send instead of wa.me to prevent encoding corruption ( symbols)
+    window.open(`https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodedText}`, '_blank');
+  };
+
   return (
     <section id="contact" className="py-20 bg-slate-950 border-t border-slate-900">
       <div className="container mx-auto px-4">
@@ -56,6 +103,8 @@ const Contact: React.FC = () => {
                     <a
                       key={link.name}
                       href={link.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className={`w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center transition-all hover:scale-110 hover:bg-slate-700 ${link.color}`}
                       aria-label={link.name}
                     >
@@ -67,13 +116,16 @@ const Contact: React.FC = () => {
             </div>
 
             {/* Form */}
-            <form className="bg-slate-900/50 backdrop-blur-sm p-8 rounded-2xl border border-slate-700/50" onSubmit={(e) => e.preventDefault()}>
+            <form className="bg-slate-900/50 backdrop-blur-sm p-8 rounded-2xl border border-slate-700/50" onSubmit={handleSubmit}>
               <div className="space-y-5">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">שם מלא</label>
                   <input 
                     type="text" 
                     id="name" 
+                    value={formData.name}
+                    onChange={handleChange}
+                    required
                     className="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all"
                     placeholder="ישראל ישראלי"
                   />
@@ -84,6 +136,9 @@ const Contact: React.FC = () => {
                     <input 
                       type="tel" 
                       id="phone" 
+                      value={formData.phone}
+                      onChange={handleChange}
+                      required
                       className="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all"
                       placeholder="050-0000000"
                     />
@@ -93,6 +148,8 @@ const Contact: React.FC = () => {
                     <input 
                       type="email" 
                       id="email" 
+                      value={formData.email}
+                      onChange={handleChange}
                       className="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all"
                       placeholder="email@example.com"
                     />
@@ -102,6 +159,8 @@ const Contact: React.FC = () => {
                   <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">שירות מבוקש</label>
                   <select 
                     id="service" 
+                    value={formData.service}
+                    onChange={handleChange}
                     className="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all"
                   >
                     <option value="">בחר שירות...</option>
@@ -115,6 +174,8 @@ const Contact: React.FC = () => {
                   <label htmlFor="description" className="block text-sm font-medium text-gray-300 mb-2">תיאור הפרויקט</label>
                   <textarea 
                     id="description" 
+                    value={formData.description}
+                    onChange={handleChange}
                     rows={4}
                     className="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all resize-none"
                     placeholder="ספרו לנו קצת על העסק ומה המטרות שלכם..."
@@ -125,7 +186,7 @@ const Contact: React.FC = () => {
                   type="submit" 
                   className="w-full animate-gradient text-white font-bold py-4 rounded-lg shadow-lg transform transition hover:-translate-y-1 flex justify-center items-center gap-2"
                 >
-                  <span>שלח הודעה</span>
+                  <span>שלח הודעה לווטסאפ</span>
                   <Send size={18} />
                 </button>
               </div>

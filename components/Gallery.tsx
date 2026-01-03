@@ -10,7 +10,7 @@ const Gallery: React.FC = () => {
   );
 
   const phoneNumber = '972547202011';
-  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent('היי עדן, ראיתי עבודות באתר ואשמח לשמוע פרטים')}`;
+  const whatsappUrl = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent('היי עדן, ראיתי עבודות באתר ואשמח לשמוע פרטים')}`;
 
   return (
     <section id="gallery" className="py-20 bg-slate-900 relative">

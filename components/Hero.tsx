@@ -4,7 +4,8 @@ import InfiniteCarousel from './InfiniteCarousel';
 import { ArrowDown, MessageCircle } from 'lucide-react';
 
 const Hero: React.FC = () => {
-  const whatsappUrl = "https://wa.me/972547202011?text=היי עדן, הגעתי מהאתר ואשמח לשמוע פרטים";
+  const whatsappMessage = "היי עדן, הגעתי מהאתר ואשמח לשמוע פרטים";
+  const whatsappUrl = `https://api.whatsapp.com/send?phone=972547202011&text=${encodeURIComponent(whatsappMessage)}`;
 
   const quickServices = [
     { icon: '🎬', text: 'עריכת וידאו & Reels' },

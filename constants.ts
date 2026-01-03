@@ -61,20 +61,20 @@ export const TESTIMONIALS: TestimonialItem[] = [
 ];
 
 export const SOCIAL_LINKS: SocialLink[] = [
-  { name: 'Instagram', url: '#', icon: Instagram, color: 'text-pink-500' },
-  { name: 'TikTok', url: '#', icon: Video, color: 'text-cyan-400' }, // Using Video icon as placeholder for TikTok
-  { name: 'Facebook', url: '#', icon: Facebook, color: 'text-blue-600' },
-  { name: 'Google', url: '#', icon: Globe, color: 'text-green-500' }
+  { name: 'Instagram', url: 'https://instagram.com', icon: Instagram, color: 'text-pink-500' },
+  { name: 'TikTok', url: 'https://tiktok.com', icon: Video, color: 'text-cyan-400' },
+  { name: 'Facebook', url: 'https://facebook.com', icon: Facebook, color: 'text-blue-600' },
+  { name: 'Google', url: 'https://google.com', icon: Globe, color: 'text-green-500' }
 ];
 
 export const CAROUSEL_IMAGES = [
-  'https://picsum.photos/600/400?random=10',
-  'https://picsum.photos/600/400?random=11',
-  'https://picsum.photos/600/400?random=12',
-  'https://picsum.photos/600/400?random=13',
-  'https://picsum.photos/600/400?random=14',
-  'https://picsum.photos/600/400?random=15',
-  'https://picsum.photos/600/400?random=16',
+  'https://i.postimg.cc/2S6ShByv/1.jpg',
+  'https://i.postimg.cc/bwBNTNS2/2.jpg',
+  'https://i.postimg.cc/7ZWYVYJG/3.jpg',
+  'https://i.postimg.cc/vZNHzHx4/4.jpg',
+  'https://i.postimg.cc/t4MC5Cn1/5.jpg',
+  'https://i.postimg.cc/dVxtBtZG/6.jpg',
+  'https://i.postimg.cc/T34Y9Y5q/8.jpg',
 ];
 
 export const GALLERY_ITEMS: GalleryItem[] = [

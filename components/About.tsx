@@ -11,19 +11,26 @@ const About: React.FC = () => {
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
           
           {/* Image Side */}
-          <div className="w-full lg:w-1/2 relative group">
-            <div className="absolute -inset-4 bg-gradient-to-r from-pink-600 to-purple-600 rounded-2xl blur opacity-30 group-hover:opacity-50 transition duration-1000"></div>
-            <div className="relative rounded-2xl overflow-hidden border border-slate-700 shadow-2xl rotate-2 hover:rotate-0 transition-transform duration-500">
-               <img 
-                 src="https://picsum.photos/800/800?grayscale" 
-                 alt="Eden Dolev" 
-                 className="w-full h-auto object-cover transform scale-100 group-hover:scale-105 transition-transform duration-700"
-               />
-               <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent opacity-80"></div>
-               <div className="absolute bottom-6 right-6 text-right">
-                 <p className="text-white font-bold text-2xl">עדן דולב</p>
-                 <p className="text-purple-400">בעלים ויוצר ראשי</p>
-               </div>
+          <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
+            <div className="relative w-full max-w-md aspect-square group">
+                {/* Glow Effect */}
+                <div className="absolute -inset-4 bg-gradient-to-r from-pink-600 to-purple-600 rounded-2xl blur-xl opacity-30 group-hover:opacity-50 transition duration-1000"></div>
+                
+                {/* Image Container */}
+                <div className="relative w-full h-full rounded-2xl overflow-hidden border border-slate-700 shadow-2xl rotate-2 group-hover:rotate-0 transition-transform duration-500 bg-slate-800">
+                  <img 
+                    src="https://i.postimg.cc/TYKr2B9w/Gemini-Generated-Image-29ykem29ykem29yk.png" 
+                    alt="Eden Dolev" 
+                    className="w-full h-full object-cover object-center transform scale-100 group-hover:scale-105 transition-transform duration-700"
+                  />
+                  
+                  {/* Text Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-transparent to-transparent"></div>
+                  <div className="absolute bottom-6 right-6 text-right z-10">
+                    <p className="text-white font-bold text-2xl drop-shadow-md">עדן דולב</p>
+                    <p className="text-purple-400 font-medium drop-shadow-md">בעלים ויוצר ראשי</p>
+                  </div>
+                </div>
             </div>
           </div>
 

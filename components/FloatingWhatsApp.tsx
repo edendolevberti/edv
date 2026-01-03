@@ -4,10 +4,11 @@ import { MessageCircle } from 'lucide-react';
 const FloatingWhatsApp: React.FC = () => {
   const phoneNumber = '972547202011';
   const message = 'היי עדן, אשמח לשמוע פרטים נוספים';
-  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+  // Use api.whatsapp.com/send to prevent encoding issues with Hebrew/Emojis
+  const whatsappUrl = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`;
 
   return (
-    <div className="fixed bottom-6 left-6 z-50 flex items-center gap-3 animate-float-slow">
+    <div className="fixed bottom-6 left-6 z-50 flex items-center gap-3">
        {/* Button */}
       <a
         href={whatsappUrl}

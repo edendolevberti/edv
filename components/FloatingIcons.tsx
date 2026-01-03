@@ -22,8 +22,8 @@ const FloatingIcons: React.FC = () => {
         />
       </div>
 
-      {/* Facebook - Bottom Right */}
-      <div className="absolute bottom-48 -right-2 md:bottom-[25%] md:right-[15%] animate-float-slow">
+      {/* Facebook - Moved up for mobile (approx middle of screen relative to top) */}
+      <div className="absolute top-[55%] -right-2 md:bottom-[25%] md:top-auto md:right-[15%] animate-float-slow">
         <img 
           src="https://upload.wikimedia.org/wikipedia/commons/b/b8/2021_Facebook_icon.svg" 
           alt="Facebook"
@@ -31,8 +31,8 @@ const FloatingIcons: React.FC = () => {
         />
       </div>
 
-      {/* Google - Bottom Left */}
-      <div className="absolute bottom-40 -left-2 md:bottom-[20%] md:left-[10%] animate-float">
+      {/* Google - Moved up for mobile (approx middle of screen relative to top) */}
+      <div className="absolute top-[62%] -left-2 md:bottom-[20%] md:top-auto md:left-[10%] animate-float">
         <img 
           src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" 
           alt="Google"

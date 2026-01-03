@@ -26,6 +26,7 @@ const Header: React.FC = () => {
   const navLinks = [
     { name: 'בית', href: '#hero' },
     { name: 'שירותים', href: '#services' },
+    { name: 'תיק עבודות', href: '#gallery' },
     { name: 'קצת עלי', href: '#about' },
     { name: 'ביקורות', href: '#testimonials' },
     { name: 'צור קשר', href: '#contact' },
@@ -43,7 +44,7 @@ const Header: React.FC = () => {
         <div className="container mx-auto px-4 flex justify-between items-center">
           {/* Logo */}
           <div className={`font-bold transition-all duration-300 z-50 ${isScrolled ? 'text-2xl' : 'text-3xl'}`}>
-            <a href="#" className="flex items-center gap-2">
+            <a href="#hero" className="flex items-center gap-2">
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 font-black tracking-tighter">
                 EDV
               </span>
