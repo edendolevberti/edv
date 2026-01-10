@@ -5,26 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <!-- SEO & Meta Tags -->
-    <title>עדן דולב וידאו & ניהול סושיאל</title>
-    <meta name="description" content="מומחים ביצירת סרטונים ויראליים, צילום מקצועי ועריכה שמשאירה חותם. הופכים את הסיפור שלכם לתוכן שאי אפשר להתעלם ממנו." />
-    <meta name="keywords" content="עריכת וידאו, ניהול סושיאל, צילום, שיווק דיגיטלי, טיקטוק, אינסטגרם, רילס, סרטוני תדמית, עדן דולב" />
+    <title>עדן דולב | מומחה לנוכחות דיגיטלית 360° לעסקים</title>
+    <meta name="description" content="בניית נוכחות דיגיטלית מנצחת: אתרי תדמית וחנויות, הפקת תוכן וידאו ויראלי לסושיאל, ושליטה בתוצאות החיפוש בגוגל (GMB). כל מה שהעסק שלך צריך כדי לצמוח." />
+    <meta name="keywords" content="בניית אתרים, קידום אורגני, ניהול סושיאל, Google My Business, סרטוני תדמית, איקומרס, עדן דולב, שיווק דיגיטלי, נוכחות דיגיטלית" />
     <meta name="author" content="Eden Dolev" />
-    <meta name="theme-color" content="#0f172a" />
+    <meta name="theme-color" content="#8b5cf6" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="עדן דולב וידאו & ניהול סושיאל" />
-    <meta property="og:description" content="מומחים ביצירת סרטונים ויראליים, צילום מקצועי ועריכה שמשאירה חותם. הופכים את הסיפור שלכם לתוכן שאי אפשר להתעלם ממנו." />
+    <meta property="og:title" content="עדן דולב | מומחה לנוכחות דיגיטלית 360°" />
+    <meta property="og:description" content="אתרים, וידאו, וקידום בגוגל. בונים את הנוכחות הדיגיטלית של העסק שלך מא' ועד ת'." />
     <meta property="og:locale" content="he_IL" />
     <meta property="og:image" content="https://i.postimg.cc/TYKr2B9w/Gemini-Generated-Image-29ykem29ykem29yk.png" />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:title" content="עדן דולב וידאו & ניהול סושיאל" />
-    <meta property="twitter:description" content="מומחים ביצירת סרטונים ויראליים, צילום מקצועי ועריכה שמשאירה חותם. הופכים את הסיפור שלכם לתוכן שאי אפשר להתעלם ממנו." />
+    <meta property="twitter:title" content="עדן דולב | מומחה לנוכחות דיגיטלית 360°" />
+    <meta property="twitter:description" content="אתרים, וידאו, וקידום בגוגל. בונים את הנוכחות הדיגיטלית של העסק שלך מא' ועד ת'." />
     <meta property="twitter:image" content="https://i.postimg.cc/TYKr2B9w/Gemini-Generated-Image-29ykem29ykem29yk.png" />
 
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              // Using standard Tailwind colors for Blue/Purple/Pink theme
+            },
+            animation: {
+              'blob': 'blob 7s infinite',
+            }
+          }
+        }
+      }
+    </script>
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <style>
       /* Force Heebo globally with high specificity */
@@ -45,12 +59,11 @@
         background: #1e293b;
       }
       ::-webkit-scrollbar-thumb {
-        background: linear-gradient(to bottom, #8b5cf6, #ec4899, #3b82f6);
+        background: linear-gradient(to bottom, #3b82f6, #8b5cf6, #ec4899);
         border-radius: 5px;
       }
       
       /* Animation Keyframes */
-      /* More dynamic float animations with X and Y movement */
       @keyframes float-1 {
         0% { transform: translate(0px, 0px) rotate(0deg); }
         33% { transform: translate(15px, -45px) rotate(2deg); }
@@ -99,11 +112,6 @@
         animation-delay: 4s;
       }
 
-      /* 
-         Carousel Logic:
-         Mobile: Image (200px) + Gap (16px) = 216px * 7 items = 1512px
-         Desktop: Image (250px) + Gap (16px) = 266px * 7 items = 1862px
-      */
       :root {
         --scroll-dist: -1512px;
       }
@@ -126,13 +134,13 @@
         animation-play-state: paused;
       }
 
-      /* Button Gradient Animation */
       @keyframes gradient-xy {
         0% { background-position: 0% 50%; }
         50% { background-position: 100% 50%; }
         100% { background-position: 0% 50%; }
       }
       .animate-gradient {
+        /* Gradient: Blue, Purple, Pink */
         background: linear-gradient(120deg, #2563eb, #9333ea, #db2777, #2563eb); 
         background-size: 300% 300%;
         animation: gradient-xy 5s ease-in-out infinite;

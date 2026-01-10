@@ -25,15 +25,16 @@ const Contact: React.FC = () => {
     // Helper to get service text with specific emoji
     const getServiceDisplay = (val: string) => {
       switch(val) {
-        case 'video': return 'וידאו 🎥';
-        case 'posts': return 'עיצוב פוסטים 🎨';
-        case 'both': return 'וידאו + עיצוב 🚀';
+        case 'website': return 'בניית אתר/חנות 💻';
+        case 'video': return 'הפקת תוכן וידאו 🎬';
+        case 'gmb': return 'קידום בגוגל מפות 📍';
+        case 'full': return 'מעטפת מלאה 360° 🚀';
         case 'other': return 'אחר 💎';
         default: return 'לא נבחר ❓';
       }
     };
 
-    const intro = "היי עדן, פניה חדשה מהאתר EDV 👋";
+    const intro = "היי עדן, פניה חדשה מהאתר (Digital Presence) 👋";
     const nameLine = `👤 *שם מלא:* ${formData.name || 'לא צוין'}`;
     const phoneLine = `📱 *טלפון:* ${formData.phone || 'לא צוין'}`;
     const emailLine = `📧 *אימייל:* ${formData.email || 'לא צוין'}`;
@@ -54,41 +55,41 @@ const Contact: React.FC = () => {
     <section id="contact" className="py-20 bg-slate-950 border-t border-slate-900">
       <div className="container mx-auto px-4">
         
-        <div className="bg-gradient-to-r from-indigo-900 to-purple-900 rounded-3xl p-8 md:p-16 relative overflow-hidden shadow-2xl">
+        <div className="bg-gradient-to-r from-[#1e1b2e] to-purple-900/40 rounded-3xl p-8 md:p-16 relative overflow-hidden shadow-2xl">
           {/* Decorative circles */}
           <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
-          <div className="absolute bottom-0 left-0 w-64 h-64 bg-pink-500/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
+          <div className="absolute bottom-0 left-0 w-64 h-64 bg-blue-600/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 relative z-10">
             
             {/* Contact Info */}
             <div className="text-right">
               <h2 className="text-3xl md:text-5xl font-black text-white mb-6">
-                בואו ניצור <br/>
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-blue-400">
-                  קסם ביחד
+                בואו נבנה <br/>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-pink-500">
+                  נוכחות דיגיטלית
                 </span>
               </h2>
               <p className="text-gray-300 text-lg mb-10 max-w-md">
-                יש לכם פרויקט מעניין? רוצים לשדרג את הנוכחות שלכם ברשת?
-                השאירו פרטים ונחזור אליכם בהקדם.
+                רוצים אתר שנראה מעולה? סרטונים ששורפים את הרשת? או להיות ראשונים בגוגל?
+                השאירו פרטים ונבנה לכם תוכנית צמיחה.
               </p>
 
               <div className="space-y-6">
                 <div className="flex items-center gap-4 text-gray-300 hover:text-white transition-colors">
-                  <div className="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center text-purple-400">
+                  <div className="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center text-blue-500">
                     <Phone size={20} />
                   </div>
                   <span className="text-lg">054-7202011</span>
                 </div>
                 <div className="flex items-center gap-4 text-gray-300 hover:text-white transition-colors">
-                  <div className="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center text-pink-400">
+                  <div className="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center text-pink-500">
                     <Mail size={20} />
                   </div>
                   <span className="text-lg">office@edv.co.il</span>
                 </div>
                  <div className="flex items-center gap-4 text-gray-300 hover:text-white transition-colors">
-                  <div className="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center text-blue-400">
+                  <div className="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center text-purple-500">
                     <MapPin size={20} />
                   </div>
                   <span className="text-lg">תל אביב והמרכז</span>
@@ -126,7 +127,7 @@ const Contact: React.FC = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all"
+                    className="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all"
                     placeholder="ישראל ישראלי"
                   />
                 </div>
@@ -139,7 +140,7 @@ const Contact: React.FC = () => {
                       value={formData.phone}
                       onChange={handleChange}
                       required
-                      className="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all"
+                      className="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all"
                       placeholder="050-0000000"
                     />
                   </div>
@@ -150,43 +151,44 @@ const Contact: React.FC = () => {
                       id="email" 
                       value={formData.email}
                       onChange={handleChange}
-                      className="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all"
+                      className="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all"
                       placeholder="email@example.com"
                     />
                   </div>
                 </div>
                  <div>
-                  <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">שירות מבוקש</label>
+                  <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">מה מעניין אתכם?</label>
                   <select 
                     id="service" 
                     value={formData.service}
                     onChange={handleChange}
-                    className="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all"
+                    className="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all"
                   >
                     <option value="">בחר שירות...</option>
-                    <option value="video">וידאו</option>
-                    <option value="posts">עיצוב פוסטים</option>
-                    <option value="both">שניהם (וידאו + עיצוב)</option>
+                    <option value="website">בניית אתרים & חנויות</option>
+                    <option value="video">הפקת וידאו & סושיאל</option>
+                    <option value="gmb">קידום בגוגל (GMB)</option>
+                    <option value="full">מעטפת מלאה 360°</option>
                     <option value="other">אחר</option>
                   </select>
                 </div>
                 <div>
-                  <label htmlFor="description" className="block text-sm font-medium text-gray-300 mb-2">תיאור הפרויקט</label>
+                  <label htmlFor="description" className="block text-sm font-medium text-gray-300 mb-2">ספרו לנו קצת על הפרויקט</label>
                   <textarea 
                     id="description" 
                     value={formData.description}
                     onChange={handleChange}
                     rows={4}
-                    className="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all resize-none"
-                    placeholder="ספרו לנו קצת על העסק ומה המטרות שלכם..."
+                    className="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all resize-none"
+                    placeholder="המטרות שלכם, האתגרים שלכם..."
                   ></textarea>
                 </div>
                 
                 <button 
                   type="submit" 
-                  className="w-full animate-gradient text-white font-bold py-4 rounded-lg shadow-lg transform transition hover:-translate-y-1 flex justify-center items-center gap-2"
+                  className="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-4 rounded-lg shadow-lg shadow-blue-600/20 transform transition hover:-translate-y-1 flex justify-center items-center gap-2"
                 >
-                  <span>שלח הודעה לווטסאפ</span>
+                  <span>התחל שיחה בוואטסאפ</span>
                   <Send size={18} />
                 </button>
               </div>
@@ -196,7 +198,7 @@ const Contact: React.FC = () => {
         </div>
         
         <div className="text-center mt-12 text-gray-500 text-sm">
-          © {new Date().getFullYear()} EDV - Eden Dolev Video. כל הזכויות שמורות.
+          © {new Date().getFullYear()} EDV - Eden Dolev Digital. כל הזכויות שמורות.
         </div>
       </div>
     </section>
