@@ -83,15 +83,21 @@ const Hero: React.FC = () => {
 
             <div className="flex flex-col sm:flex-row gap-5 justify-center items-center w-full px-8 md:px-0">
             
-            {/* Start Project Button with RGB Border Animation */}
-            <div className="relative group w-full sm:w-auto">
-                <div className="absolute -inset-0.5 rounded-full blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-gradient"></div>
+            {/* Start Project Button with Prominent RGB Border Animation */}
+            <div className="relative group w-full sm:w-auto scale-100 hover:scale-105 transition-transform duration-300">
+                {/* 1. Outer Glow (Blurry) */}
+                <div className="absolute -inset-1 rounded-full opacity-70 blur-md group-hover:opacity-100 group-hover:blur-lg transition duration-200 animate-gradient"></div>
+                
+                {/* 2. Sharp Border (Slightly larger than button to act as frame) */}
+                <div className="absolute -inset-[2px] rounded-full opacity-100 animate-gradient"></div>
+                
+                {/* 3. The Button Content */}
                 <a
                     href="#contact"
                     onClick={(e) => handleScroll(e, '#contact')}
-                    className="relative block w-full sm:w-auto px-8 py-4 bg-slate-900 rounded-full leading-none flex items-center justify-center border border-slate-800 hover:bg-slate-800 transition-colors duration-200"
+                    className="relative block w-full sm:w-auto px-10 py-5 bg-slate-900 rounded-full leading-none flex items-center justify-center hover:bg-slate-800 transition-colors duration-200"
                 >
-                    <span className="text-white font-bold text-lg tracking-wide">התחילו פרויקט 🚀</span>
+                    <span className="text-white font-black text-xl tracking-wide drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]">התחילו פרויקט 🚀</span>
                 </a>
             </div>
 

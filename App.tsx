@@ -6,7 +6,6 @@ import About from './components/About';
 import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
 import Gallery from './components/Gallery';
-import FloatingWhatsApp from './components/FloatingWhatsApp';
 
 function App() {
   return (
@@ -20,7 +19,6 @@ function App() {
         <Testimonials />
         <Contact />
       </main>
-      <FloatingWhatsApp />
     </div>
   );
 }
