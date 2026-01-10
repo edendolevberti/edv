@@ -5,7 +5,7 @@ const FloatingIcons: React.FC = () => {
     <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
       
       {/* Instagram - Top Right */}
-      <div className="absolute top-20 -right-4 md:top-[10%] md:right-[5%] animate-float">
+      <div className="absolute top-20 -right-4 md:top-[15%] md:right-[15%] animate-float">
         <img 
           src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" 
           alt="Instagram"
@@ -14,7 +14,7 @@ const FloatingIcons: React.FC = () => {
       </div>
 
       {/* TikTok - Top Left (Using standard App Icon style with black background) */}
-      <div className="absolute top-24 -left-4 md:top-[15%] md:left-[5%] animate-float-delayed">
+      <div className="absolute top-24 -left-4 md:top-[20%] md:left-[15%] animate-float-delayed">
          <img 
           src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" 
           alt="TikTok"
@@ -22,8 +22,8 @@ const FloatingIcons: React.FC = () => {
         />
       </div>
 
-      {/* Facebook - Moved up for mobile (approx middle of screen relative to top) */}
-      <div className="absolute top-[55%] -right-2 md:bottom-[25%] md:top-auto md:right-[15%] animate-float-slow">
+      {/* Facebook - Moved towards middle for desktop */}
+      <div className="absolute top-[55%] -right-2 md:top-[45%] md:right-[20%] animate-float-slow">
         <img 
           src="https://upload.wikimedia.org/wikipedia/commons/b/b8/2021_Facebook_icon.svg" 
           alt="Facebook"
@@ -31,8 +31,8 @@ const FloatingIcons: React.FC = () => {
         />
       </div>
 
-      {/* Google - Moved up for mobile (approx middle of screen relative to top) */}
-      <div className="absolute top-[62%] -left-2 md:bottom-[20%] md:top-auto md:left-[10%] animate-float">
+      {/* Google - Moved towards middle for desktop */}
+      <div className="absolute top-[62%] -left-2 md:top-[55%] md:left-[20%] animate-float">
         <img 
           src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" 
           alt="Google"

@@ -13,8 +13,17 @@ const Hero: React.FC = () => {
     { icon: '📍', text: 'שליטה בגוגל מפות (GMB)' },
   ];
 
+  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    const targetId = href.replace('#', '');
+    const element = document.getElementById(targetId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
-    <section id="hero" className="relative min-h-[100dvh] flex flex-col justify-center items-center overflow-x-hidden pt-24 pb-10">
+    <section id="hero" className="relative min-h-[100dvh] flex flex-col justify-center items-center overflow-x-hidden pt-24 pb-28">
       
       {/* 1. Main Brand Gradient Background */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#1e1b2e] via-[#0f172a] to-[#020617] z-0"></div>
@@ -53,15 +62,15 @@ const Hero: React.FC = () => {
           🌐 בונה ומנהל נוכחות דיגיטלית ב-360° לעסקים
         </p>
 
-        {/* Feature Pills */}
-        <div className="flex flex-wrap justify-center gap-3 md:gap-4 mb-10">
+        {/* Feature Pills - CHANGED: Removed border, adjusted background to look like information tags */}
+        <div className="flex flex-wrap justify-center gap-4 mb-10">
           {quickServices.map((item, index) => (
             <div 
               key={index} 
-              className="bg-slate-800/60 backdrop-blur-md border border-slate-600/50 px-5 py-3 rounded-xl flex items-center gap-3 text-gray-100 font-medium shadow-lg hover:bg-slate-700/60 hover:border-blue-500/50 transition-all duration-300 hover:-translate-y-1"
+              className="bg-slate-800/40 backdrop-blur-md px-6 py-3 rounded-2xl flex items-center gap-3 text-gray-100 shadow-lg hover:bg-slate-800/60 transition-colors duration-300 cursor-default"
             >
-              <span className="text-xl md:text-2xl filter drop-shadow-md">{item.icon}</span>
-              <span className="text-sm md:text-lg">{item.text}</span>
+              <span className="text-2xl md:text-3xl filter drop-shadow-lg opacity-90">{item.icon}</span>
+              <span className="text-base md:text-xl font-light tracking-wide">{item.text}</span>
             </div>
           ))}
         </div>
@@ -72,19 +81,21 @@ const Hero: React.FC = () => {
              הדרך שלך לצמיחה דיגיטלית מתחילה כאן 👇
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center items-center w-full px-8 md:px-0">
-            <a
-                href="#contact"
-                className="px-6 md:px-8 py-3 md:py-4 bg-blue-600 rounded-full text-white font-bold text-base md:text-lg shadow-lg shadow-blue-600/20 hover:shadow-blue-600/50 hover:bg-blue-500 transform hover:-translate-y-1 transition-all duration-300 w-full sm:w-auto"
-            >
-                התחילו פרויקט
-            </a>
-            <a
-                href="#services"
-                className="px-6 md:px-8 py-3 md:py-4 bg-slate-800/40 border-2 border-slate-600/50 rounded-full text-white font-bold text-base md:text-lg hover:border-pink-500 hover:text-pink-500 transition-all duration-300 w-full sm:w-auto backdrop-blur-md"
-            >
-                גלו את השירותים
-            </a>
+            <div className="flex flex-col sm:flex-row gap-5 justify-center items-center w-full px-8 md:px-0">
+            
+            {/* Start Project Button with RGB Border Animation */}
+            <div className="relative group w-full sm:w-auto">
+                <div className="absolute -inset-0.5 rounded-full blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-gradient"></div>
+                <a
+                    href="#contact"
+                    onClick={(e) => handleScroll(e, '#contact')}
+                    className="relative block w-full sm:w-auto px-8 py-4 bg-slate-900 rounded-full leading-none flex items-center justify-center border border-slate-800 hover:bg-slate-800 transition-colors duration-200"
+                >
+                    <span className="text-white font-bold text-lg tracking-wide">התחילו פרויקט 🚀</span>
+                </a>
+            </div>
+
+            {/* WhatsApp Button */}
             <a
                 href={whatsappUrl}
                 target="_blank"
@@ -104,9 +115,13 @@ const Hero: React.FC = () => {
       </div>
 
       {/* Scroll Down Indicator */}
-      <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 animate-bounce text-slate-400 hidden md:block z-10">
+      <a 
+        href="#services"
+        onClick={(e) => handleScroll(e, '#services')}
+        className="absolute bottom-6 left-1/2 transform -translate-x-1/2 animate-bounce text-slate-400 hidden md:block z-10 hover:text-white transition-colors cursor-pointer"
+      >
         <ArrowDown size={24} />
-      </div>
+      </a>
     </section>
   );
 };

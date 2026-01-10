@@ -4,7 +4,7 @@ import { Quote } from 'lucide-react';
 
 const Testimonials: React.FC = () => {
   return (
-    <section id="testimonials" className="py-20 bg-slate-900 relative overflow-hidden">
+    <section id="testimonials" className="py-20 bg-slate-900 relative overflow-hidden scroll-mt-24">
        {/* Background gradient orb */}
        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-purple-600/20 rounded-[100%] blur-[100px] pointer-events-none"></div>
 

@@ -34,7 +34,7 @@ const Contact: React.FC = () => {
       }
     };
 
-    const intro = "היי עדן, פניה חדשה מהאתר (Digital Presence) 👋";
+    const intro = "היי עדן, פניה חדשה מהאתר (Digital Presence Expert) 👋";
     const nameLine = `👤 *שם מלא:* ${formData.name || 'לא צוין'}`;
     const phoneLine = `📱 *טלפון:* ${formData.phone || 'לא צוין'}`;
     const emailLine = `📧 *אימייל:* ${formData.email || 'לא צוין'}`;
@@ -52,7 +52,7 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-slate-950 border-t border-slate-900">
+    <section id="contact" className="py-20 bg-slate-950 border-t border-slate-900 scroll-mt-24">
       <div className="container mx-auto px-4">
         
         <div className="bg-gradient-to-r from-[#1e1b2e] to-purple-900/40 rounded-3xl p-8 md:p-16 relative overflow-hidden shadow-2xl">
@@ -198,7 +198,7 @@ const Contact: React.FC = () => {
         </div>
         
         <div className="text-center mt-12 text-gray-500 text-sm">
-          © {new Date().getFullYear()} EDV - Eden Dolev Digital. כל הזכויות שמורות.
+          © {new Date().getFullYear()} Eden Dolev - Digital Presence Expert. כל הזכויות שמורות.
         </div>
       </div>
     </section>

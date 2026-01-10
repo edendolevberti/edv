@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { CheckCircle } from 'lucide-react';
 
 const About: React.FC = () => {
   return (
-    <section id="about" className="py-20 bg-gradient-to-b from-slate-900 to-slate-800 overflow-hidden relative">
+    <section id="about" className="py-20 bg-gradient-to-b from-slate-900 to-slate-800 overflow-hidden relative scroll-mt-24">
       {/* Decorative Element */}
       <div className="absolute right-0 top-1/4 w-96 h-96 bg-purple-600/10 rounded-full blur-3xl pointer-events-none"></div>
 

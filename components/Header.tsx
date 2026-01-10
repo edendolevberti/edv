@@ -32,6 +32,16 @@ const Header: React.FC = () => {
     { name: 'צור קשר', href: '#contact' },
   ];
 
+  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    const targetId = href.replace('#', '');
+    const element = document.getElementById(targetId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+    setIsMobileMenuOpen(false);
+  };
+
   return (
     <>
       <header
@@ -44,12 +54,16 @@ const Header: React.FC = () => {
         <div className="container mx-auto px-4 flex justify-between items-center">
           {/* Logo */}
           <div className={`font-bold transition-all duration-300 z-50 ${isScrolled ? 'text-2xl' : 'text-3xl'}`}>
-            <a href="#hero" className="flex items-center gap-2">
+            <a 
+              href="#hero" 
+              onClick={(e) => handleScroll(e, '#hero')}
+              className="flex items-center gap-2"
+            >
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 font-black tracking-tighter">
                 EDEN DOLEV
               </span>
               <span className={`text-white text-xs sm:text-sm font-light tracking-widest hidden sm:block ${isScrolled ? 'opacity-0 w-0' : 'opacity-100 transition-opacity duration-500'}`}>
-                 | DIGITAL PRESENCE
+                 - DIGITAL PRESENCE EXPERT
               </span>
             </a>
           </div>
@@ -60,6 +74,7 @@ const Header: React.FC = () => {
               <a
                 key={link.name}
                 href={link.href}
+                onClick={(e) => handleScroll(e, link.href)}
                 className="text-gray-300 hover:text-white relative group text-sm font-medium transition-colors font-sans"
               >
                 {link.name}
@@ -72,6 +87,7 @@ const Header: React.FC = () => {
           <div className="hidden md:block">
             <a
               href="#contact"
+              onClick={(e) => handleScroll(e, '#contact')}
               className={`px-6 py-2 rounded-full font-bold text-white bg-blue-600 hover:bg-blue-500 transition-all duration-300 transform hover:scale-105 shadow-lg ${
                 isScrolled
                   ? 'text-sm'
@@ -121,7 +137,7 @@ const Header: React.FC = () => {
                   isMobileMenuOpen ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'
                 }`}
                 style={{ transitionDelay: `${index * 100}ms` }}
-                onClick={() => setIsMobileMenuOpen(false)}
+                onClick={(e) => handleScroll(e, link.href)}
               >
                 <span className="w-0 overflow-hidden group-hover:w-6 transition-all duration-300 text-blue-500">
                   <ArrowRight size={20} />
@@ -136,12 +152,12 @@ const Header: React.FC = () => {
         <div className="p-8 border-t border-slate-800">
            <a
             href="#contact"
-            onClick={() => setIsMobileMenuOpen(false)}
+            onClick={(e) => handleScroll(e, '#contact')}
             className="block w-full text-center px-6 py-3 rounded-full font-bold text-white bg-blue-600 hover:bg-blue-500 shadow-lg"
           >
             בואו נצמח
           </a>
-          <p className="text-center text-slate-500 text-xs mt-4">EDEN DOLEV | DIGITAL EXPERT</p>
+          <p className="text-center text-slate-500 text-xs mt-4 uppercase">Eden Dolev - Digital Presence Expert</p>
         </div>
       </div>
     </>
