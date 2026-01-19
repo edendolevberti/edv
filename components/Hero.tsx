@@ -58,25 +58,12 @@ const Hero: React.FC = () => {
         </h1>
 
         {/* Subtitle */}
-        <p className="text-xl md:text-3xl text-gray-100 max-w-4xl mx-auto mb-8 font-light leading-relaxed drop-shadow-lg">
+        <p className="text-xl md:text-3xl text-gray-100 max-w-4xl mx-auto mb-10 font-light leading-relaxed drop-shadow-lg">
           🌐 בונה ומנהל נוכחות דיגיטלית ב-360° לעסקים
         </p>
 
-        {/* Feature Pills - CHANGED: Removed border, adjusted background to look like information tags */}
-        <div className="flex flex-wrap justify-center gap-4 mb-10">
-          {quickServices.map((item, index) => (
-            <div 
-              key={index} 
-              className="bg-slate-800/40 backdrop-blur-md px-6 py-3 rounded-2xl flex items-center gap-3 text-gray-100 shadow-lg hover:bg-slate-800/60 transition-colors duration-300 cursor-default"
-            >
-              <span className="text-2xl md:text-3xl filter drop-shadow-lg opacity-90">{item.icon}</span>
-              <span className="text-base md:text-xl font-light tracking-wide">{item.text}</span>
-            </div>
-          ))}
-        </div>
-
         {/* CTA Section */}
-        <div className="flex flex-col items-center gap-6">
+        <div className="flex flex-col items-center gap-8 mb-12">
            <p className="text-lg md:text-xl text-gray-300 font-medium animate-pulse">
              הדרך שלך לצמיחה דיגיטלית מתחילה כאן 👇
             </p>
@@ -84,7 +71,7 @@ const Hero: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-5 justify-center items-center w-full px-8 md:px-0">
             
             {/* Start Project Button with Prominent RGB Border Animation */}
-            <div className="relative group w-full sm:w-auto scale-100 hover:scale-105 transition-transform duration-300">
+            <div className="relative group w-full sm:w-auto scale-100 hover:scale-105 transition-transform duration-300 z-20">
                 {/* 1. Outer Glow (Blurry) */}
                 <div className="absolute -inset-1 rounded-full opacity-70 blur-md group-hover:opacity-100 group-hover:blur-lg transition duration-200 animate-gradient"></div>
                 
@@ -106,13 +93,27 @@ const Hero: React.FC = () => {
                 href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-6 md:px-8 py-3 md:py-4 bg-[#25D366] rounded-full text-white font-bold text-base md:text-lg shadow-lg shadow-green-500/30 hover:shadow-green-500/50 transform hover:-translate-y-1 transition-all duration-300 w-full sm:w-auto flex items-center justify-center gap-2"
+                className="px-6 md:px-8 py-3 md:py-4 bg-[#25D366] rounded-full text-white font-bold text-base md:text-lg shadow-lg shadow-green-500/30 hover:shadow-green-500/50 transform hover:-translate-y-1 transition-all duration-300 w-full sm:w-auto flex items-center justify-center gap-2 z-20"
             >
                 <MessageCircle size={20} fill="white" />
                 ווטסאפ
             </a>
             </div>
         </div>
+
+        {/* Feature List - Text Only (No Button Styling) - Moved Below Buttons */}
+        <div className="flex flex-wrap justify-center gap-x-8 gap-y-4 mb-10">
+          {quickServices.map((item, index) => (
+            <div 
+              key={index} 
+              className="flex items-center gap-3 text-gray-300 select-none"
+            >
+              <span className="text-2xl md:text-3xl filter drop-shadow-lg">{item.icon}</span>
+              <span className="text-base md:text-lg font-medium tracking-wide">{item.text}</span>
+            </div>
+          ))}
+        </div>
+
       </div>
 
       {/* Infinite Carousel */}

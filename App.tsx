@@ -6,6 +6,7 @@ import About from './components/About';
 import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
 import Gallery from './components/Gallery';
+import ScrollProgressLine from './components/ScrollProgressLine';
 
 function App() {
   return (
@@ -13,8 +14,14 @@ function App() {
       <Header />
       <main>
         <Hero />
-        <Services />
-        <Gallery />
+        
+        {/* Wrapper for Services & Gallery to share the continuous scroll line */}
+        <div className="relative bg-slate-900">
+          <ScrollProgressLine />
+          <Services />
+          <Gallery />
+        </div>
+
         <About />
         <Testimonials />
         <Contact />

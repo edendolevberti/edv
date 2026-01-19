@@ -87,6 +87,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     title: 'Pulse Energy Agency',
     category: 'website',
     url: 'https://pulsee.co.il',
+    image: 'https://image.thum.io/get/width/1000/crop/800/noanimate/https://pulsee.co.il',
     description: 'אתר תדמית חדשני לסוכנות פולס המתמחה בהנדסה בתחום הבניין, אתר התדמית משלב אנימציות מתקדמות וחווית משתמש ייחודית ומושכת.'
   },
   {
@@ -94,6 +95,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     title: 'DTS Law Firm',
     category: 'website',
     url: 'https://dts-law.co.il',
+    image: 'https://image.thum.io/get/width/1000/crop/800/noanimate/https://dts-law.co.il',
     description: 'אתר יוקרתי למשרד עורכי דין, המשדר אמינות ומקצועיות עם דגש על נגישות ללקוח.'
   },
   {
@@ -101,6 +103,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     title: 'Agro-Lima',
     category: 'website',
     url: 'https://agrolima.co.il',
+    image: 'https://image.thum.io/get/width/1000/crop/800/noanimate/https://agrolima.co.il',
     description: 'אתר תדמית לחברת אגרו-לימה, המציג את שירותי החברה בעיצוב נקי, מקצועי ומותאם לקהל היעד.'
   },
   {
@@ -108,6 +111,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     title: 'Noa Law',
     category: 'website',
     url: 'https://noa-law.co.il',
+    image: 'https://image.thum.io/get/width/1000/crop/800/noanimate/https://noa-law.co.il',
     description: 'נוכחות דיגיטלית מרשימה לעורכת דין, כולל עיצוב נקי, אזור מאמרים ובלוג משפטי מקצועי.'
   },
   {
@@ -115,6 +119,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     title: 'BarBike',
     category: 'website',
     url: 'https://barbike.co.il',
+    image: 'https://image.thum.io/get/width/1000/crop/800/noanimate/https://barbike.co.il',
     description: 'חנות אונליין (E-com) למותג אופניים, הכוללת קטלוג מוצרים חכם וממשק רכישה מהיר ומאובטח.'
   },
   {
@@ -122,6 +127,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     title: 'Porat Law',
     category: 'website',
     url: 'https://porat-law.co.il',
+    image: 'https://image.thum.io/get/width/1000/crop/800/noanimate/https://porat-law.co.il',
     description: 'אתר תדמית נקי ומודרני למשרד עורכי דין, הבנוי בצורה אופטימלית לקידום אורגני בגוגל (SEO).'
   }
 ];
