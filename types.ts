@@ -25,7 +25,8 @@ export interface SocialLink {
 export interface GalleryItem {
   id: number;
   title: string;
-  category: 'video' | 'design';
-  image: string;
+  category: 'video' | 'design' | 'website';
+  image?: string;
+  url?: string;
   description: string;
 }

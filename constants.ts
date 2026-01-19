@@ -84,44 +84,37 @@ export const CAROUSEL_IMAGES = [
 export const GALLERY_ITEMS: GalleryItem[] = [
   {
     id: 1,
-    title: 'חנות תכשיטים אונליין',
-    category: 'design', // Using 'design' for Web for now based on types
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-    description: 'בניית חנות Shopify מעוצבת עם חווית משתמש שהזניקה את המרות האתר.'
+    title: 'Pulse Energy Agency',
+    category: 'website',
+    url: 'https://pulsee.co.il',
+    description: 'אתר תדמית חדשני לסוכנות פולס המתמחה בהנדסה בתחום הבניין, אתר התדמית משלב אנימציות מתקדמות וחווית משתמש ייחודית ומושכת.'
   },
   {
     id: 2,
-    title: 'קמפיין טיקטוק ויראלי',
-    category: 'video',
-    image: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-    description: 'הפקת סדרת סרטונים שהגיעה ל-100K צפיות אורגניות תוך שבוע.'
+    title: 'DTS Law Firm',
+    category: 'website',
+    url: 'https://dts-law.co.il',
+    description: 'אתר יוקרתי למשרד עורכי דין, המשדר אמינות ומקצועיות עם דגש על נגישות ללקוח.'
   },
   {
     id: 3,
-    title: 'אתר תדמית למשרד עו"ד',
-    category: 'design',
-    image: 'https://images.unsplash.com/photo-1555421689-491a97ff2040?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-    description: 'אתר יוקרתי המשדר מקצועיות ואמינות, מותאם לקידום בגוגל.'
+    title: 'Noa Law',
+    category: 'website',
+    url: 'https://noa-law.co.il',
+    description: 'נוכחות דיגיטלית מרשימה לעורכת דין, כולל עיצוב נקי, אזור מאמרים ובלוג משפטי מקצועי.'
   },
   {
     id: 4,
-    title: 'שליטה בגוגל מפות (GMB)',
-    category: 'design',
-    image: 'https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-    description: 'אופטימיזציה של הכרטיס העסקי שהובילה לעלייה של 200% בשיחות נכנסות.'
+    title: 'BarBike',
+    category: 'website',
+    url: 'https://barbike.co.il',
+    description: 'חנות אונליין (E-com) למותג אופניים, הכוללת קטלוג מוצרים חכם וממשק רכישה מהיר ומאובטח.'
   },
   {
     id: 5,
-    title: 'סרטון השקה לסטארטאפ',
-    category: 'video',
-    image: 'https://picsum.photos/600/400?random=24',
-    description: 'סרטון תדמית המשלב צילומי מוצר ואנימציה להצגת הטכנולוגיה.'
-  },
-  {
-    id: 6,
-    title: 'ניהול סושיאל למסעדה',
-    category: 'video',
-    image: 'https://picsum.photos/600/400?random=25',
-    description: 'יצירת שפה ויזואלית וניהול תוכן שוטף שהביא המון לקוחות חדשים.'
+    title: 'Porat Law',
+    category: 'website',
+    url: 'https://porat-law.co.il',
+    description: 'אתר תדמית נקי ומודרני למשרד עורכי דין, הבנוי בצורה אופטימלית לקידום אורגני בגוגל (SEO).'
   }
 ];
