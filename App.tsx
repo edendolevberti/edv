@@ -15,15 +15,15 @@ function App() {
       <main>
         <Hero />
         
-        {/* Wrapper for Services & Gallery to share the continuous scroll line */}
+        {/* Wrapper for Services, Gallery, About AND Testimonials to share the continuous scroll line */}
         <div className="relative bg-slate-900">
           <ScrollProgressLine />
           <Services />
           <Gallery />
+          <About />
+          <Testimonials />
         </div>
 
-        <About />
-        <Testimonials />
         <Contact />
       </main>
     </div>

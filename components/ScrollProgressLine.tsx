@@ -127,11 +127,11 @@ const ScrollProgressLine: React.FC = () => {
           </filter>
         </defs>
 
-        {/* --- MOBILE PATH (Bolder & Lighter Color) --- */}
+        {/* --- MOBILE PATH (High density waves for 4 sections) --- */}
         <path 
           ref={mobilePathRef}
           className="lg:hidden"
-          d="M 50 0 C 20 5, 20 10, 50 15 S 80 25, 50 30 S 20 40, 50 45 S 80 55, 50 60 S 20 70, 50 75 S 80 85, 50 90 S 20 100, 50 100"
+          d="M 50 0 C 10 5, 10 6, 50 11 S 90 17, 50 22 S 10 28, 50 33 S 90 39, 50 44 S 10 50, 50 55 S 90 61, 50 66 S 10 72, 50 77 S 90 83, 50 88 S 10 94, 50 100"
           fill="none"
           stroke="#475569" 
           strokeWidth="1.5"
@@ -139,11 +139,11 @@ const ScrollProgressLine: React.FC = () => {
           opacity="0.5"
         />
 
-        {/* --- DESKTOP PATH (Bolder & Lighter Color) --- */}
+        {/* --- DESKTOP PATH (High density waves for 4 sections) --- */}
         <path 
           ref={desktopPathRef}
           className="hidden lg:block"
-          d="M 50 0 C 5 10, 5 20, 50 25 S 95 40, 50 50 S 5 70, 50 75 S 95 90, 50 100"
+          d="M 50 0 C 5 5, 5 6, 50 11 S 95 17, 50 22 S 5 28, 50 33 S 95 39, 50 44 S 5 50, 50 55 S 95 61, 50 66 S 5 72, 50 77 S 95 83, 50 88 S 5 94, 50 100"
           fill="none"
           stroke="#475569" 
           strokeWidth="1.5"
@@ -152,7 +152,7 @@ const ScrollProgressLine: React.FC = () => {
         />
       </svg>
 
-      {/* --- MOBILE ARROW (Larger & Thicker) --- */}
+      {/* --- MOBILE ARROW --- */}
       <div 
         ref={mobileArrowRef}
         className="absolute w-10 h-10 z-10 lg:hidden will-change-transform opacity-0 transition-opacity duration-300"
@@ -162,22 +162,15 @@ const ScrollProgressLine: React.FC = () => {
         </svg>
       </div>
 
-      {/* --- DESKTOP ARROW (Larger, Filled & Sci-Fi) --- */}
+      {/* --- DESKTOP ARROW --- */}
       <div 
         ref={desktopArrowRef}
         className="absolute w-16 h-16 z-10 hidden lg:block will-change-transform opacity-0 transition-opacity duration-300"
       >
          <svg viewBox="0 0 24 24" className="w-full h-full filter drop-shadow-[0_0_12px_rgba(236,72,153,0.8)]">
-            {/* Center Line */}
             <path d="M2 12L22 12" stroke="#ec4899" strokeWidth="1" strokeOpacity="0.8" />
-            
-            {/* Arrow Head - Filled for visibility */}
             <path d="M12 4L22 12L12 20" stroke="#ec4899" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="rgba(236, 72, 153, 0.2)" />
-            
-            {/* Core Dot */}
             <circle cx="22" cy="12" r="2.5" fill="#ec4899" />
-            
-            {/* Rear decorations */}
             <path d="M5 9L2 12L5 15" stroke="#ec4899" strokeWidth="1.5" strokeLinecap="round" fill="none" opacity="0.7"/>
          </svg>
       </div>
