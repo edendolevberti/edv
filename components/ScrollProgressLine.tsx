@@ -7,7 +7,7 @@ const ScrollProgressLine: React.FC = () => {
   const mobilePathRef = useRef<SVGPathElement>(null);
   const desktopPathRef = useRef<SVGPathElement>(null);
   
-  // Refs for the arrow ELEMENTS (Divs now, to avoid distortion)
+  // Refs for the arrow ELEMENTS
   const mobileArrowRef = useRef<HTMLDivElement>(null);
   const desktopArrowRef = useRef<HTMLDivElement>(null);
 
@@ -46,29 +46,24 @@ const ScrollProgressLine: React.FC = () => {
 
         try {
           const len = path.getTotalLength();
-          // Get point at current progress (SVG Coordinates 0..100)
+          // Get point at current progress
           const point = path.getPointAtLength(len * progress);
           
-          // Calculate rotation based on Screen Pixels to avoid distortion
-          // We need two points close to each other
-          const lookDist = 1; // 1 unit in SVG space
+          const lookDist = 1; 
           
           let p1 = point;
           let p2;
 
-          // Handle lookahead/lookbehind for tangent
           if (len * progress < lookDist) {
              p2 = path.getPointAtLength(Math.min(len, len * progress + lookDist));
           } else {
              p2 = path.getPointAtLength(len * progress - lookDist);
-             // Swap so we always calculate p1 -> p2 direction (tangent)
              const temp = p1;
              p1 = p2;
              p2 = temp;
           }
 
           // Convert to pixels for correct angle calculation
-          // This fixes the distortion issue where the arrow angle was wrong on stretched SVGs
           const scaleX = rect.width / 100;
           const scaleY = rect.height / 100;
 
@@ -88,7 +83,6 @@ const ScrollProgressLine: React.FC = () => {
         }
       };
 
-      // Update Arrows
       if (window.innerWidth < 1024) {
           updateArrow(mobilePathRef.current, mobileArrowRef.current);
       } else {
@@ -133,51 +127,58 @@ const ScrollProgressLine: React.FC = () => {
           </filter>
         </defs>
 
-        {/* --- MOBILE PATH --- */}
+        {/* --- MOBILE PATH (Bolder & Lighter Color) --- */}
         <path 
           ref={mobilePathRef}
           className="lg:hidden"
           d="M 50 0 C 20 5, 20 10, 50 15 S 80 25, 50 30 S 20 40, 50 45 S 80 55, 50 60 S 20 70, 50 75 S 80 85, 50 90 S 20 100, 50 100"
           fill="none"
-          stroke="#1e293b"
-          strokeWidth="0.5"
+          stroke="#475569" 
+          strokeWidth="1.5"
           vectorEffect="non-scaling-stroke"
+          opacity="0.5"
         />
 
-        {/* --- DESKTOP PATH (WIDER) --- */}
-        {/* Widened amplitude to 5% and 95% to span across project cards */}
+        {/* --- DESKTOP PATH (Bolder & Lighter Color) --- */}
         <path 
           ref={desktopPathRef}
           className="hidden lg:block"
           d="M 50 0 C 5 10, 5 20, 50 25 S 95 40, 50 50 S 5 70, 50 75 S 95 90, 50 100"
           fill="none"
-          stroke="#1e293b"
-          strokeWidth="0.5"
+          stroke="#475569" 
+          strokeWidth="1.5"
           vectorEffect="non-scaling-stroke"
+          opacity="0.5"
         />
       </svg>
 
-      {/* --- MOBILE ARROW (DOM Element) --- */}
+      {/* --- MOBILE ARROW (Larger & Thicker) --- */}
       <div 
         ref={mobileArrowRef}
-        className="absolute w-8 h-8 z-10 lg:hidden will-change-transform opacity-0 transition-opacity duration-300"
+        className="absolute w-10 h-10 z-10 lg:hidden will-change-transform opacity-0 transition-opacity duration-300"
       >
-        <svg viewBox="0 0 24 24" className="w-full h-full filter drop-shadow-[0_0_5px_rgba(236,72,153,0.5)]">
-           {/* Simple Right-Pointing Arrow Head */}
-           <path d="M5 12L19 12M19 12L12 5M19 12L12 19" stroke="#ec4899" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+        <svg viewBox="0 0 24 24" className="w-full h-full filter drop-shadow-[0_0_8px_rgba(236,72,153,0.8)]">
+           <path d="M6 12L18 12M18 12L11 5M18 12L11 19" stroke="#ec4899" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
       </div>
 
-      {/* --- DESKTOP ARROW (DOM Element) --- */}
+      {/* --- DESKTOP ARROW (Larger, Filled & Sci-Fi) --- */}
       <div 
         ref={desktopArrowRef}
-        className="absolute w-10 h-10 z-10 hidden lg:block will-change-transform opacity-0 transition-opacity duration-300"
+        className="absolute w-16 h-16 z-10 hidden lg:block will-change-transform opacity-0 transition-opacity duration-300"
       >
-         {/* Sci-fi Style Arrow Head pointing Right */}
-         <svg viewBox="0 0 24 24" className="w-full h-full filter drop-shadow-[0_0_8px_rgba(236,72,153,0.6)]">
-            <path d="M4 12L20 12" stroke="#ec4899" strokeWidth="1.5" strokeOpacity="0.5" />
-            <path d="M12 4L20 12L12 20" stroke="#ec4899" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
-            <circle cx="20" cy="12" r="2" fill="#ec4899" />
+         <svg viewBox="0 0 24 24" className="w-full h-full filter drop-shadow-[0_0_12px_rgba(236,72,153,0.8)]">
+            {/* Center Line */}
+            <path d="M2 12L22 12" stroke="#ec4899" strokeWidth="1" strokeOpacity="0.8" />
+            
+            {/* Arrow Head - Filled for visibility */}
+            <path d="M12 4L22 12L12 20" stroke="#ec4899" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="rgba(236, 72, 153, 0.2)" />
+            
+            {/* Core Dot */}
+            <circle cx="22" cy="12" r="2.5" fill="#ec4899" />
+            
+            {/* Rear decorations */}
+            <path d="M5 9L2 12L5 15" stroke="#ec4899" strokeWidth="1.5" strokeLinecap="round" fill="none" opacity="0.7"/>
          </svg>
       </div>
 
