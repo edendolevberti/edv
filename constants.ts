@@ -71,23 +71,25 @@ export const SOCIAL_LINKS: SocialLink[] = [
   { name: 'Google', url: 'https://google.com', icon: Globe, color: 'text-green-500' }
 ];
 
+// Note: Please save the original images to '/images/carousel/' folder in your project
 export const CAROUSEL_IMAGES = [
-  'https://i.postimg.cc/2S6ShByv/1.jpg',
-  'https://i.postimg.cc/bwBNTNS2/2.jpg',
-  'https://i.postimg.cc/7ZWYVYJG/3.jpg',
-  'https://i.postimg.cc/vZNHzHx4/4.jpg',
-  'https://i.postimg.cc/t4MC5Cn1/5.jpg',
-  'https://i.postimg.cc/dVxtBtZG/6.jpg',
-  'https://i.postimg.cc/T34Y9Y5q/8.jpg',
+  'https://i.postimg.cc/2S6ShByv/1.jpg', // Original: https://i.postimg.cc/2S6ShByv/1.jpg
+  'https://i.postimg.cc/bwBNTNS2/2.jpg', // Original: https://i.postimg.cc/bwBNTNS2/2.jpg
+  'https://i.postimg.cc/7ZWYVYJG/3.jpg', // Original: https://i.postimg.cc/7ZWYVYJG/3.jpg
+  'https://i.postimg.cc/vZNHzHx4/4.jpg', // Original: https://i.postimg.cc/vZNHzHx4/4.jpg
+  'https://i.postimg.cc/t4MC5Cn1/5.jpg', // Original: https://i.postimg.cc/t4MC5Cn1/5.jpg
+  'https://i.postimg.cc/dVxtBtZG/6.jpg', // Original: https://i.postimg.cc/dVxtBtZG/6.jpg
+  'https://i.postimg.cc/T34Y9Y5q/8.jpg', // Original: https://i.postimg.cc/T34Y9Y5q/8.jpg
 ];
 
+// Note: Please capture screenshots or save images to '/images/projects/' folder in your project
 export const GALLERY_ITEMS: GalleryItem[] = [
   {
     id: 1,
     title: 'Pulse Energy Agency',
     category: 'website',
     url: 'https://pulsee.co.il',
-    image: 'https://image.thum.io/get/width/1000/crop/800/noanimate/https://pulsee.co.il',
+    image: 'https://edendolev.varcel.app/images/pulsee.jpg', // Was: thum.io screenshot
     description: 'אתר תדמית חדשני לסוכנות פולס המתמחה בהנדסה בתחום הבניין, אתר התדמית משלב אנימציות מתקדמות וחווית משתמש ייחודית ומושכת.'
   },
   {
@@ -95,7 +97,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     title: 'DTS Law Firm',
     category: 'website',
     url: 'https://dts-law.co.il',
-    image: 'https://image.thum.io/get/width/1000/crop/800/noanimate/https://dts-law.co.il',
+    image: 'https://edendolev.varcel.app/images/dts-law.jpg', // Was: thum.io screenshot
     description: 'אתר יוקרתי למשרד עורכי דין, המשדר אמינות ומקצועיות עם דגש על נגישות ללקוח.'
   },
   {
@@ -103,7 +105,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     title: 'Agro-Lima',
     category: 'website',
     url: 'https://agrolima.co.il',
-    image: 'https://image.thum.io/get/width/1000/crop/800/noanimate/https://agrolima.co.il',
+    image: 'https://edendolev.varcel.app/images/agrolima.png', // Was: thum.io screenshot
     description: 'אתר תדמית לחברת אגרו-לימה, המציג את שירותי החברה בעיצוב נקי, מקצועי ומותאם לקהל היעד.'
   },
   {
@@ -111,7 +113,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     title: 'Noa Law',
     category: 'website',
     url: 'https://noa-law.co.il',
-    image: 'https://image.thum.io/get/width/1000/crop/800/noanimate/https://noa-law.co.il',
+    image: 'https://edendolev.varcel.app/images/noa-law.jpg', // Was: thum.io screenshot
     description: 'נוכחות דיגיטלית מרשימה לעורכת דין, כולל עיצוב נקי, אזור מאמרים ובלוג משפטי מקצועי.'
   },
   {
@@ -119,7 +121,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     title: 'BarBike',
     category: 'website',
     url: 'https://barbike.co.il',
-    image: 'https://image.thum.io/get/width/1000/crop/800/noanimate/https://barbike.co.il',
+    image: 'https://edendolev.varcel.app/images/barbike.jpg', // Was: thum.io screenshot
     description: 'חנות אונליין (E-com) למותג אופניים, הכוללת קטלוג מוצרים חכם וממשק רכישה מהיר ומאובטח.'
   },
   {
@@ -127,7 +129,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     title: 'Porat Law',
     category: 'website',
     url: 'https://porat-law.co.il',
-    image: 'https://image.thum.io/get/width/1000/crop/800/noanimate/https://porat-law.co.il',
+    image: 'https://edendolev.varcel.app/images/porat-law.jpg', // Was: thum.io screenshot
     description: 'אתר תדמית נקי ומודרני למשרד עורכי דין, הבנוי בצורה אופטימלית לקידום אורגני בגוגל (SEO).'
   }
 ];

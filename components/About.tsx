@@ -19,7 +19,8 @@ const About: React.FC = () => {
                 {/* Image Container */}
                 <div className="relative w-full h-full rounded-2xl overflow-hidden border border-slate-700 shadow-2xl rotate-2 group-hover:rotate-0 transition-transform duration-500 bg-slate-800">
                   <img 
-                    src="https://i.postimg.cc/TYKr2B9w/Gemini-Generated-Image-29ykem29ykem29yk.png" 
+                    src="https://i.postimg.cc/TYKr2B9w/Gemini-Generated-Image-29ykem29ykem29yk.png"
+                    // Original: https://i.postimg.cc/TYKr2B9w/Gemini-Generated-Image-29ykem29ykem29yk.png
                     alt="Eden Dolev" 
                     className="w-full h-full object-cover object-center transform scale-100 group-hover:scale-105 transition-transform duration-700"
                   />
