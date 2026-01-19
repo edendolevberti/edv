@@ -86,7 +86,7 @@ const Contact: React.FC = () => {
                   <div className="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center text-pink-500">
                     <Mail size={20} />
                   </div>
-                  <span className="text-lg">office@edv.co.il</span>
+                  <span className="text-lg">edendolevberti@gmail.com</span>
                 </div>
                  <div className="flex items-center gap-4 text-gray-300 hover:text-white transition-colors">
                   <div className="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center text-purple-500">

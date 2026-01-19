@@ -43,24 +43,24 @@ export const SERVICES: ServiceItem[] = [
 export const TESTIMONIALS: TestimonialItem[] = [
   {
     id: 1,
-    name: 'רונית אברהם',
-    role: 'בעלת קליניקה לאסתטיקה',
-    content: 'עדן בנה לי אתר מושלם וסידר את המיקום בגוגל מפות. תוך שבועיים הטלפון לא הפסיק לצלצל מלקוחות חדשים שמצאו אותי בגוגל.',
-    image: 'https://picsum.photos/100/100?random=1'
+    name: 'Pulse Energy',
+    role: 'הנהלת החברה',
+    content: 'תהליך העבודה מול עדן היה סופר מקצועי. האתר החדש משקף בדיוק את החדשנות שאנחנו מביאים לעולם ההנדסה, עם חווית משתמש ברמה הגבוהה ביותר.',
+    image: 'https://ui-avatars.com/api/?name=Pulse+Energy&background=0D8ABC&color=fff'
   },
   {
     id: 2,
-    name: 'עומר פרץ',
-    role: 'יזם E-commerce',
-    content: 'חנות השופיפיי שעדן הקים לי נראית מיליון דולר. בשילוב עם הרילס שהוא הפיק להשקה, המכירות שברו שיאים.',
-    image: 'https://picsum.photos/100/100?random=2'
+    name: 'עו"ד תעבורה דניאל תמיר סער',
+    role: 'DTS Law Firm',
+    content: 'חיפשנו אתר שישדר יוקרה ואמינות למשרד עורכי הדין שלנו. התוצאה הסופית מרשימה, נקייה ומקצועית, והלקוחות שלנו לא מפסיקים להחמיא.',
+    image: 'https://ui-avatars.com/api/?name=DTS+Law&background=1e293b&color=fff'
   },
   {
     id: 3,
-    name: 'דנה מור',
-    role: 'עורכת דין',
-    content: 'חיפשתי מישהו שיעשה סדר בנוכחות הדיגיטלית שלי. עדן לקח פיקוד על הכל - אתר, סרטונים וגוגל. הראש שלי שקט והעסק עובד.',
-    image: 'https://picsum.photos/100/100?random=3'
+    name: 'Agro-Lima',
+    role: 'צוות החברה',
+    content: 'עדן הקים עבורנו אתר תדמית מדויק שמציג את הפעילות שלנו בצורה ברורה ומזמינה. השירות היה מהיר, קשוב ומקצועי לאורך כל הדרך.',
+    image: 'https://ui-avatars.com/api/?name=Agro+Lima&background=16a34a&color=fff'
   }
 ];
 
@@ -98,20 +98,27 @@ export const GALLERY_ITEMS: GalleryItem[] = [
   },
   {
     id: 3,
+    title: 'Agro-Lima',
+    category: 'website',
+    url: 'https://agrolima.co.il',
+    description: 'אתר תדמית לחברת אגרו-לימה, המציג את שירותי החברה בעיצוב נקי, מקצועי ומותאם לקהל היעד.'
+  },
+  {
+    id: 4,
     title: 'Noa Law',
     category: 'website',
     url: 'https://noa-law.co.il',
     description: 'נוכחות דיגיטלית מרשימה לעורכת דין, כולל עיצוב נקי, אזור מאמרים ובלוג משפטי מקצועי.'
   },
   {
-    id: 4,
+    id: 5,
     title: 'BarBike',
     category: 'website',
     url: 'https://barbike.co.il',
     description: 'חנות אונליין (E-com) למותג אופניים, הכוללת קטלוג מוצרים חכם וממשק רכישה מהיר ומאובטח.'
   },
   {
-    id: 5,
+    id: 6,
     title: 'Porat Law',
     category: 'website',
     url: 'https://porat-law.co.il',
