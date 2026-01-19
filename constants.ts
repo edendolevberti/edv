@@ -89,7 +89,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     title: 'Pulse Energy Agency',
     category: 'website',
     url: 'https://pulsee.co.il',
-    image: 'https://edendolev.varcel.app/images/pulsee.jpg', // Was: thum.io screenshot
+    image: 'https://edendolev.vercel.app/images/pulsee.png', // Was: thum.io screenshot
     description: 'אתר תדמית חדשני לסוכנות פולס המתמחה בהנדסה בתחום הבניין, אתר התדמית משלב אנימציות מתקדמות וחווית משתמש ייחודית ומושכת.'
   },
   {
@@ -97,7 +97,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     title: 'DTS Law Firm',
     category: 'website',
     url: 'https://dts-law.co.il',
-    image: 'https://edendolev.varcel.app/images/dts-law.jpg', // Was: thum.io screenshot
+    image: 'https://edendolev.vercel.app/images/dts-law.png', // Was: thum.io screenshot
     description: 'אתר יוקרתי למשרד עורכי דין, המשדר אמינות ומקצועיות עם דגש על נגישות ללקוח.'
   },
   {
@@ -105,7 +105,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     title: 'Agro-Lima',
     category: 'website',
     url: 'https://agrolima.co.il',
-    image: 'https://edendolev.varcel.app/images/agrolima.png', // Was: thum.io screenshot
+    image: 'https://edendolev.vercel.app/images/agrolima.png', // Was: thum.io screenshot
     description: 'אתר תדמית לחברת אגרו-לימה, המציג את שירותי החברה בעיצוב נקי, מקצועי ומותאם לקהל היעד.'
   },
   {
@@ -113,7 +113,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     title: 'Noa Law',
     category: 'website',
     url: 'https://noa-law.co.il',
-    image: 'https://edendolev.varcel.app/images/noa-law.jpg', // Was: thum.io screenshot
+    image: 'https://edendolev.vercel.app/images/noa-law.png', // Was: thum.io screenshot
     description: 'נוכחות דיגיטלית מרשימה לעורכת דין, כולל עיצוב נקי, אזור מאמרים ובלוג משפטי מקצועי.'
   },
   {
@@ -121,7 +121,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     title: 'BarBike',
     category: 'website',
     url: 'https://barbike.co.il',
-    image: 'https://edendolev.varcel.app/images/barbike.jpg', // Was: thum.io screenshot
+    image: 'https://edendolev.vercel.app/images/barbike.png', // Was: thum.io screenshot
     description: 'חנות אונליין (E-com) למותג אופניים, הכוללת קטלוג מוצרים חכם וממשק רכישה מהיר ומאובטח.'
   },
   {
@@ -129,7 +129,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     title: 'Porat Law',
     category: 'website',
     url: 'https://porat-law.co.il',
-    image: 'https://edendolev.varcel.app/images/porat-law.jpg', // Was: thum.io screenshot
+    image: 'https://edendolev.vercel.app/images/porat-law.png', // Was: thum.io screenshot
     description: 'אתר תדמית נקי ומודרני למשרד עורכי דין, הבנוי בצורה אופטימלית לקידום אורגני בגוגל (SEO).'
   }
 ];
