@@ -52,10 +52,18 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-slate-950 border-t border-slate-900 scroll-mt-24">
-      <div className="container mx-auto px-4">
+    <section id="contact" className="relative py-24 scroll-mt-24">
+      {/* Background decoration */}
+      <div className="absolute left-0 bottom-0 w-full h-full bg-gradient-to-t from-black/40 to-transparent pointer-events-none"></div>
+
+      <div className="container mx-auto px-4 relative z-20">
         
-        <div className="bg-gradient-to-r from-[#1e1b2e] to-purple-900/40 rounded-3xl p-8 md:p-16 relative overflow-hidden shadow-2xl">
+        {/* Main Card - Glassmorphism Style to match others */}
+        <div className="relative rounded-3xl border border-slate-700/50 bg-gradient-to-b from-slate-800/10 to-slate-900/60 backdrop-blur-md p-8 md:p-16 shadow-2xl overflow-hidden">
+          
+          {/* Top Fade / Glow Effect */}
+          <div className="absolute top-0 left-0 w-full h-1/2 bg-gradient-to-b from-blue-500/5 to-transparent pointer-events-none"></div>
+
           {/* Decorative circles */}
           <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
           <div className="absolute bottom-0 left-0 w-64 h-64 bg-blue-600/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
@@ -70,6 +78,8 @@ const Contact: React.FC = () => {
                   נוכחות דיגיטלית
                 </span>
               </h2>
+              <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-pink-500 rounded-full mb-8"></div>
+              
               <p className="text-gray-300 text-lg mb-10 max-w-md">
                 רוצים אתר שנראה מעולה? סרטונים ששורפים את הרשת? או להיות ראשונים בגוגל?
                 השאירו פרטים ונבנה לכם תוכנית צמיחה.
@@ -77,19 +87,19 @@ const Contact: React.FC = () => {
 
               <div className="space-y-6">
                 <div className="flex items-center gap-4 text-gray-300 hover:text-white transition-colors">
-                  <div className="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center text-blue-500">
+                  <div className="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center text-blue-500 border border-slate-700">
                     <Phone size={20} />
                   </div>
                   <span className="text-lg">054-7202011</span>
                 </div>
                 <div className="flex items-center gap-4 text-gray-300 hover:text-white transition-colors">
-                  <div className="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center text-pink-500">
+                  <div className="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center text-pink-500 border border-slate-700">
                     <Mail size={20} />
                   </div>
                   <span className="text-lg">edendolevberti@gmail.com</span>
                 </div>
                  <div className="flex items-center gap-4 text-gray-300 hover:text-white transition-colors">
-                  <div className="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center text-purple-500">
+                  <div className="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center text-purple-500 border border-slate-700">
                     <MapPin size={20} />
                   </div>
                   <span className="text-lg">תל אביב והמרכז</span>
@@ -106,7 +116,7 @@ const Contact: React.FC = () => {
                       href={link.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className={`w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center transition-all hover:scale-110 hover:bg-slate-700 ${link.color}`}
+                      className={`w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center transition-all hover:scale-110 hover:bg-slate-700 ${link.color} border border-slate-700`}
                       aria-label={link.name}
                     >
                       <link.icon size={20} />
@@ -117,7 +127,7 @@ const Contact: React.FC = () => {
             </div>
 
             {/* Form */}
-            <form className="bg-slate-900/50 backdrop-blur-sm p-8 rounded-2xl border border-slate-700/50" onSubmit={handleSubmit}>
+            <form className="bg-slate-900/60 backdrop-blur-md p-8 rounded-2xl border border-slate-700/50 shadow-inner" onSubmit={handleSubmit}>
               <div className="space-y-5">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">שם מלא</label>

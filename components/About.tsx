@@ -10,8 +10,8 @@ const About: React.FC = () => {
 
       <div className="container mx-auto px-4 relative z-10">
         
-        {/* The Frame / Card Container */}
-        <div className="relative rounded-3xl border border-slate-700/50 bg-gradient-to-b from-slate-800/40 to-slate-900/90 backdrop-blur-md p-8 md:p-12 shadow-2xl overflow-hidden">
+        {/* The Frame / Card Container - Made more transparent */}
+        <div className="relative rounded-3xl border border-slate-700/50 bg-gradient-to-b from-slate-800/10 to-slate-900/60 backdrop-blur-md p-8 md:p-12 shadow-2xl overflow-hidden">
           
           {/* Top Fade / Glow Effect inside the frame */}
           <div className="absolute top-0 left-0 w-full h-1/2 bg-gradient-to-b from-blue-500/5 to-transparent pointer-events-none"></div>

@@ -25,7 +25,10 @@ const ScrollProgressLine: React.FC = () => {
       const elementTop = rect.top + window.scrollY;
       const elementHeight = rect.height;
       
+      // Start slightly before the container comes into view
       const startScroll = elementTop - windowHeight * 0.7; 
+      
+      // End when we've scrolled past the element height minus some offset
       const endScroll = (elementTop + elementHeight) - windowHeight * 0.8;
       
       const distance = endScroll - startScroll;
@@ -127,11 +130,11 @@ const ScrollProgressLine: React.FC = () => {
           </filter>
         </defs>
 
-        {/* --- MOBILE PATH (High density waves for 4 sections) --- */}
+        {/* --- MOBILE PATH (More waves added to cover extended height) --- */}
         <path 
           ref={mobilePathRef}
           className="lg:hidden"
-          d="M 50 0 C 10 5, 10 6, 50 11 S 90 17, 50 22 S 10 28, 50 33 S 90 39, 50 44 S 10 50, 50 55 S 90 61, 50 66 S 10 72, 50 77 S 90 83, 50 88 S 10 94, 50 100"
+          d="M 50 0 C 10 4, 10 4, 50 8 S 90 12, 50 16 S 10 20, 50 24 S 90 28, 50 32 S 10 36, 50 40 S 90 44, 50 48 S 10 52, 50 56 S 90 60, 50 64 S 10 68, 50 72 S 90 76, 50 80 S 10 84, 50 88 S 90 92, 50 96 S 10 100, 50 100"
           fill="none"
           stroke="#475569" 
           strokeWidth="1.5"
@@ -139,11 +142,11 @@ const ScrollProgressLine: React.FC = () => {
           opacity="0.5"
         />
 
-        {/* --- DESKTOP PATH (High density waves for 4 sections) --- */}
+        {/* --- DESKTOP PATH (More waves added to cover extended height) --- */}
         <path 
           ref={desktopPathRef}
           className="hidden lg:block"
-          d="M 50 0 C 5 5, 5 6, 50 11 S 95 17, 50 22 S 5 28, 50 33 S 95 39, 50 44 S 5 50, 50 55 S 95 61, 50 66 S 5 72, 50 77 S 95 83, 50 88 S 5 94, 50 100"
+          d="M 50 0 C 5 4, 5 4, 50 8 S 95 12, 50 16 S 5 20, 50 24 S 95 28, 50 32 S 5 36, 50 40 S 95 44, 50 48 S 5 52, 50 56 S 95 60, 50 64 S 5 68, 50 72 S 95 76, 50 80 S 5 84, 50 88 S 95 92, 50 96 S 5 100, 50 100"
           fill="none"
           stroke="#475569" 
           strokeWidth="1.5"

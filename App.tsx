@@ -3,6 +3,7 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import Services from './components/Services';
 import About from './components/About';
+import Experience from './components/Experience';
 import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
 import Gallery from './components/Gallery';
@@ -15,16 +16,17 @@ function App() {
       <main>
         <Hero />
         
-        {/* Wrapper for Services, Gallery, About AND Testimonials to share the continuous scroll line */}
+        {/* Wrapper for ALL sections including Contact to share the continuous scroll line */}
         <div className="relative bg-slate-900">
           <ScrollProgressLine />
           <Services />
           <Gallery />
           <About />
+          <Experience />
           <Testimonials />
+          <Contact />
         </div>
 
-        <Contact />
       </main>
     </div>
   );
