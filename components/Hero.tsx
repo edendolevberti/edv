@@ -4,13 +4,13 @@ import InfiniteCarousel from './InfiniteCarousel';
 import { ArrowDown, MessageCircle } from 'lucide-react';
 
 const Hero: React.FC = () => {
-  const whatsappMessage = "היי עדן, הגעתי מהאתר ואשמח לשמוע פרטים על בניית נוכחות דיגיטלית";
+  const whatsappMessage = "היי עדן, הגעתי מהאתר ואשמח לשמוע פרטים על ניהול קמפיינים ושיווק העסק";
   const whatsappUrl = `https://api.whatsapp.com/send?phone=972547202011&text=${encodeURIComponent(whatsappMessage)}`;
 
   const quickServices = [
-    { icon: '💻', text: 'אתרי תדמית וחנויות (E-com)' },
-    { icon: '🎬', text: 'הפקת תוכן וידאו לסושיאל' },
-    { icon: '📍', text: 'שליטה בגוגל מפות (GMB)' },
+    { icon: '🚀', text: 'ניהול קמפיינים (PPC)' },
+    { icon: '📈', text: 'הגדלת מכירות ולידים' },
+    { icon: '💻', text: 'בניית נכסים דיגיטליים' },
   ];
 
   const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
@@ -49,7 +49,7 @@ const Hero: React.FC = () => {
         
         {/* Title / Role */}
         <h2 className="text-lg md:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400 mb-2 md:mb-4 tracking-widest uppercase drop-shadow-md">
-          Digital Presence Expert
+          Performance Marketer & Campaign Manager
         </h2>
         
         {/* Name */}
@@ -59,13 +59,13 @@ const Hero: React.FC = () => {
 
         {/* Subtitle */}
         <p className="text-xl md:text-3xl text-gray-100 max-w-4xl mx-auto mb-10 font-light leading-relaxed drop-shadow-lg">
-          🌐 בונה ומנהל נוכחות דיגיטלית ב-360° לעסקים
+          🎯 מנהל קמפיינים מא' ועד ת' | הופך תקציב פרסום להכנסות
         </p>
 
         {/* CTA Section */}
         <div className="flex flex-col items-center gap-8 mb-12">
            <p className="text-lg md:text-xl text-gray-300 font-medium animate-pulse">
-             הדרך שלך לצמיחה דיגיטלית מתחילה כאן 👇
+             רוצים להגדיל את כמות הלידים והמכירות? 👇
             </p>
 
             <div className="flex flex-col sm:flex-row gap-5 justify-center items-center w-full px-8 md:px-0">
@@ -84,7 +84,7 @@ const Hero: React.FC = () => {
                     onClick={(e) => handleScroll(e, '#contact')}
                     className="relative block w-full sm:w-auto px-10 py-5 bg-slate-900 rounded-full leading-none flex items-center justify-center hover:bg-slate-800 transition-colors duration-200"
                 >
-                    <span className="text-white font-black text-xl tracking-wide drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]">התחילו פרויקט 🚀</span>
+                    <span className="text-white font-black text-xl tracking-wide drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]">בואו נמריא 🚀</span>
                 </a>
             </div>
 
@@ -96,7 +96,7 @@ const Hero: React.FC = () => {
                 className="px-6 md:px-8 py-3 md:py-4 bg-[#25D366] rounded-full text-white font-bold text-base md:text-lg shadow-lg shadow-green-500/30 hover:shadow-green-500/50 transform hover:-translate-y-1 transition-all duration-300 w-full sm:w-auto flex items-center justify-center gap-2 z-20"
             >
                 <MessageCircle size={20} fill="white" />
-                ווטסאפ
+                ייעוץ בוואטסאפ
             </a>
             </div>
         </div>

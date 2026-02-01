@@ -36,7 +36,7 @@ const About: React.FC = () => {
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-transparent to-transparent"></div>
                     <div className="absolute bottom-6 right-6 text-right z-10">
                       <p className="text-white font-bold text-2xl drop-shadow-md">עדן דולב</p>
-                      <p className="text-blue-400 font-medium drop-shadow-md">Digital Presence Expert</p>
+                      <p className="text-blue-400 font-medium drop-shadow-md">משווק דיגיטלי & מנהל קמפיינים</p>
                     </div>
                   </div>
               </div>
@@ -50,26 +50,26 @@ const About: React.FC = () => {
               <div className="w-20 h-1.5 bg-gradient-to-r from-blue-500 to-pink-500 rounded-full mb-8"></div>
               
               <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                היי, אני עדן. המומחיות שלי היא לקחת עסקים ולהפוך אותם למותגים דומיננטיים בדיגיטל.
-                אני לא רק "צלם" או "בונה אתרים" – אני בונה תשתיות דיגיטליות שמייצרות כסף.
+                היי, אני עדן. אני לא רק "מקים קמפיינים" – אני שותף לצמיחה העסקית שלכם.
+                בעולם שבו כל קליק עולה כסף, המטרה שלי היא אחת: להפוך כל שקל שיוצא מהכיס שלכם להכנסה משמעותית לעסק.
               </p>
               <p className="text-gray-300 text-lg leading-relaxed mb-8">
-                העולם הדיגיטלי עובד כהוליסטי: האתר שלכם צריך לתקשר עם הסושיאל, והמיקום שלכם בגוגל חייב להיות בולט. 
-                אני מספק את המעטפת המלאה: בניית אתרים מתקדמים, הפקת תוכן וידאו שובר רשת, ושליטה אבסולוטית בתוצאות החיפוש. הכל תחת קורת גג אחת.
+                אני משלב ידע טכני עמוק (בניית אתרים, סייבר, אנליטיקה) עם הבנה שיווקית חדה. 
+                אני בונה עבורכם את כל התשתית: מהאתר והדף נחיתה, דרך הקמפיין הממומן בפייסבוק/גוגל, ועד לטיפוח הליד והפיכתו ללקוח משלם. הכל מנוהל מא' ועד ת' עם דגש על ROI חיובי.
               </p>
 
               <div className="space-y-4">
                 <div className="flex items-center gap-3 p-3 rounded-lg hover:bg-slate-800/50 transition-colors">
                   <CheckCircle className="text-blue-500 flex-shrink-0" size={24} />
-                  <span className="text-white font-medium">מומחה לפיתוח אתרים וחנויות</span>
+                  <span className="text-white font-medium">מומחה PPC (פייסבוק & גוגל) מבוסס נתונים</span>
                 </div>
                 <div className="flex items-center gap-3 p-3 rounded-lg hover:bg-slate-800/50 transition-colors">
                   <CheckCircle className="text-purple-500 flex-shrink-0" size={24} />
-                  <span className="text-white font-medium">אשף תוכן ויראלי וסושיאל</span>
+                  <span className="text-white font-medium">בניית נכסים דיגיטליים שמייצרים לידים</span>
                 </div>
                 <div className="flex items-center gap-3 p-3 rounded-lg hover:bg-slate-800/50 transition-colors">
                   <CheckCircle className="text-pink-500 flex-shrink-0" size={24} />
-                  <span className="text-white font-medium">שליטה בגוגל מפות (GMB)</span>
+                  <span className="text-white font-medium">שליטה בתוצאות מקומיות (GMB) ומפות</span>
                 </div>
               </div>
             </div>

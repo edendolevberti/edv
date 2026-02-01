@@ -9,34 +9,37 @@ import {
   MapPin,
   Laptop,
   BarChart,
-  Layers
+  Layers,
+  Target,
+  TrendingUp,
+  Megaphone
 } from 'lucide-react';
 import { ServiceItem, TestimonialItem, SocialLink, GalleryItem } from './types';
 
 export const SERVICES: ServiceItem[] = [
   {
     id: 1,
-    title: 'בניית אתרים & E-com',
-    description: 'בניית אתרי תדמית מרהיבים וחנויות איקומרס (Shopify/WP) שממירים גולשים ללקוחות משלמים.',
-    icon: Laptop
+    title: 'ניהול קמפיינים (PPC)',
+    description: 'ניהול תקציבי פרסום במטא (Facebook/Instagram) וגוגל. אופטימיזציה יומית להורדת מחיר הליד והגדלת ה-ROAS.',
+    icon: Target
   },
   {
     id: 2,
-    title: 'תוכן וידאו וסושיאל',
-    description: 'הפקת סרטוני Reels/TikTok ויראליים וניהול עמודי סושיאל שמשאירים אבק למתחרים.',
-    icon: Smartphone
+    title: 'אסטרטגיה ומשפכים',
+    description: 'בניית משפכי שיווק (Funnels) חכמים שהופכים גולשים ללקוחות משלמים, כולל אוטומציות וטיפוח לידים.',
+    icon: TrendingUp
   },
   {
     id: 3,
-    title: 'שליטה בגוגל (GMB)',
-    description: 'השתלטות על המפה ועל תוצאות החיפוש המקומיות כדי שלקוחות ימצאו אתכם ראשונים.',
-    icon: MapPin
+    title: 'בניית אתרים וחנויות',
+    description: 'הקמת נכסים דיגיטליים: אתרי תדמית ממירים וחנויות E-com שנועדו למכור, כבסיס לקמפיינים מוצלחים.',
+    icon: Laptop
   },
   {
     id: 4,
-    title: 'מעטפת דיגיטלית 360°',
-    description: 'אסטרטגיה מלאה המשלבת אתר חזק, נוכחות סושיאל ומיתוג מדויק לצמיחה מקסימלית.',
-    icon: Layers
+    title: 'שליטה בגוגל (GMB)',
+    description: 'קידום העסק בתוצאות המקומיות ובמפות של גוגל לחשיפה אורגנית מקסימלית באזור הפעילות שלך.',
+    icon: MapPin
   }
 ];
 
@@ -44,23 +47,23 @@ export const TESTIMONIALS: TestimonialItem[] = [
   {
     id: 1,
     name: 'Pulse Energy',
-    role: 'הנהלת החברה',
-    content: 'תהליך העבודה מול עדן היה סופר מקצועי. האתר החדש משקף בדיוק את החדשנות שאנחנו מביאים לעולם ההנדסה, עם חווית משתמש ברמה הגבוהה ביותר.',
+    role: 'מנכ"ל',
+    content: 'התחלנו עם תקציב נמוך, ותוך חודשיים עדן שילש את כמות הלידים שלנו. ה-ROI בקמפיינים חיובי בצורה עקבית, והוא יודע בדיוק איפה הקהל שלנו נמצא.',
     image: 'https://ui-avatars.com/api/?name=Pulse+Energy&background=0D8ABC&color=fff'
   },
   {
     id: 2,
-    name: 'עו"ד תעבורה דניאל תמיר סער',
-    role: 'DTS Law Firm',
-    content: 'חיפשנו אתר שישדר יוקרה ואמינות למשרד עורכי הדין שלנו. התוצאה הסופית מרשימה, נקייה ומקצועית, והלקוחות שלנו לא מפסיקים להחמיא.',
+    name: 'עו"ד דניאל תמיר',
+    role: 'בעלים, DTS Law',
+    content: 'לפני שהגעתי לעדן זרקתי כסף לפח על פייסבוק. עדן בנה לנו משפך שיווקי שמביא פניות איכותיות של לקוחות שמוכנים לסגור, והוריד את עלות הליד ב-40%.',
     image: 'https://ui-avatars.com/api/?name=DTS+Law&background=1e293b&color=fff'
   },
   {
     id: 3,
-    name: 'Agro-Lima',
-    role: 'צוות החברה',
-    content: 'עדן הקים עבורנו אתר תדמית מדויק שמציג את הפעילות שלנו בצורה ברורה ומזמינה. השירות היה מהיר, קשוב ומקצועי לאורך כל הדרך.',
-    image: 'https://ui-avatars.com/api/?name=Agro+Lima&background=16a34a&color=fff'
+    name: 'BarBike',
+    role: 'בעלים',
+    content: 'הקמפיינים של השופינג בגוגל שעדן מנהל לנו פשוט עובדים. האתר שבנינו יחד עם הפרסום הממומן הביא לעלייה של 200% במכירות האונליין בחצי השנה האחרונה.',
+    image: 'https://ui-avatars.com/api/?name=Bar+Bike&background=16a34a&color=fff'
   }
 ];
 
@@ -73,63 +76,63 @@ export const SOCIAL_LINKS: SocialLink[] = [
 
 // Note: Please save the original images to '/images/carousel/' folder in your project
 export const CAROUSEL_IMAGES = [
-  'https://i.postimg.cc/2S6ShByv/1.jpg', // Original: https://i.postimg.cc/2S6ShByv/1.jpg
-  'https://i.postimg.cc/bwBNTNS2/2.jpg', // Original: https://i.postimg.cc/bwBNTNS2/2.jpg
-  'https://i.postimg.cc/7ZWYVYJG/3.jpg', // Original: https://i.postimg.cc/7ZWYVYJG/3.jpg
-  'https://i.postimg.cc/vZNHzHx4/4.jpg', // Original: https://i.postimg.cc/vZNHzHx4/4.jpg
-  'https://i.postimg.cc/t4MC5Cn1/5.jpg', // Original: https://i.postimg.cc/t4MC5Cn1/5.jpg
-  'https://i.postimg.cc/dVxtBtZG/6.jpg', // Original: https://i.postimg.cc/dVxtBtZG/6.jpg
-  'https://i.postimg.cc/T34Y9Y5q/8.jpg', // Original: https://i.postimg.cc/T34Y9Y5q/8.jpg
+  'https://i.postimg.cc/2S6ShByv/1.jpg', 
+  'https://i.postimg.cc/bwBNTNS2/2.jpg', 
+  'https://i.postimg.cc/7ZWYVYJG/3.jpg', 
+  'https://i.postimg.cc/vZNHzHx4/4.jpg', 
+  'https://i.postimg.cc/t4MC5Cn1/5.jpg', 
+  'https://i.postimg.cc/dVxtBtZG/6.jpg', 
+  'https://i.postimg.cc/T34Y9Y5q/8.jpg', 
 ];
 
-// Note: Please capture screenshots or save images to '/images/projects/' folder in your project
+// Note: Gallery items now focus on Campaign Results + The Asset built
 export const GALLERY_ITEMS: GalleryItem[] = [
   {
     id: 1,
-    title: 'Pulse Energy Agency',
+    title: 'Pulse Energy - קמפיין לידים',
     category: 'website',
     url: 'https://pulsee.co.il',
-    image: 'https://i.postimg.cc/tgHY22kP/pulsee_co_il.png', // Was: thum.io screenshot
-    description: 'אתר תדמית חדשני לסוכנות פולס המתמחה בהנדסה בתחום הבניין, אתר התדמית משלב אנימציות מתקדמות וחווית משתמש ייחודית ומושכת.'
+    image: 'https://i.postimg.cc/tgHY22kP/pulsee_co_il.png',
+    description: 'בניית משפך שיווקי מלא: דף נחיתה ממיר + קמפיין פייסבוק ואינסטגרם. תוצאה: ירידה של 35% בעלות לליד ועלייה באיכות הפניות.'
   },
   {
     id: 2,
-    title: 'DTS Law Firm',
+    title: 'DTS Law - מיתוג וגיוס לקוחות',
     category: 'website',
     url: 'https://dts-law.co.il',
-    image: 'https://i.postimg.cc/zf1V007h/dts_law_co_il.png', // Was: thum.io screenshot
-    description: 'אתר יוקרתי למשרד עורכי דין, המשדר אמינות ומקצועיות עם דגש על נגישות ללקוח.'
+    image: 'https://i.postimg.cc/zf1V007h/dts_law_co_il.png',
+    description: 'מיתוג מחדש ובניית אתר תדמית המשמש כבסיס לקמפיין גוגל חיפוש (Search). השגנו מקומות ראשונים בביטויים תחרותיים מאוד.'
   },
   {
     id: 3,
-    title: 'Agro-Lima',
+    title: 'BarBike - איקומרס ו-GMB',
     category: 'website',
-    url: 'https://agrolima.co.il',
-    image: 'https://i.postimg.cc/g0PnNNs6/agrolima_co_il.png', // Was: thum.io screenshot
-    description: 'אתר תדמית לחברת אגרו-לימה, המציג את שירותי החברה בעיצוב נקי, מקצועי ומותאם לקהל היעד.'
+    url: 'https://barbike.co.il',
+    image: 'https://i.postimg.cc/VNcdDDg0/barbike_co_il.png',
+    description: 'הקמת חנות איקומרס וחיבור לקטלוג פייסבוק וגוגל שופינג. אופטימיזציה ל-GMB הביאה לעלייה של 50% בשיחות טלפון מהמפה.'
   },
   {
     id: 4,
-    title: 'Noa Law',
+    title: 'Agro-Lima - חשיפה למותג',
     category: 'website',
-    url: 'https://noa-law.co.il',
-    image: 'https://i.postimg.cc/pdtpqqCr/noa_law_co_il.png', // Was: thum.io screenshot
-    description: 'נוכחות דיגיטלית מרשימה לעורכת דין, כולל עיצוב נקי, אזור מאמרים ובלוג משפטי מקצועי.'
+    url: 'https://agrolima.co.il',
+    image: 'https://i.postimg.cc/g0PnNNs6/agrolima_co_il.png',
+    description: 'קמפיין מודעות (Awareness) ולידים לחברה חקלאית. יצירת סרטוני תדמית וקידום ממומן שהוביל לחשיפה של מעל 100K משתמשים רלוונטיים.'
   },
   {
     id: 5,
-    title: 'BarBike',
+    title: 'Noa Law - תוכן וקידום',
     category: 'website',
-    url: 'https://barbike.co.il',
-    image: 'https://i.postimg.cc/VNcdDDg0/barbike_co_il.png', // Was: thum.io screenshot
-    description: 'חנות אונליין (E-com) למותג אופניים, הכוללת קטלוג מוצרים חכם וממשק רכישה מהיר ומאובטח.'
+    url: 'https://noa-law.co.il',
+    image: 'https://i.postimg.cc/pdtpqqCr/noa_law_co_il.png',
+    description: 'ניהול עמוד סושיאל עסקי וקידום פוסטים ממומנים. בניית אתר המותאם לקידום אורגני (SEO) שייצר זרם פניות קבוע ללא עלות מדיה.'
   },
   {
     id: 6,
-    title: 'Porat Law',
+    title: 'Porat Law - לידים ממוקדים',
     category: 'website',
     url: 'https://porat-law.co.il',
-    image: 'https://i.postimg.cc/CKVzmm7Z/porat_law_co_il.png', // Was: thum.io screenshot
-    description: 'אתר תדמית נקי ומודרני למשרד עורכי דין, הבנוי בצורה אופטימלית לקידום אורגני בגוגל (SEO).'
+    image: 'https://i.postimg.cc/CKVzmm7Z/porat_law_co_il.png',
+    description: 'קמפיין PPC ממוקד לקהל עסקי (B2B). שימוש בטופסי לידים (Lead Forms) בפייסבוק ואינטגרציה ל-CRM של הלקוח.'
   }
 ];

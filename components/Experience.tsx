@@ -1,5 +1,5 @@
 import React from 'react';
-import { GraduationCap, Award, BookOpen, School } from 'lucide-react';
+import { GraduationCap, Award, BookOpen } from 'lucide-react';
 
 const EXPERIENCES = [
   {
@@ -33,14 +33,6 @@ const EXPERIENCES = [
     institution: 'מכללת "גרילה" - הבית ספר למקצועות הדיגיטל',
     icon: BookOpen,
     color: 'text-pink-400'
-  },
-  {
-    id: 5,
-    year: '2012',
-    title: 'בגרות מלאה - מגמת מחשבים (10 יח"ל)',
-    institution: 'ביה"ס האלון, יבנה',
-    icon: School,
-    color: 'text-blue-400'
   }
 ];
 
@@ -62,11 +54,11 @@ const Experience: React.FC = () => {
           <div className="relative z-10">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-5xl font-black text-white mb-4">
-                הניסיון <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-pink-500">שלי</span>
+                הניסיון <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-pink-500">והרקורד שלי</span>
               </h2>
               <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-pink-500 mx-auto rounded-full"></div>
               <p className="mt-4 text-gray-400">
-                ההכשרה המקצועית והרקע שלי בעולם הטכנולוגי
+                הכשרה מקצועית עמוקה בפיתוח, שיווק וסייבר - השילוב המנצח לדיגיטל.
               </p>
             </div>
 

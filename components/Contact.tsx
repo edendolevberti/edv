@@ -25,20 +25,21 @@ const Contact: React.FC = () => {
     // Helper to get service text with specific emoji
     const getServiceDisplay = (val: string) => {
       switch(val) {
+        case 'ppc': return 'ניהול קמפיינים (PPC) 🚀';
+        case 'leads': return 'הגדלת כמות לידים 📈';
         case 'website': return 'בניית אתר/חנות 💻';
-        case 'video': return 'הפקת תוכן וידאו 🎬';
         case 'gmb': return 'קידום בגוגל מפות 📍';
-        case 'full': return 'מעטפת מלאה 360° 🚀';
-        case 'other': return 'אחר 💎';
+        case 'full': return 'מעטפת שיווקית מלאה 💎';
+        case 'other': return 'אחר 🤔';
         default: return 'לא נבחר ❓';
       }
     };
 
-    const intro = "היי עדן, פניה חדשה מהאתר (Digital Presence Expert) 👋";
+    const intro = "היי עדן, פניה חדשה מהאתר (Digital Marketing) 👋";
     const nameLine = `👤 *שם מלא:* ${formData.name || 'לא צוין'}`;
     const phoneLine = `📱 *טלפון:* ${formData.phone || 'לא צוין'}`;
     const emailLine = `📧 *אימייל:* ${formData.email || 'לא צוין'}`;
-    const serviceLine = `🛠️ *שירות:* ${getServiceDisplay(formData.service)}`;
+    const serviceLine = `🛠️ *מתעניין ב:* ${getServiceDisplay(formData.service)}`;
     const contentLine = `✍️ *הודעה:* \n${formData.description || 'ללא תוכן נוסף'}`;
 
     const fullMessage = `${intro}\n\n${nameLine}\n${phoneLine}\n${emailLine}\n${serviceLine}\n\n${contentLine}`;
@@ -73,16 +74,16 @@ const Contact: React.FC = () => {
             {/* Contact Info */}
             <div className="text-right">
               <h2 className="text-3xl md:text-5xl font-black text-white mb-6">
-                בואו נבנה <br/>
+                בואו נגדיל את <br/>
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-pink-500">
-                  נוכחות דיגיטלית
+                  המכירות שלכם
                 </span>
               </h2>
               <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-pink-500 rounded-full mb-8"></div>
               
               <p className="text-gray-300 text-lg mb-10 max-w-md">
-                רוצים אתר שנראה מעולה? סרטונים ששורפים את הרשת? או להיות ראשונים בגוגל?
-                השאירו פרטים ונבנה לכם תוכנית צמיחה.
+                מרגישים שתקציב הפרסום שלכם לא מנוצל? צריכים יותר לידים איכותיים?
+                השאירו פרטים ונבנה אסטרטגיה מותאמת אישית לצמיחה.
               </p>
 
               <div className="space-y-6">
@@ -167,7 +168,7 @@ const Contact: React.FC = () => {
                   </div>
                 </div>
                  <div>
-                  <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">מה מעניין אתכם?</label>
+                  <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">מה המטרה העיקרית?</label>
                   <select 
                     id="service" 
                     value={formData.service}
@@ -175,22 +176,23 @@ const Contact: React.FC = () => {
                     className="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all"
                   >
                     <option value="">בחר שירות...</option>
-                    <option value="website">בניית אתרים & חנויות</option>
-                    <option value="video">הפקת וידאו & סושיאל</option>
-                    <option value="gmb">קידום בגוגל (GMB)</option>
+                    <option value="ppc">ניהול קמפיינים (PPC)</option>
+                    <option value="leads">הגדלת כמות לידים</option>
+                    <option value="website">בניית אתר/חנות מכירתית</option>
+                    <option value="gmb">קידום בגוגל מפות</option>
                     <option value="full">מעטפת מלאה 360°</option>
                     <option value="other">אחר</option>
                   </select>
                 </div>
                 <div>
-                  <label htmlFor="description" className="block text-sm font-medium text-gray-300 mb-2">ספרו לנו קצת על הפרויקט</label>
+                  <label htmlFor="description" className="block text-sm font-medium text-gray-300 mb-2">ספרו לנו קצת על העסק</label>
                   <textarea 
                     id="description" 
                     value={formData.description}
                     onChange={handleChange}
                     rows={4}
                     className="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all resize-none"
-                    placeholder="המטרות שלכם, האתגרים שלכם..."
+                    placeholder="תקציב פרסום נוכחי, מטרות, אתגרים..."
                   ></textarea>
                 </div>
                 
@@ -208,7 +210,7 @@ const Contact: React.FC = () => {
         </div>
         
         <div className="text-center mt-12 text-gray-500 text-sm">
-          © {new Date().getFullYear()} Eden Dolev - Digital Presence Expert. כל הזכויות שמורות.
+          © {new Date().getFullYear()} Eden Dolev - Performance Marketing. כל הזכויות שמורות.
         </div>
       </div>
     </section>

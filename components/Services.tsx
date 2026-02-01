@@ -26,7 +26,7 @@ const Services: React.FC = () => {
               </h2>
               <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-pink-500 mx-auto rounded-full"></div>
               <p className="mt-4 text-gray-400 max-w-2xl mx-auto">
-                מבניית אתר מנצח ועד השתלטות על תוצאות החיפוש והסושיאל. אנחנו בונים לכם אקו-סיסטם דיגיטלי מושלם.
+                החל מבניית התשתית (אתר/חנות) ועד להזרמת תנועה ממומנת ואיכותית. אנחנו בונים לכם מכונת שיווק שעובדת.
               </p>
             </div>
 

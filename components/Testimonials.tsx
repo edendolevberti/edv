@@ -20,11 +20,11 @@ const Testimonials: React.FC = () => {
            <div className="relative z-10">
               <div className="text-center mb-16">
                 <h2 className="text-3xl md:text-5xl font-black text-white mb-4">
-                  לקוחות <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-pink-500">ממליצים</span>
+                  הלקוחות <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-pink-500">מספרים על התוצאות</span>
                 </h2>
                 <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-pink-500 mx-auto rounded-full mb-6"></div>
                 <p className="mt-4 text-gray-400">
-                  עסקים שצמחו איתנו בדיגיטל
+                  עסקים שהגדילו את המחזור והלידים בעזרת הקמפיינים שלנו
                 </p>
               </div>
 
