@@ -5,32 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <!-- SEO & Meta Tags -->
-    <title>Eden Dolev - Performance Marketer | מנהל קמפיינים ושיווק דיגיטלי</title>
-    <meta name="description" content="ניהול קמפיינים ממומנים (Facebook/Google Ads), בניית אסטרטגיה שיווקית, והגדלת החזר השקעה (ROAS). מומחה להבאת לידים ומכירות לעסקים." />
-    <meta name="keywords" content="ניהול קמפיינים, שיווק דיגיטלי, PPC, פרסום בפייסבוק, פרסום בגוגל, קידום עסקים, בניית אתרים, עדן דולב, שיווק שותפים, איקומרס" />
+    <title>Eden Dolev - Digital Presence Expert | בניית אתרים וחנויות דיגיטליות</title>
+    <meta name="description" content="מומחה לנוכחות דיגיטלית: בניית אתרי תדמית, חנויות איקומרס, וניהול גוגל לעסק שלי (GMB). פתרונות דיגיטליים מתקדמים לעסקים." />
+    <meta name="keywords" content="בניית אתרים, בניית חנויות, איקומרס, גוגל לעסק שלי, GMB, קידום אתרים, עדן דולב, נוכחות דיגיטלית, וורדפרס, שופיפיי" />
     <meta name="author" content="Eden Dolev" />
-    <meta name="theme-color" content="#8b5cf6" />
+    <meta name="theme-color" content="#10b981" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="עדן דולב | מנהל קמפיינים ושיווק דיגיטלי" />
-    <meta property="og:description" content="מייצרים כסף מהדיגיטל. ניהול קמפיינים ממומנים, בניית משפכים והגדלת המכירות בעסק שלך." />
+    <meta property="og:title" content="עדן דולב | מומחה לנוכחות דיגיטלית" />
+    <meta property="og:description" content="בונים את הנוכחות הדיגיטלית שלך. אתרים, חנויות וניהול גוגל לעסק שלי ברמה הגבוהה ביותר." />
     <meta property="og:locale" content="he_IL" />
     <meta property="og:image" content="https://i.postimg.cc/TYKr2B9w/Gemini-Generated-Image-29ykem29ykem29yk.png" />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:title" content="עדן דולב | מנהל קמפיינים ושיווק דיגיטלי" />
-    <meta property="twitter:description" content="מייצרים כסף מהדיגיטל. ניהול קמפיינים ממומנים, בניית משפכים והגדלת המכירות בעסק שלך." />
+    <meta property="twitter:title" content="עדן דולב | מומחה לנוכחות דיגיטלית" />
+    <meta property="twitter:description" content="בונים את הנוכחות הדיגיטלית שלך. אתרים, חנויות וניהול גוגל לעסק שלי ברמה הגבוהה ביותר." />
     <meta property="twitter:image" content="https://i.postimg.cc/TYKr2B9w/Gemini-Generated-Image-29ykem29ykem29yk.png" />
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
+        darkMode: 'class',
         theme: {
           extend: {
             colors: {
-              // Using standard Tailwind colors for Blue/Purple/Pink theme
+              // Using standard Tailwind colors for Pink/Purple/Green theme
             },
             animation: {
               'blob': 'blob 7s infinite',
@@ -40,15 +41,14 @@
       }
     </script>
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-    <style>
+    <style type="text/tailwindcss">
       /* Force Heebo globally with high specificity */
       body, html, button, input, select, textarea, .font-sans, h1, h2, h3, h4, h5, h6, p, a, span, div, li {
         font-family: 'Heebo', sans-serif !important;
       }
       
       body {
-        background-color: #0f172a; /* Slate 900 */
-        color: #ffffff;
+        @apply bg-slate-50 text-slate-900 dark:bg-slate-900 dark:text-white transition-colors duration-300;
       }
 
       /* Custom scrollbar */
@@ -56,10 +56,10 @@
         width: 10px;
       }
       ::-webkit-scrollbar-track {
-        background: #1e293b;
+        @apply bg-slate-100 dark:bg-slate-800;
       }
       ::-webkit-scrollbar-thumb {
-        background: linear-gradient(to bottom, #3b82f6, #8b5cf6, #ec4899);
+        background: linear-gradient(to bottom, #ec4899, #a855f7, #10b981);
         border-radius: 5px;
       }
       

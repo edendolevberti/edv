@@ -133,10 +133,10 @@ const ScrollProgressLine: React.FC = () => {
         {/* --- MOBILE PATH (More waves added to cover extended height) --- */}
         <path 
           ref={mobilePathRef}
-          className="lg:hidden"
+          className="lg:hidden text-slate-300 dark:text-slate-600 transition-colors duration-300"
           d="M 50 0 C 10 4, 10 4, 50 8 S 90 12, 50 16 S 10 20, 50 24 S 90 28, 50 32 S 10 36, 50 40 S 90 44, 50 48 S 10 52, 50 56 S 90 60, 50 64 S 10 68, 50 72 S 90 76, 50 80 S 10 84, 50 88 S 90 92, 50 96 S 10 100, 50 100"
           fill="none"
-          stroke="#475569" 
+          stroke="currentColor" 
           strokeWidth="1.5"
           vectorEffect="non-scaling-stroke"
           opacity="0.5"
@@ -145,10 +145,10 @@ const ScrollProgressLine: React.FC = () => {
         {/* --- DESKTOP PATH (More waves added to cover extended height) --- */}
         <path 
           ref={desktopPathRef}
-          className="hidden lg:block"
+          className="hidden lg:block text-slate-300 dark:text-slate-600 transition-colors duration-300"
           d="M 50 0 C 5 4, 5 4, 50 8 S 95 12, 50 16 S 5 20, 50 24 S 95 28, 50 32 S 5 36, 50 40 S 95 44, 50 48 S 5 52, 50 56 S 95 60, 50 64 S 5 68, 50 72 S 95 76, 50 80 S 5 84, 50 88 S 95 92, 50 96 S 5 100, 50 100"
           fill="none"
-          stroke="#475569" 
+          stroke="currentColor" 
           strokeWidth="1.5"
           vectorEffect="non-scaling-stroke"
           opacity="0.5"
@@ -160,8 +160,8 @@ const ScrollProgressLine: React.FC = () => {
         ref={mobileArrowRef}
         className="absolute w-10 h-10 z-10 lg:hidden will-change-transform opacity-0 transition-opacity duration-300"
       >
-        <svg viewBox="0 0 24 24" className="w-full h-full filter drop-shadow-[0_0_8px_rgba(236,72,153,0.8)]">
-           <path d="M6 12L18 12M18 12L11 5M18 12L11 19" stroke="#ec4899" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+        <svg viewBox="0 0 24 24" className="w-full h-full filter drop-shadow-[0_0_8px_rgba(16,185,129,0.8)]">
+           <path d="M6 12L18 12M18 12L11 5M18 12L11 19" stroke="#10b981" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
       </div>
 
@@ -173,8 +173,8 @@ const ScrollProgressLine: React.FC = () => {
          <svg viewBox="0 0 24 24" className="w-full h-full filter drop-shadow-[0_0_12px_rgba(236,72,153,0.8)]">
             <path d="M2 12L22 12" stroke="#ec4899" strokeWidth="1" strokeOpacity="0.8" />
             <path d="M12 4L22 12L12 20" stroke="#ec4899" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="rgba(236, 72, 153, 0.2)" />
-            <circle cx="22" cy="12" r="2.5" fill="#ec4899" />
-            <path d="M5 9L2 12L5 15" stroke="#ec4899" strokeWidth="1.5" strokeLinecap="round" fill="none" opacity="0.7"/>
+            <circle cx="22" cy="12" r="2.5" fill="#10b981" />
+            <path d="M5 9L2 12L5 15" stroke="#a855f7" strokeWidth="1.5" strokeLinecap="round" fill="none" opacity="0.7"/>
          </svg>
       </div>
 

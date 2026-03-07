@@ -8,27 +8,30 @@ import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
 import Gallery from './components/Gallery';
 import ScrollProgressLine from './components/ScrollProgressLine';
+import { ThemeProvider } from './context/ThemeContext';
 
 function App() {
   return (
-    <div className="min-h-screen bg-slate-900 text-slate-100 font-sans selection:bg-pink-500 selection:text-white">
-      <Header />
-      <main>
-        <Hero />
-        
-        {/* Wrapper for ALL sections including Contact to share the continuous scroll line */}
-        <div className="relative bg-slate-900">
-          <ScrollProgressLine />
-          <Services />
-          <Gallery />
-          <About />
-          <Experience />
-          <Testimonials />
-          <Contact />
-        </div>
+    <ThemeProvider>
+      <div className="min-h-screen bg-slate-50 text-slate-900 dark:bg-slate-900 dark:text-slate-100 font-sans selection:bg-pink-500 selection:text-white transition-colors duration-300">
+        <Header />
+        <main>
+          <Hero />
+          
+          {/* Wrapper for ALL sections including Contact to share the continuous scroll line */}
+          <div className="relative bg-slate-50 dark:bg-slate-900 transition-colors duration-300">
+            <ScrollProgressLine />
+            <Services />
+            <Gallery />
+            <About />
+            <Experience />
+            <Testimonials />
+            <Contact />
+          </div>
 
-      </main>
-    </div>
+        </main>
+      </div>
+    </ThemeProvider>
   );
 }
 

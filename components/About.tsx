@@ -5,16 +5,16 @@ const About: React.FC = () => {
   return (
     <section id="about" className="py-24 relative scroll-mt-24">
       {/* Background decoration behind the frame */}
-      <div className="absolute left-0 top-1/4 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl pointer-events-none"></div>
-      <div className="absolute right-0 bottom-1/4 w-96 h-96 bg-purple-600/10 rounded-full blur-3xl pointer-events-none"></div>
+      <div className="absolute left-0 top-1/4 w-96 h-96 bg-pink-600/10 rounded-full blur-3xl pointer-events-none"></div>
+      <div className="absolute right-0 bottom-1/4 w-96 h-96 bg-emerald-600/10 rounded-full blur-3xl pointer-events-none"></div>
 
       <div className="container mx-auto px-4 relative z-10">
         
         {/* The Frame / Card Container - Made more transparent */}
-        <div className="relative rounded-3xl border border-slate-700/50 bg-gradient-to-b from-slate-800/10 to-slate-900/60 backdrop-blur-md p-8 md:p-12 shadow-2xl overflow-hidden">
+        <div className="relative rounded-3xl border border-slate-200 dark:border-slate-700/50 bg-white/50 dark:bg-gradient-to-b dark:from-slate-800/10 dark:to-slate-900/60 backdrop-blur-md p-8 md:p-12 shadow-2xl overflow-hidden transition-colors duration-300">
           
           {/* Top Fade / Glow Effect inside the frame */}
-          <div className="absolute top-0 left-0 w-full h-1/2 bg-gradient-to-b from-blue-500/5 to-transparent pointer-events-none"></div>
+          <div className="absolute top-0 left-0 w-full h-1/2 bg-gradient-to-b from-pink-500/5 to-transparent pointer-events-none"></div>
           
           <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20 relative z-10">
             
@@ -22,10 +22,10 @@ const About: React.FC = () => {
             <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
               <div className="relative w-full max-w-md aspect-square group">
                   {/* Glow Effect */}
-                  <div className="absolute -inset-4 bg-gradient-to-r from-blue-500 to-pink-500 rounded-2xl blur-xl opacity-30 group-hover:opacity-50 transition duration-1000"></div>
+                  <div className="absolute -inset-4 bg-gradient-to-r from-pink-500 to-emerald-500 rounded-2xl blur-xl opacity-30 group-hover:opacity-50 transition duration-1000"></div>
                   
                   {/* Image Container */}
-                  <div className="relative w-full h-full rounded-2xl overflow-hidden border border-slate-700 shadow-2xl rotate-2 group-hover:rotate-0 transition-transform duration-500 bg-slate-800">
+                  <div className="relative w-full h-full rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700 shadow-2xl rotate-2 group-hover:rotate-0 transition-transform duration-500 bg-slate-100 dark:bg-slate-800">
                     <img 
                       src="https://i.postimg.cc/TYKr2B9w/Gemini-Generated-Image-29ykem29ykem29yk.png"
                       alt="Eden Dolev" 
@@ -36,7 +36,7 @@ const About: React.FC = () => {
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-transparent to-transparent"></div>
                     <div className="absolute bottom-6 right-6 text-right z-10">
                       <p className="text-white font-bold text-2xl drop-shadow-md">עדן דולב</p>
-                      <p className="text-blue-400 font-medium drop-shadow-md">משווק דיגיטלי & מנהל קמפיינים</p>
+                      <p className="text-emerald-400 font-medium drop-shadow-md">מומחה לנוכחות דיגיטלית</p>
                     </div>
                   </div>
               </div>
@@ -44,32 +44,32 @@ const About: React.FC = () => {
 
             {/* Text Side */}
             <div className="w-full lg:w-1/2 text-right">
-              <h2 className="text-3xl md:text-5xl font-black text-white mb-6">
-                מי <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500">אני?</span>
+              <h2 className="text-3xl md:text-5xl font-black text-slate-900 dark:text-white mb-6 transition-colors duration-300">
+                מי <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-purple-600 dark:from-pink-500 dark:to-purple-500">אני?</span>
               </h2>
-              <div className="w-20 h-1.5 bg-gradient-to-r from-blue-500 to-pink-500 rounded-full mb-8"></div>
+              <div className="w-20 h-1.5 bg-gradient-to-r from-pink-500 to-emerald-500 rounded-full mb-8"></div>
               
-              <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                היי, אני עדן. אני לא רק "מקים קמפיינים" – אני שותף לצמיחה העסקית שלכם.
-                בעולם שבו כל קליק עולה כסף, המטרה שלי היא אחת: להפוך כל שקל שיוצא מהכיס שלכם להכנסה משמעותית לעסק.
+              <p className="text-slate-600 dark:text-gray-300 text-lg leading-relaxed mb-6 transition-colors duration-300">
+                היי, אני עדן. אני לא רק "בונה אתרים" – אני האדריכל של הנוכחות הדיגיטלית שלכם.
+                בעולם שבו הרושם הראשוני נקבע בשניות, המטרה שלי היא לבנות לכם נכסים דיגיטליים שמשדרים מקצועיות, אמינות ויוקרה.
               </p>
-              <p className="text-gray-300 text-lg leading-relaxed mb-8">
-                אני משלב ידע טכני עמוק (בניית אתרים, סייבר, אנליטיקה) עם הבנה שיווקית חדה. 
-                אני בונה עבורכם את כל התשתית: מהאתר והדף נחיתה, דרך הקמפיין הממומן בפייסבוק/גוגל, ועד לטיפוח הליד והפיכתו ללקוח משלם. הכל מנוהל מא' ועד ת' עם דגש על ROI חיובי.
+              <p className="text-slate-600 dark:text-gray-300 text-lg leading-relaxed mb-8 transition-colors duration-300">
+                אני משלב ידע טכני עמוק בפיתוח (Full Stack) עם הבנה עסקית רחבה.
+                אני בונה עבורכם את כל התשתית: מאתר תדמית מרשים או חנות איקומרס מתקדמת, ועד לניהול הפרופיל העסקי בגוגל (GMB) שיביא לכם לקוחות מהאזור. הכל מנוהל מא' ועד ת' עם דגש על חווית משתמש מושלמת.
               </p>
 
               <div className="space-y-4">
-                <div className="flex items-center gap-3 p-3 rounded-lg hover:bg-slate-800/50 transition-colors">
-                  <CheckCircle className="text-blue-500 flex-shrink-0" size={24} />
-                  <span className="text-white font-medium">מומחה PPC (פייסבוק & גוגל) מבוסס נתונים</span>
+                <div className="flex items-center gap-3 p-3 rounded-lg hover:bg-slate-100/50 dark:hover:bg-slate-800/50 transition-colors">
+                  <CheckCircle className="text-pink-600 dark:text-pink-500 flex-shrink-0" size={24} />
+                  <span className="text-slate-800 dark:text-white font-medium transition-colors duration-300">מומחה בפיתוח אתרים וחנויות (WordPress/Shopify)</span>
                 </div>
-                <div className="flex items-center gap-3 p-3 rounded-lg hover:bg-slate-800/50 transition-colors">
-                  <CheckCircle className="text-purple-500 flex-shrink-0" size={24} />
-                  <span className="text-white font-medium">בניית נכסים דיגיטליים שמייצרים לידים</span>
+                <div className="flex items-center gap-3 p-3 rounded-lg hover:bg-slate-100/50 dark:hover:bg-slate-800/50 transition-colors">
+                  <CheckCircle className="text-purple-600 dark:text-purple-500 flex-shrink-0" size={24} />
+                  <span className="text-slate-800 dark:text-white font-medium transition-colors duration-300">בניית נכסים דיגיטליים שמייצרים לידים</span>
                 </div>
-                <div className="flex items-center gap-3 p-3 rounded-lg hover:bg-slate-800/50 transition-colors">
-                  <CheckCircle className="text-pink-500 flex-shrink-0" size={24} />
-                  <span className="text-white font-medium">שליטה בתוצאות מקומיות (GMB) ומפות</span>
+                <div className="flex items-center gap-3 p-3 rounded-lg hover:bg-slate-100/50 dark:hover:bg-slate-800/50 transition-colors">
+                  <CheckCircle className="text-emerald-600 dark:text-emerald-500 flex-shrink-0" size={24} />
+                  <span className="text-slate-800 dark:text-white font-medium transition-colors duration-300">שליטה בתוצאות מקומיות (GMB) ומפות</span>
                 </div>
               </div>
             </div>
