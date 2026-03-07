@@ -91,11 +91,11 @@ export const CAROUSEL_IMAGES = [
 export const GALLERY_ITEMS: GalleryItem[] = [
   {
     id: 1,
-    title: 'Pulse Energy - אתר תדמית',
+    title: 'Pulse - הנדסה וקיימות',
     category: 'website',
     url: 'https://pulsee.co.il',
     image: 'https://i.postimg.cc/tgHY22kP/pulsee_co_il.png',
-    description: 'עיצוב ופיתוח אתר תדמית מודרני לחברת אנרגיה, עם דגש על חווית משתמש ומהירות טעינה.'
+    description: 'אתר תדמית לחברת הנדסה וקיימות, עם דגש על חווית משתמש ומהירות טעינה.'
   },
   {
     id: 2,
@@ -115,26 +115,26 @@ export const GALLERY_ITEMS: GalleryItem[] = [
   },
   {
     id: 4,
-    title: 'Agro-Lima - קטלוג מוצרים',
+    title: 'Agro-Lima - קרן פילנתרופית',
     category: 'website',
     url: 'https://agrolima.co.il',
     image: 'https://i.postimg.cc/g0PnNNs6/agrolima_co_il.png',
-    description: 'אתר קטלוגי לחברה חקלאית, המציג את מגוון המוצרים והפתרונות בצורה ויזואלית ומרשימה.'
+    description: 'אתר שבניתי לקרן פילנתרופית שמציג את הפעילות שלה בצורה המיטבית.'
   },
   {
     id: 5,
-    title: 'Noa Law - אתר תוכן',
+    title: 'Noa Law - עו״ד נועה אופנהיימר',
     category: 'website',
     url: 'https://noa-law.co.il',
     image: 'https://i.postimg.cc/pdtpqqCr/noa_law_co_il.png',
-    description: 'אתר תוכן ובלוג משפטי, מותאם לקידום אורגני (SEO) ונגיש לכל המכשירים.'
+    description: 'אתר תדמית לעו"ד נועה אופנהיימר שמציג את השירותים שלה בצורה מקצועית.'
   },
   {
     id: 6,
-    title: 'Porat Law - דף נחיתה',
+    title: 'Porat Law - אתר תדמית',
     category: 'website',
     url: 'https://porat-law.co.il',
     image: 'https://i.postimg.cc/CKVzmm7Z/porat_law_co_il.png',
-    description: 'עיצוב דף נחיתה ממיר לקמפיינים ממומנים, עם קריאה לפעולה ברורה ועיצוב נקי.'
+    description: 'אתר תדמית עם קריאה לפעולה ועיצוב מרשים שמציג את האיכות של המשרד.'
   }
 ];
