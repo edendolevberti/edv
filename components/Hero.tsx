@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import FloatingIcons from './FloatingIcons';
-import InfiniteCarousel from './InfiniteCarousel';
-import { ArrowDown, MessageCircle } from 'lucide-react';
+import { ArrowDown, MessageCircle, ChevronLeft, ChevronRight } from 'lucide-react';
+import { CAROUSEL_IMAGES } from '../constants';
 
 const Hero: React.FC = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
   const whatsappMessage = "היי עדן, הגעתי מהאתר ואשמח לשמוע פרטים על בניית אתר/חנות או ניהול GMB";
   const whatsappUrl = `https://api.whatsapp.com/send?phone=972547202011&text=${encodeURIComponent(whatsappMessage)}`;
 
@@ -12,6 +14,15 @@ const Hero: React.FC = () => {
     { icon: '🛍️', text: 'חנויות דיגיטליות' },
     { icon: '📍', text: 'ניהול גוגל לעסק שלי' },
   ];
+
+  // Auto-play fade effect
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % CAROUSEL_IMAGES.length);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
@@ -23,48 +34,57 @@ const Hero: React.FC = () => {
   };
 
   return (
-    <section id="hero" className="relative min-h-[100dvh] flex flex-col justify-center items-center overflow-x-hidden pt-24 pb-28">
+    <section 
+      id="hero" 
+      className="relative min-h-[100dvh] flex flex-col justify-center items-center overflow-hidden pt-24 pb-28"
+    >
       
-      {/* 1. Main Brand Gradient Background */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-pink-50 via-slate-50 to-white dark:from-[#2e1b2e] dark:via-[#0f172a] dark:to-[#020617] z-0 transition-colors duration-500"></div>
-
-      {/* 2. Animated Blobs (Deep Background) */}
-      <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none z-0">
-        <div className="absolute top-0 -left-4 w-72 h-72 bg-pink-500/30 dark:bg-pink-500 rounded-full mix-blend-multiply filter blur-[80px] opacity-20 animate-blob"></div>
-        <div className="absolute top-0 -right-4 w-72 h-72 bg-purple-500/30 dark:bg-purple-500 rounded-full mix-blend-multiply filter blur-[80px] opacity-20 animate-blob animation-delay-2000"></div>
-        <div className="absolute -bottom-8 left-20 w-72 h-72 bg-emerald-500/30 dark:bg-emerald-500 rounded-full mix-blend-multiply filter blur-[80px] opacity-20 animate-blob animation-delay-4000"></div>
+      {/* Background Fade Slider */}
+      <div className="absolute inset-0 z-0 overflow-hidden bg-slate-900 select-none">
+        {CAROUSEL_IMAGES.map((img, index) => (
+          <div
+            key={index}
+            className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
+              index === currentIndex ? 'opacity-100 z-10' : 'opacity-0 z-0'
+            }`}
+          >
+            <img
+              src={img}
+              alt={`Slide ${index}`}
+              className="absolute inset-0 w-full h-full object-cover"
+              referrerPolicy="no-referrer"
+              draggable="false"
+            />
+            {/* Dark Overlay for readability */}
+            <div className="absolute inset-0 bg-slate-900/80 dark:bg-slate-950/80 backdrop-blur-[1px]"></div>
+          </div>
+        ))}
       </div>
 
-      {/* 3. Floating Icons Layer */}
+      {/* Floating Icons Layer */}
       <FloatingIcons />
 
-      {/* 4. Blur Overlay Layer (Creates the depth effect over icons/bg but under text) */}
-      <div className="absolute inset-0 backdrop-blur-[2px] z-0 pointer-events-none"></div>
-
-      {/* 5. Noise Texture Overlay */}
-      <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-10 z-0 pointer-events-none mix-blend-overlay"></div>
-
       {/* Main Content */}
-      <div className="relative z-10 text-center px-4 max-w-5xl mx-auto mb-8 md:mb-12 mt-4 md:mt-10 flex-grow flex flex-col justify-center">
+      <div className="relative z-20 text-center px-4 max-w-5xl mx-auto mb-8 md:mb-12 mt-4 md:mt-10 flex-grow flex flex-col justify-center">
         
         {/* Title / Role */}
-        <h2 className="text-lg md:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-purple-600 dark:from-pink-400 dark:to-purple-400 mb-2 md:mb-4 tracking-widest uppercase drop-shadow-md">
+        <h2 className="text-lg md:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-400 mb-2 md:mb-4 tracking-widest uppercase drop-shadow-md">
           Digital Presence Expert
         </h2>
         
         {/* Name */}
-        <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-slate-900 dark:text-white mb-6 leading-tight drop-shadow-2xl transition-colors duration-300">
+        <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-white mb-6 leading-tight drop-shadow-2xl transition-colors duration-300">
           EDEN DOLEV
         </h1>
 
         {/* Subtitle */}
-        <p className="text-xl md:text-3xl text-slate-700 dark:text-gray-100 max-w-4xl mx-auto mb-10 font-light leading-relaxed drop-shadow-lg transition-colors duration-300">
+        <p className="text-xl md:text-3xl text-gray-100 max-w-4xl mx-auto mb-10 font-light leading-relaxed drop-shadow-lg transition-colors duration-300">
           🎯 מומחה לנוכחות דיגיטלית | בונים נכסים שמייצרים הכנסות
         </p>
 
         {/* CTA Section */}
         <div className="flex flex-col items-center gap-8 mb-12">
-           <p className="text-lg md:text-xl text-slate-600 dark:text-gray-300 font-medium animate-pulse transition-colors duration-300">
+           <p className="text-lg md:text-xl text-gray-200 font-medium animate-pulse transition-colors duration-300">
              רוצים אתר או חנות שמוכרים באמת? 👇
             </p>
 
@@ -82,9 +102,9 @@ const Hero: React.FC = () => {
                 <a
                     href="#contact"
                     onClick={(e) => handleScroll(e, '#contact')}
-                    className="relative block w-full sm:w-auto px-10 py-5 bg-white dark:bg-slate-900 rounded-full leading-none flex items-center justify-center hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors duration-200"
+                    className="relative block w-full sm:w-auto px-10 py-5 bg-slate-900 rounded-full leading-none flex items-center justify-center hover:bg-slate-800 transition-colors duration-200"
                 >
-                    <span className="text-slate-900 dark:text-white font-black text-xl tracking-wide drop-shadow-[0_2px_4px_rgba(0,0,0,0.1)] dark:drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]">בואו נתחיל 🚀</span>
+                    <span className="text-white font-black text-xl tracking-wide drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]">בואו נתחיל 🚀</span>
                 </a>
             </div>
 
@@ -106,7 +126,7 @@ const Hero: React.FC = () => {
           {quickServices.map((item, index) => (
             <div 
               key={index} 
-              className="flex items-center gap-3 text-slate-700 dark:text-gray-300 select-none transition-colors duration-300"
+              className="flex items-center gap-3 text-gray-200 select-none transition-colors duration-300"
             >
               <span className="text-2xl md:text-3xl filter drop-shadow-lg">{item.icon}</span>
               <span className="text-base md:text-lg font-medium tracking-wide">{item.text}</span>
@@ -116,16 +136,11 @@ const Hero: React.FC = () => {
 
       </div>
 
-      {/* Infinite Carousel */}
-      <div className="w-full mt-auto z-20">
-        <InfiniteCarousel />
-      </div>
-
       {/* Scroll Down Indicator */}
       <a 
         href="#services"
         onClick={(e) => handleScroll(e, '#services')}
-        className="absolute bottom-6 left-1/2 transform -translate-x-1/2 animate-bounce text-slate-400 dark:text-slate-400 hidden md:block z-10 hover:text-slate-900 dark:hover:text-white transition-colors cursor-pointer"
+        className="absolute bottom-6 left-1/2 transform -translate-x-1/2 animate-bounce text-white/70 hidden md:block z-30 hover:text-white transition-colors cursor-pointer"
       >
         <ArrowDown size={24} />
       </a>

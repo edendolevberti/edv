@@ -87,10 +87,18 @@ const Header: React.FC = () => {
             {/* Theme Toggle Desktop */}
             <button
               onClick={toggleTheme}
-              className="p-2 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-yellow-400 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors"
+              className={`relative w-14 h-7 rounded-full transition-colors duration-300 focus:outline-none ${
+                theme === 'dark' ? 'bg-slate-700' : 'bg-sky-300'
+              }`}
               aria-label="Toggle theme"
             >
-              {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
+              <div
+                className={`absolute top-1 left-1 bg-white w-5 h-5 rounded-full shadow-md transform transition-transform duration-300 flex items-center justify-center ${
+                  theme === 'dark' ? 'translate-x-7' : 'translate-x-0'
+                }`}
+              >
+                 {theme === 'dark' ? <Moon size={12} className="text-slate-800" /> : <Sun size={12} className="text-yellow-500" />}
+              </div>
             </button>
           </nav>
 
@@ -114,22 +122,40 @@ const Header: React.FC = () => {
             {/* Theme Toggle Mobile */}
             <button
               onClick={toggleTheme}
-              className="p-2 rounded-full bg-slate-100/50 dark:bg-slate-800/50 text-slate-800 dark:text-yellow-400 backdrop-blur-sm"
+              className={`relative w-14 h-7 rounded-full transition-colors duration-300 focus:outline-none ${
+                theme === 'dark' ? 'bg-slate-700' : 'bg-sky-300'
+              }`}
               aria-label="Toggle theme"
             >
-              {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
+              <div
+                className={`absolute top-1 left-1 bg-white w-5 h-5 rounded-full shadow-md transform transition-transform duration-300 flex items-center justify-center ${
+                  theme === 'dark' ? 'translate-x-7' : 'translate-x-0'
+                }`}
+              >
+                 {theme === 'dark' ? <Moon size={12} className="text-slate-800" /> : <Sun size={12} className="text-yellow-500" />}
+              </div>
             </button>
 
             {/* Mobile Menu Button */}
             <button
-              className="text-slate-800 dark:text-white flex items-center gap-2 group focus:outline-none"
+              className={`flex items-center gap-2 group focus:outline-none ${
+                isScrolled ? 'text-slate-800 dark:text-white' : 'text-white'
+              }`}
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
-              <span className={`text-sm font-medium tracking-wide transition-colors duration-300 ${isMobileMenuOpen ? 'text-slate-800 dark:text-white' : 'text-slate-600 dark:text-gray-200 group-hover:text-blue-500'}`}>
+              <span className={`text-sm font-medium tracking-wide transition-colors duration-300 ${
+                isMobileMenuOpen 
+                  ? 'text-slate-800 dark:text-white' 
+                  : (isScrolled ? 'text-slate-800 dark:text-white group-hover:text-blue-500' : 'text-white group-hover:text-pink-400')
+              }`}>
                 {isMobileMenuOpen ? 'סגור' : 'תפריט'}
               </span>
               <div className={`relative w-6 h-6 flex items-center justify-center transition-transform duration-300 ${isMobileMenuOpen ? 'rotate-90' : ''}`}>
-                {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+                {isMobileMenuOpen ? (
+                  <X size={24} className="text-slate-800 dark:text-white" />
+                ) : (
+                  <Menu size={24} className={isScrolled ? 'text-slate-800 dark:text-white' : 'text-white'} />
+                )}
               </div>
             </button>
           </div>

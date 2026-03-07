@@ -8,7 +8,7 @@ const FloatingWhatsApp: React.FC = () => {
   const whatsappUrl = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`;
 
   return (
-    <div className="fixed bottom-6 left-6 z-50 flex items-center gap-3">
+    <div className="fixed bottom-24 left-6 md:bottom-6 z-50 flex items-center gap-3">
       {/* Text Label - Placed first so in RTL it appears on the Right */}
       <a 
         href={whatsappUrl}

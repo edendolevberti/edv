@@ -8,6 +8,7 @@ import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
 import Gallery from './components/Gallery';
 import ScrollProgressLine from './components/ScrollProgressLine';
+import BottomNav from './components/BottomNav';
 import { ThemeProvider } from './context/ThemeContext';
 
 function App() {
@@ -19,7 +20,7 @@ function App() {
           <Hero />
           
           {/* Wrapper for ALL sections including Contact to share the continuous scroll line */}
-          <div className="relative bg-slate-50 dark:bg-slate-900 transition-colors duration-300">
+          <div className="relative bg-slate-50 dark:bg-slate-900 transition-colors duration-300 pb-20 md:pb-24">
             <ScrollProgressLine />
             <Services />
             <Gallery />
@@ -30,6 +31,7 @@ function App() {
           </div>
 
         </main>
+        <BottomNav />
       </div>
     </ThemeProvider>
   );
