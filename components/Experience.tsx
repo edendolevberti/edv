@@ -54,9 +54,9 @@ const Experience: React.FC = () => {
           <div className="relative z-10">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-5xl font-black text-slate-900 dark:text-white mb-4 transition-colors duration-300">
-                הניסיון <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-pink-600 dark:from-emerald-500 dark:to-pink-500">והרקורד שלי</span>
+                הניסיון <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-purple-600">והרקורד שלי</span>
               </h2>
-              <div className="w-24 h-1 bg-gradient-to-r from-emerald-500 to-pink-500 mx-auto rounded-full"></div>
+              <div className="w-24 h-1 bg-gradient-to-r from-pink-600 to-purple-600 mx-auto rounded-full"></div>
               <p className="mt-4 text-slate-600 dark:text-gray-400 transition-colors duration-300">
                 הכשרה מקצועית עמוקה בפיתוח, סייבר וטכנולוגיה - הבסיס לנכסים דיגיטליים חזקים.
               </p>
@@ -64,7 +64,7 @@ const Experience: React.FC = () => {
 
             <div className="relative max-w-4xl mx-auto">
               {/* Timeline Line */}
-              <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-px bg-gradient-to-b from-emerald-500/0 via-purple-500/50 to-pink-500/0 hidden md:block"></div>
+              <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-px bg-gradient-to-b from-pink-600/0 via-purple-600/50 to-pink-600/0 hidden md:block"></div>
 
               <div className="space-y-8 md:space-y-0">
                 {EXPERIENCES.map((item, index) => (
@@ -82,7 +82,7 @@ const Experience: React.FC = () => {
                     <div className="w-full md:w-5/12">
                       <div className="bg-white/80 dark:bg-slate-900/40 backdrop-blur-sm p-6 rounded-2xl border border-slate-200 dark:border-slate-800 hover:border-purple-500/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg relative overflow-hidden">
                         {/* Hover Gradient */}
-                        <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div className="absolute inset-0 bg-gradient-to-r from-pink-600/5 to-purple-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                         
                         <div className="relative z-10 text-center md:text-right">
                           <span className={`inline-block px-3 py-1 rounded-full bg-slate-100/80 dark:bg-slate-800/80 text-xs font-bold mb-3 ${item.color} border border-slate-200 dark:border-slate-700 transition-colors duration-300`}>

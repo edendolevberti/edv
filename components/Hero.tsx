@@ -68,7 +68,7 @@ const Hero: React.FC = () => {
       <div className="relative z-20 text-center px-4 max-w-5xl mx-auto mb-8 md:mb-12 mt-4 md:mt-10 flex-grow flex flex-col justify-center">
         
         {/* Title / Role */}
-        <h2 className="text-lg md:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-400 mb-2 md:mb-4 tracking-widest uppercase drop-shadow-md">
+        <h2 className="text-lg md:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-purple-600 mb-2 md:mb-4 tracking-widest uppercase drop-shadow-md">
           Digital Presence Expert
         </h2>
         
@@ -102,9 +102,9 @@ const Hero: React.FC = () => {
                 <a
                     href="#contact"
                     onClick={(e) => handleScroll(e, '#contact')}
-                    className="relative block w-full sm:w-auto px-10 py-5 bg-slate-900 rounded-full leading-none flex items-center justify-center hover:bg-slate-800 transition-colors duration-200"
+                    className="relative block w-full sm:w-auto px-6 md:px-8 py-3 md:py-4 bg-slate-900 rounded-full leading-none flex items-center justify-center hover:bg-slate-800 transition-colors duration-200"
                 >
-                    <span className="text-white font-black text-xl tracking-wide drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]">בואו נתחיל 🚀</span>
+                    <span className="text-white font-bold text-base md:text-lg tracking-wide drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]">בואו נתחיל 🚀</span>
                 </a>
             </div>
 

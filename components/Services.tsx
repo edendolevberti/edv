@@ -22,9 +22,9 @@ const Services: React.FC = () => {
           <div className="relative z-10">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-5xl font-black text-slate-900 dark:text-white mb-4 transition-colors duration-300">
-                השירותים <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-purple-600 dark:from-emerald-500 dark:to-purple-500">שלנו</span>
+                השירותים <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-purple-600">שלנו</span>
               </h2>
-              <div className="w-24 h-1 bg-gradient-to-r from-emerald-500 to-purple-500 mx-auto rounded-full"></div>
+              <div className="w-24 h-1 bg-gradient-to-r from-pink-600 to-purple-600 mx-auto rounded-full"></div>
               <p className="mt-4 text-slate-600 dark:text-gray-400 max-w-2xl mx-auto transition-colors duration-300">
                 פתרונות דיגיטליים מקצה לקצה: מבניית האתר ועד לקידום בגוגל. אנחנו דואגים שהעסק שלך יראה מצוין ויעבוד בשבילך.
               </p>

@@ -61,10 +61,10 @@ const Header: React.FC = () => {
               onClick={(e) => handleScroll(e, '#hero')}
               className="flex items-center gap-2"
             >
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-pink-600 via-purple-600 to-emerald-600 dark:from-pink-500 dark:via-purple-500 dark:to-emerald-500 font-black tracking-tighter">
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-pink-600 to-purple-600 font-black tracking-tighter">
                 EDEN DOLEV
               </span>
-              <span className={`text-slate-700 dark:text-white text-xs sm:text-sm font-light tracking-widest hidden sm:block ${isScrolled ? 'opacity-0 w-0' : 'opacity-100 transition-opacity duration-500'}`}>
+              <span className={`${isScrolled ? 'text-slate-700 opacity-0 w-0' : 'text-white opacity-100 transition-opacity duration-500'} text-xs sm:text-sm font-light tracking-widest hidden sm:block`}>
                  - DIGITAL PRESENCE EXPERT
               </span>
             </a>
@@ -77,29 +77,12 @@ const Header: React.FC = () => {
                 key={link.name}
                 href={link.href}
                 onClick={(e) => handleScroll(e, link.href)}
-                className="text-slate-600 dark:text-gray-300 hover:text-slate-900 dark:hover:text-white relative group text-sm font-medium transition-colors font-sans"
+                className={`${isScrolled ? 'text-slate-600 hover:text-slate-900' : 'text-white/90 hover:text-white'} relative group text-sm font-medium transition-colors font-sans`}
               >
                 {link.name}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-pink-500 to-emerald-500 transition-all duration-300 group-hover:w-full"></span>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-pink-600 to-purple-600 transition-all duration-300 group-hover:w-full"></span>
               </a>
             ))}
-            
-            {/* Theme Toggle Desktop */}
-            <button
-              onClick={toggleTheme}
-              className={`relative w-14 h-7 rounded-full transition-colors duration-300 focus:outline-none ${
-                theme === 'dark' ? 'bg-slate-700' : 'bg-sky-300'
-              }`}
-              aria-label="Toggle theme"
-            >
-              <div
-                className={`absolute top-1 left-1 bg-white w-5 h-5 rounded-full shadow-md transform transition-transform duration-300 flex items-center justify-center ${
-                  theme === 'dark' ? 'translate-x-7' : 'translate-x-0'
-                }`}
-              >
-                 {theme === 'dark' ? <Moon size={12} className="text-slate-800" /> : <Sun size={12} className="text-yellow-500" />}
-              </div>
-            </button>
           </nav>
 
           {/* CTA Button */}
@@ -119,23 +102,6 @@ const Header: React.FC = () => {
 
           {/* Mobile Controls */}
           <div className={`flex items-center gap-4 md:hidden ${isMobileMenuOpen ? 'relative z-[80]' : 'z-50'}`}>
-            {/* Theme Toggle Mobile */}
-            <button
-              onClick={toggleTheme}
-              className={`relative w-14 h-7 rounded-full transition-colors duration-300 focus:outline-none ${
-                theme === 'dark' ? 'bg-slate-700' : 'bg-sky-300'
-              }`}
-              aria-label="Toggle theme"
-            >
-              <div
-                className={`absolute top-1 left-1 bg-white w-5 h-5 rounded-full shadow-md transform transition-transform duration-300 flex items-center justify-center ${
-                  theme === 'dark' ? 'translate-x-7' : 'translate-x-0'
-                }`}
-              >
-                 {theme === 'dark' ? <Moon size={12} className="text-slate-800" /> : <Sun size={12} className="text-yellow-500" />}
-              </div>
-            </button>
-
             {/* Mobile Menu Button */}
             <button
               className={`flex items-center gap-2 group focus:outline-none ${

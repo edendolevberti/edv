@@ -51,37 +51,37 @@ const BottomNav: React.FC = () => {
                     onClick={() => scrollTo('hero')}
                     className={`flex flex-col items-center gap-0.5 transition-all duration-300 ${activeSection === 'hero' ? 'text-yellow-400 scale-110' : 'text-slate-400 hover:text-slate-200'}`}
                 >
-                    <Home size={20} strokeWidth={activeSection === 'hero' ? 2.5 : 2} />
-                    <span className="text-[9px] font-medium">בית</span>
+                    <Home className="w-5 h-5 md:w-9 md:h-9" strokeWidth={activeSection === 'hero' ? 2.5 : 2} />
+                    <span className="text-[9px] md:text-base font-medium">בית</span>
                 </button>
 
                 <button 
                     onClick={() => scrollTo('services')}
                     className={`flex flex-col items-center gap-0.5 transition-all duration-300 ${activeSection === 'services' ? 'text-yellow-400 scale-110' : 'text-slate-400 hover:text-slate-200'}`}
                 >
-                    <Laptop size={20} strokeWidth={activeSection === 'services' ? 2.5 : 2} />
-                    <span className="text-[9px] font-medium">שירותים</span>
+                    <Laptop className="w-5 h-5 md:w-9 md:h-9" strokeWidth={activeSection === 'services' ? 2.5 : 2} />
+                    <span className="text-[9px] md:text-base font-medium">שירותים</span>
                 </button>
 
                 <button 
                     onClick={() => scrollTo('gallery')}
                     className={`flex flex-col items-center gap-0.5 transition-all duration-300 ${activeSection === 'gallery' ? 'text-yellow-400 scale-110' : 'text-slate-400 hover:text-slate-200'}`}
                 >
-                    <Image size={20} strokeWidth={activeSection === 'gallery' ? 2.5 : 2} />
-                    <span className="text-[9px] font-medium">עבודות</span>
+                    <Image className="w-5 h-5 md:w-9 md:h-9" strokeWidth={activeSection === 'gallery' ? 2.5 : 2} />
+                    <span className="text-[9px] md:text-base font-medium">עבודות</span>
                 </button>
             </div>
 
             {/* Center Logo - Floating */}
-            <div className="relative -top-5 mx-1 flex-shrink-0 z-10">
+            <div className="relative -top-6 md:-top-9 mx-2 flex-shrink-0 z-10">
                 <button 
                     onClick={() => scrollTo('hero')}
-                    className="w-14 h-14 rounded-full bg-gradient-to-br from-pink-500 via-purple-500 to-emerald-500 p-[2px] shadow-lg shadow-purple-500/40 transform transition-transform active:scale-95 flex items-center justify-center"
+                    className="w-16 h-16 md:w-[100px] md:h-[100px] rounded-full bg-gradient-to-br from-pink-600 to-purple-600 p-[2px] md:p-[3px] shadow-lg shadow-purple-500/40 transform transition-transform active:scale-95 flex items-center justify-center"
                 >
                     <div className="w-full h-full rounded-full bg-slate-900 flex items-center justify-center border border-white/10">
                         <div className="flex flex-col items-center justify-center leading-none">
-                            <span className="text-white font-black text-[9px] tracking-wider">EDEN</span>
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-400 font-bold text-[7px] tracking-widest">DOLEV</span>
+                            <span className="text-white font-black text-[10px] md:text-base tracking-wider">EDEN</span>
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-purple-600 font-bold text-[8px] md:text-xs tracking-widest">DOLEV</span>
                         </div>
                     </div>
                 </button>
@@ -93,24 +93,24 @@ const BottomNav: React.FC = () => {
                     onClick={() => scrollTo('about')}
                     className={`flex flex-col items-center gap-0.5 transition-all duration-300 ${activeSection === 'about' ? 'text-yellow-400 scale-110' : 'text-slate-400 hover:text-slate-200'}`}
                 >
-                    <User size={20} strokeWidth={activeSection === 'about' ? 2.5 : 2} />
-                    <span className="text-[9px] font-medium">אודות</span>
+                    <User className="w-5 h-5 md:w-9 md:h-9" strokeWidth={activeSection === 'about' ? 2.5 : 2} />
+                    <span className="text-[9px] md:text-base font-medium">אודות</span>
                 </button>
 
                 <button 
                     onClick={() => scrollTo('testimonials')}
                     className={`flex flex-col items-center gap-0.5 transition-all duration-300 ${activeSection === 'testimonials' ? 'text-yellow-400 scale-110' : 'text-slate-400 hover:text-slate-200'}`}
                 >
-                    <Star size={20} strokeWidth={activeSection === 'testimonials' ? 2.5 : 2} />
-                    <span className="text-[9px] font-medium">המלצות</span>
+                    <Star className="w-5 h-5 md:w-9 md:h-9" strokeWidth={activeSection === 'testimonials' ? 2.5 : 2} />
+                    <span className="text-[9px] md:text-base font-medium">המלצות</span>
                 </button>
 
                  <button 
                     onClick={() => scrollTo('contact')}
                     className={`flex flex-col items-center gap-0.5 transition-all duration-300 ${activeSection === 'contact' ? 'text-yellow-400 scale-110' : 'text-slate-400 hover:text-slate-200'}`}
                 >
-                    <Mail size={20} strokeWidth={activeSection === 'contact' ? 2.5 : 2} />
-                    <span className="text-[9px] font-medium">צור קשר</span>
+                    <Mail className="w-5 h-5 md:w-9 md:h-9" strokeWidth={activeSection === 'contact' ? 2.5 : 2} />
+                    <span className="text-[9px] md:text-base font-medium">צור קשר</span>
                 </button>
             </div>
 

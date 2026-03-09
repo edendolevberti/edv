@@ -20,9 +20,9 @@ const Testimonials: React.FC = () => {
            <div className="relative z-10">
               <div className="text-center mb-16">
                 <h2 className="text-3xl md:text-5xl font-black text-slate-900 dark:text-white mb-4 transition-colors duration-300">
-                  הלקוחות <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-purple-600 dark:from-pink-500 dark:to-purple-500">מספרים על התוצאות</span>
+                  הלקוחות <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-purple-600">מספרים על התוצאות</span>
                 </h2>
-                <div className="w-24 h-1 bg-gradient-to-r from-pink-500 to-emerald-500 mx-auto rounded-full mb-6"></div>
+                <div className="w-24 h-1 bg-gradient-to-r from-pink-600 to-purple-600 mx-auto rounded-full mb-6"></div>
                 <p className="mt-4 text-slate-600 dark:text-gray-400 transition-colors duration-300">
                   עסקים ששידרגו את הנוכחות הדיגיטלית שלהם וראו תוצאות בשטח
                 </p>

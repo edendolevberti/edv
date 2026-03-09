@@ -30,6 +30,9 @@
         darkMode: 'class',
         theme: {
           extend: {
+            fontFamily: {
+              sans: ['"FUP Begin"', 'sans-serif'],
+            },
             colors: {
               // Using standard Tailwind colors for Pink/Purple/Green theme
             },
@@ -40,11 +43,71 @@
         }
       }
     </script>
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <style type="text/tailwindcss">
-      /* Force Heebo globally with high specificity */
+      @font-face {
+        font-family: 'FUP Begin';
+        src: url('/fonts/FUP%20Begin%20-%20For%20Web/FUP%20Begin%20-%20Light/FUP%20Begin%20-%20Light.eot');
+        src: url('/fonts/FUP%20Begin%20-%20For%20Web/FUP%20Begin%20-%20Light/FUP%20Begin%20-%20Light.eot?#iefix') format('embedded-opentype'),
+             url('/fonts/FUP%20Begin%20-%20For%20Web/FUP%20Begin%20-%20Light/FUP%20Begin%20-%20Light.woff2') format('woff2'),
+             url('/fonts/FUP%20Begin%20-%20For%20Web/FUP%20Begin%20-%20Light/FUP%20Begin%20-%20Light.woff') format('woff');
+        font-weight: 300;
+        font-style: normal;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: 'FUP Begin';
+        src: url('/fonts/FUP%20Begin%20-%20For%20Web/FUP%20Begin%20-%20Regular/FUP%20Begin%20-%20Regular.eot');
+        src: url('/fonts/FUP%20Begin%20-%20For%20Web/FUP%20Begin%20-%20Regular/FUP%20Begin%20-%20Regular.eot?#iefix') format('embedded-opentype'),
+             url('/fonts/FUP%20Begin%20-%20For%20Web/FUP%20Begin%20-%20Regular/FUP%20Begin%20-%20Regular.woff2') format('woff2'),
+             url('/fonts/FUP%20Begin%20-%20For%20Web/FUP%20Begin%20-%20Regular/FUP%20Begin%20-%20Regular.woff') format('woff');
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: 'FUP Begin';
+        src: url('/fonts/FUP%20Begin%20-%20For%20Web/FUP%20Begin%20-%20Medium/FUP%20Begin%20-%20Medium.eot');
+        src: url('/fonts/FUP%20Begin%20-%20For%20Web/FUP%20Begin%20-%20Medium/FUP%20Begin%20-%20Medium.eot?#iefix') format('embedded-opentype'),
+             url('/fonts/FUP%20Begin%20-%20For%20Web/FUP%20Begin%20-%20Medium/FUP%20Begin%20-%20Medium.woff2') format('woff2'),
+             url('/fonts/FUP%20Begin%20-%20For%20Web/FUP%20Begin%20-%20Medium/FUP%20Begin%20-%20Medium.woff') format('woff');
+        font-weight: 500;
+        font-style: normal;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: 'FUP Begin';
+        src: url('/fonts/FUP%20Begin%20-%20For%20Web/FUP%20Begin%20-%20SemiBold/FUP%20Begin%20-%20SemiBold.eot');
+        src: url('/fonts/FUP%20Begin%20-%20For%20Web/FUP%20Begin%20-%20SemiBold/FUP%20Begin%20-%20SemiBold.eot?#iefix') format('embedded-opentype'),
+             url('/fonts/FUP%20Begin%20-%20For%20Web/FUP%20Begin%20-%20SemiBold/FUP%20Begin%20-%20SemiBold.woff2') format('woff2'),
+             url('/fonts/FUP%20Begin%20-%20For%20Web/FUP%20Begin%20-%20SemiBold/FUP%20Begin%20-%20SemiBold.woff') format('woff');
+        font-weight: 600;
+        font-style: normal;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: 'FUP Begin';
+        src: url('/fonts/FUP%20Begin%20-%20For%20Web/FUP%20Begin%20-%20Bold/FUP%20Begin%20-%20Bold.eot');
+        src: url('/fonts/FUP%20Begin%20-%20For%20Web/FUP%20Begin%20-%20Bold/FUP%20Begin%20-%20Bold.eot?#iefix') format('embedded-opentype'),
+             url('/fonts/FUP%20Begin%20-%20For%20Web/FUP%20Begin%20-%20Bold/FUP%20Begin%20-%20Bold.woff2') format('woff2'),
+             url('/fonts/FUP%20Begin%20-%20For%20Web/FUP%20Begin%20-%20Bold/FUP%20Begin%20-%20Bold.woff') format('woff');
+        font-weight: 700;
+        font-style: normal;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: 'FUP Begin';
+        src: url('/fonts/FUP%20Begin%20-%20For%20Web/FUP%20Begin%20-%20ExtraBold/FUP%20Begin%20-%20ExtraBold.eot');
+        src: url('/fonts/FUP%20Begin%20-%20For%20Web/FUP%20Begin%20-%20ExtraBold/FUP%20Begin%20-%20ExtraBold.eot?#iefix') format('embedded-opentype'),
+             url('/fonts/FUP%20Begin%20-%20For%20Web/FUP%20Begin%20-%20ExtraBold/FUP%20Begin%20-%20ExtraBold.woff2') format('woff2'),
+             url('/fonts/FUP%20Begin%20-%20For%20Web/FUP%20Begin%20-%20ExtraBold/FUP%20Begin%20-%20ExtraBold.woff') format('woff');
+        font-weight: 800;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      /* Force FUP Begin globally with high specificity */
       body, html, button, input, select, textarea, .font-sans, h1, h2, h3, h4, h5, h6, p, a, span, div, li {
-        font-family: 'Heebo', sans-serif !important;
+        font-family: 'FUP Begin', sans-serif !important;
       }
       
       body {
@@ -140,8 +203,8 @@
         100% { background-position: 0% 50%; }
       }
       .animate-gradient {
-        /* Gradient: Blue, Purple, Pink */
-        background: linear-gradient(120deg, #2563eb, #9333ea, #db2777, #2563eb); 
+        /* Gradient: Pink, Purple */
+        background: linear-gradient(120deg, #db2777, #9333ea, #db2777); 
         background-size: 300% 300%;
         animation: gradient-xy 5s ease-in-out infinite;
       }

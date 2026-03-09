@@ -22,7 +22,7 @@ const About: React.FC = () => {
             <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
               <div className="relative w-full max-w-md aspect-square group">
                   {/* Glow Effect */}
-                  <div className="absolute -inset-4 bg-gradient-to-r from-pink-500 to-emerald-500 rounded-2xl blur-xl opacity-30 group-hover:opacity-50 transition duration-1000"></div>
+                  <div className="absolute -inset-4 bg-gradient-to-r from-pink-600 to-purple-600 rounded-2xl blur-xl opacity-30 group-hover:opacity-50 transition duration-1000"></div>
                   
                   {/* Image Container */}
                   <div className="relative w-full h-full rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700 shadow-2xl rotate-2 group-hover:rotate-0 transition-transform duration-500 bg-slate-100 dark:bg-slate-800">
@@ -45,9 +45,9 @@ const About: React.FC = () => {
             {/* Text Side */}
             <div className="w-full lg:w-1/2 text-right">
               <h2 className="text-3xl md:text-5xl font-black text-slate-900 dark:text-white mb-6 transition-colors duration-300">
-                מי <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-purple-600 dark:from-pink-500 dark:to-purple-500">אני?</span>
+                מי <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-purple-600">אני?</span>
               </h2>
-              <div className="w-20 h-1.5 bg-gradient-to-r from-pink-500 to-emerald-500 rounded-full mb-8"></div>
+              <div className="w-20 h-1.5 bg-gradient-to-r from-pink-600 to-purple-600 rounded-full mb-8"></div>
               
               <p className="text-slate-600 dark:text-gray-300 text-lg leading-relaxed mb-6 transition-colors duration-300">
                 היי, אני עדן. אני לא רק "בונה אתרים" – אני האדריכל של הנוכחות הדיגיטלית שלכם.

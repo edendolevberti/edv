@@ -13,7 +13,7 @@ const Gallery: React.FC = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-black text-slate-900 dark:text-white mb-4 transition-colors duration-300">
-            פרויקטים <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-emerald-600 dark:from-pink-500 dark:to-emerald-500">נבחרים</span>
+            פרויקטים <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-purple-600">נבחרים</span>
           </h2>
           <p className="text-slate-600 dark:text-gray-400 max-w-2xl mx-auto mb-8 text-lg transition-colors duration-300">
             לא רק אתרים יפים, אלא נכסים דיגיטליים שעובדים. הנה הצצה לחלק מהפרויקטים שביצענו, משלב האפיון ועד להשקה המוצלחת.

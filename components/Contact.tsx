@@ -75,11 +75,11 @@ const Contact: React.FC = () => {
             <div className="text-right">
               <h2 className="text-3xl md:text-5xl font-black text-slate-900 dark:text-white mb-6 transition-colors duration-300">
                 בואו נבנה את <br/>
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-purple-600 dark:from-pink-400 dark:to-purple-500">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-purple-600">
                   הנוכחות שלכם
                 </span>
               </h2>
-              <div className="w-24 h-1 bg-gradient-to-r from-pink-500 to-emerald-500 rounded-full mb-8"></div>
+              <div className="w-24 h-1 bg-gradient-to-r from-pink-600 to-purple-600 rounded-full mb-8"></div>
               
               <p className="text-slate-600 dark:text-gray-300 text-lg mb-10 max-w-md transition-colors duration-300">
                 רוצים אתר שנראה מיליון דולר? חנות שמוכרת בלי הפסקה? או פשוט שימצאו אתכם בגוגל?
