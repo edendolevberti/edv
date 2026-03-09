@@ -31,7 +31,7 @@
         theme: {
           extend: {
             fontFamily: {
-              sans: ['"FUPBegin"', 'sans-serif'],
+              sans: ['"Begin"', 'sans-serif'],
             },
             colors: {
               // Using standard Tailwind colors for Pink/Purple/Green theme
@@ -45,72 +45,72 @@
     </script>
     <style>
       @font-face {
-        font-family: 'FUPBegin';
-        src: url('./fonts/fup_begin/light/light.eot');
-        src: url('./fonts/fup_begin/light/light.eot?#iefix') format('embedded-opentype'),
-             url('./fonts/fup_begin/light/light.woff2') format('woff2'),
-             url('./fonts/fup_begin/light/light.woff') format('woff');
+        font-family: 'Begin';
+        src: url('/fonts/fup_begin/light/light.eot');
+        src: url('/fonts/fup_begin/light/light.eot?#iefix') format('embedded-opentype'),
+             url('/fonts/fup_begin/light/light.woff2') format('woff2'),
+             url('/fonts/fup_begin/light/light.woff') format('woff');
         font-weight: 300;
         font-style: normal;
         font-display: swap;
       }
       @font-face {
-        font-family: 'FUPBegin';
-        src: url('./fonts/fup_begin/regular/regular.eot');
-        src: url('./fonts/fup_begin/regular/regular.eot?#iefix') format('embedded-opentype'),
-             url('./fonts/fup_begin/regular/regular.woff2') format('woff2'),
-             url('./fonts/fup_begin/regular/regular.woff') format('woff');
+        font-family: 'Begin';
+        src: url('/fonts/fup_begin/regular/regular.eot');
+        src: url('/fonts/fup_begin/regular/regular.eot?#iefix') format('embedded-opentype'),
+             url('/fonts/fup_begin/regular/regular.woff2') format('woff2'),
+             url('/fonts/fup_begin/regular/regular.woff') format('woff');
         font-weight: 400;
         font-style: normal;
         font-display: swap;
       }
       @font-face {
-        font-family: 'FUPBegin';
-        src: url('./fonts/fup_begin/medium/medium.eot');
-        src: url('./fonts/fup_begin/medium/medium.eot?#iefix') format('embedded-opentype'),
-             url('./fonts/fup_begin/medium/medium.woff2') format('woff2'),
-             url('./fonts/fup_begin/medium/medium.woff') format('woff');
+        font-family: 'Begin';
+        src: url('/fonts/fup_begin/medium/medium.eot');
+        src: url('/fonts/fup_begin/medium/medium.eot?#iefix') format('embedded-opentype'),
+             url('/fonts/fup_begin/medium/medium.woff2') format('woff2'),
+             url('/fonts/fup_begin/medium/medium.woff') format('woff');
         font-weight: 500;
         font-style: normal;
         font-display: swap;
       }
       @font-face {
-        font-family: 'FUPBegin';
-        src: url('./fonts/fup_begin/semibold/semibold.eot');
-        src: url('./fonts/fup_begin/semibold/semibold.eot?#iefix') format('embedded-opentype'),
-             url('./fonts/fup_begin/semibold/semibold.woff2') format('woff2'),
-             url('./fonts/fup_begin/semibold/semibold.woff') format('woff');
+        font-family: 'Begin';
+        src: url('/fonts/fup_begin/semibold/semibold.eot');
+        src: url('/fonts/fup_begin/semibold/semibold.eot?#iefix') format('embedded-opentype'),
+             url('/fonts/fup_begin/semibold/semibold.woff2') format('woff2'),
+             url('/fonts/fup_begin/semibold/semibold.woff') format('woff');
         font-weight: 600;
         font-style: normal;
         font-display: swap;
       }
       @font-face {
-        font-family: 'FUPBegin';
-        src: url('./fonts/fup_begin/bold/bold.eot');
-        src: url('./fonts/fup_begin/bold/bold.eot?#iefix') format('embedded-opentype'),
-             url('./fonts/fup_begin/bold/bold.woff2') format('woff2'),
-             url('./fonts/fup_begin/bold/bold.woff') format('woff');
+        font-family: 'Begin';
+        src: url('/fonts/fup_begin/bold/bold.eot');
+        src: url('/fonts/fup_begin/bold/bold.eot?#iefix') format('embedded-opentype'),
+             url('/fonts/fup_begin/bold/bold.woff2') format('woff2'),
+             url('/fonts/fup_begin/bold/bold.woff') format('woff');
         font-weight: 700;
         font-style: normal;
         font-display: swap;
       }
       @font-face {
-        font-family: 'FUPBegin';
-        src: url('./fonts/fup_begin/extrabold/extrabold.eot');
-        src: url('./fonts/fup_begin/extrabold/extrabold.eot?#iefix') format('embedded-opentype'),
-             url('./fonts/fup_begin/extrabold/extrabold.woff2') format('woff2'),
-             url('./fonts/fup_begin/extrabold/extrabold.woff') format('woff');
+        font-family: 'Begin';
+        src: url('/fonts/fup_begin/extrabold/extrabold.eot');
+        src: url('/fonts/fup_begin/extrabold/extrabold.eot?#iefix') format('embedded-opentype'),
+             url('/fonts/fup_begin/extrabold/extrabold.woff2') format('woff2'),
+             url('/fonts/fup_begin/extrabold/extrabold.woff') format('woff');
         font-weight: 800;
         font-style: normal;
         font-display: swap;
       }
+
+      /* Force Begin globally with high specificity */
+      body, html, button, input, select, textarea, .font-sans, h1, h2, h3, h4, h5, h6, p, a, span, div, li {
+        font-family: 'Begin', sans-serif !important;
+      }
     </style>
     <style type="text/tailwindcss">
-      /* Force FUP Begin globally with high specificity */
-      body, html, button, input, select, textarea, .font-sans, h1, h2, h3, h4, h5, h6, p, a, span, div, li {
-        font-family: 'FUPBegin', sans-serif !important;
-      }
-      
       body {
         @apply bg-slate-50 text-slate-900 dark:bg-slate-900 dark:text-white transition-colors duration-300;
       }
