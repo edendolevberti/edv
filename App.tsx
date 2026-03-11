@@ -14,13 +14,13 @@ import { ThemeProvider } from './context/ThemeContext';
 function App() {
   return (
     <ThemeProvider>
-      <div className="min-h-screen bg-slate-50 text-slate-900 dark:bg-slate-900 dark:text-slate-100 font-sans selection:bg-pink-500 selection:text-white transition-colors duration-300">
+      <div className="min-h-screen bg-slate-50 text-slate-900 font-sans selection:bg-pink-500 selection:text-white transition-colors duration-300">
         <Header />
         <main>
           <Hero />
           
           {/* Wrapper for ALL sections including Contact to share the continuous scroll line */}
-          <div className="relative bg-slate-50 dark:bg-slate-900 transition-colors duration-300 pb-20 md:pb-24">
+          <div className="relative bg-slate-50 transition-colors duration-300 pb-20 md:pb-24">
             <ScrollProgressLine />
             <Services />
             <Gallery />

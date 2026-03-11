@@ -49,7 +49,7 @@ const Header: React.FC = () => {
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out ${
           isScrolled
-            ? 'bg-white/90 dark:bg-slate-900/90 backdrop-blur-md py-2 shadow-lg shadow-slate-200/50 dark:shadow-purple-900/20'
+            ? 'bg-white/90 backdrop-blur-md py-2 shadow-lg shadow-slate-200/50'
             : 'bg-transparent py-6'
         }`}
       >
@@ -105,22 +105,22 @@ const Header: React.FC = () => {
             {/* Mobile Menu Button */}
             <button
               className={`flex items-center gap-2 group focus:outline-none ${
-                isScrolled ? 'text-slate-800 dark:text-white' : 'text-white'
+                isScrolled ? 'text-slate-800' : 'text-white'
               }`}
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
               <span className={`text-sm font-medium tracking-wide transition-colors duration-300 ${
                 isMobileMenuOpen 
-                  ? 'text-slate-800 dark:text-white' 
-                  : (isScrolled ? 'text-slate-800 dark:text-white group-hover:text-blue-500' : 'text-white group-hover:text-pink-400')
+                  ? 'text-slate-800' 
+                  : (isScrolled ? 'text-slate-800 group-hover:text-blue-500' : 'text-white group-hover:text-pink-400')
               }`}>
                 {isMobileMenuOpen ? 'סגור' : 'תפריט'}
               </span>
               <div className={`relative w-6 h-6 flex items-center justify-center transition-transform duration-300 ${isMobileMenuOpen ? 'rotate-90' : ''}`}>
                 {isMobileMenuOpen ? (
-                  <X size={24} className="text-slate-800 dark:text-white" />
+                  <X size={24} className="text-slate-800" />
                 ) : (
-                  <Menu size={24} className={isScrolled ? 'text-slate-800 dark:text-white' : 'text-white'} />
+                  <Menu size={24} className={isScrolled ? 'text-slate-800' : 'text-white'} />
                 )}
               </div>
             </button>
@@ -130,7 +130,7 @@ const Header: React.FC = () => {
 
       {/* Mobile Menu Drawer - Backdrop */}
       <div 
-        className={`fixed inset-0 bg-slate-900/20 dark:bg-slate-900/80 backdrop-blur-sm z-[60] transition-opacity duration-700 ${
+        className={`fixed inset-0 bg-slate-900/20 backdrop-blur-sm z-[60] transition-opacity duration-700 ${
           isMobileMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
         }`}
         onClick={() => setIsMobileMenuOpen(false)}
@@ -138,7 +138,7 @@ const Header: React.FC = () => {
 
       {/* Mobile Menu Drawer - Panel */}
       <div 
-        className={`fixed top-0 left-0 bottom-0 w-[70%] bg-white dark:bg-slate-900 border-r border-slate-200 dark:border-slate-800 z-[70] shadow-2xl transform transition-transform duration-700 ease-[cubic-bezier(0.33,1,0.68,1)] flex flex-col ${
+        className={`fixed top-0 left-0 bottom-0 w-[70%] bg-white border-r border-slate-200 z-[70] shadow-2xl transform transition-transform duration-700 ease-[cubic-bezier(0.33,1,0.68,1)] flex flex-col ${
           isMobileMenuOpen ? 'translate-x-0' : '-translate-x-full'
         }`}
       >
@@ -148,7 +148,7 @@ const Header: React.FC = () => {
               <a
                 key={link.name}
                 href={link.href}
-                className={`text-2xl font-bold text-slate-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-white hover:pl-2 transition-all duration-500 flex items-center gap-3 group ${
+                className={`text-2xl font-bold text-slate-700 hover:text-blue-600 hover:pl-2 transition-all duration-500 flex items-center gap-3 group ${
                   isMobileMenuOpen ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'
                 }`}
                 style={{ transitionDelay: `${index * 100}ms` }}
@@ -164,7 +164,7 @@ const Header: React.FC = () => {
         </div>
         
         {/* Mobile Menu Footer */}
-        <div className="p-8 border-t border-slate-200 dark:border-slate-800">
+        <div className="p-8 border-t border-slate-200">
            <a
             href="#contact"
             onClick={(e) => handleScroll(e, '#contact')}

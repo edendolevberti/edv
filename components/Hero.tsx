@@ -56,7 +56,7 @@ const Hero: React.FC = () => {
               draggable="false"
             />
             {/* Dark Overlay for readability */}
-            <div className="absolute inset-0 bg-slate-900/80 dark:bg-slate-950/80 backdrop-blur-[1px]"></div>
+            <div className="absolute inset-0 bg-slate-900/80 backdrop-blur-[1px]"></div>
           </div>
         ))}
       </div>

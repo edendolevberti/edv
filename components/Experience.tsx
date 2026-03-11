@@ -8,7 +8,7 @@ const EXPERIENCES = [
     title: 'קורס סייבר אנליסט',
     institution: 'אוניברסיטת רייכמן בשיתוף עם Google',
     icon: Terminal,
-    color: 'text-emerald-600 dark:text-emerald-400'
+    color: 'text-emerald-600'
   },
   {
     id: 2,
@@ -16,7 +16,7 @@ const EXPERIENCES = [
     title: 'פיתוח Full Stack',
     institution: 'לימוד עצמי ופרויקטים מעשיים (React, Node.js)',
     icon: Code,
-    color: 'text-purple-600 dark:text-purple-400'
+    color: 'text-purple-600'
   },
   {
     id: 3,
@@ -24,7 +24,7 @@ const EXPERIENCES = [
     title: 'הנדסאי תוכנה',
     institution: 'מכללת אורט רחובות',
     icon: GraduationCap,
-    color: 'text-pink-600 dark:text-pink-400'
+    color: 'text-pink-600'
   },
   {
     id: 4,
@@ -32,7 +32,7 @@ const EXPERIENCES = [
     title: 'מומחה WordPress & Elementor',
     institution: 'התמחות בבניית אתרים וחנויות מורכבות',
     icon: BookOpen,
-    color: 'text-emerald-600 dark:text-emerald-400'
+    color: 'text-emerald-600'
   }
 ];
 
@@ -46,18 +46,18 @@ const Experience: React.FC = () => {
       <div className="container mx-auto px-4 relative z-10">
         
         {/* Frame / Card Container - Transparent Style */}
-        <div className="relative rounded-3xl border border-slate-200 dark:border-slate-700/50 bg-white/50 dark:bg-gradient-to-b dark:from-slate-800/10 dark:to-slate-900/60 backdrop-blur-md p-8 md:p-12 shadow-2xl overflow-hidden transition-colors duration-300">
+        <div className="relative rounded-3xl border border-slate-200 bg-white/50 backdrop-blur-md p-8 md:p-12 shadow-2xl overflow-hidden transition-colors duration-300">
           
           {/* Top Fade / Glow Effect */}
           <div className="absolute top-0 left-0 w-full h-1/2 bg-gradient-to-b from-pink-500/5 to-transparent pointer-events-none"></div>
 
           <div className="relative z-10">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-5xl font-black text-slate-900 dark:text-white mb-4 transition-colors duration-300">
+              <h2 className="text-3xl md:text-5xl font-black text-slate-900 mb-4 transition-colors duration-300">
                 הניסיון <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-purple-600">והרקורד שלי</span>
               </h2>
               <div className="w-24 h-1 bg-gradient-to-r from-pink-600 to-purple-600 mx-auto rounded-full"></div>
-              <p className="mt-4 text-slate-600 dark:text-gray-400 transition-colors duration-300">
+              <p className="mt-4 text-slate-600 transition-colors duration-300">
                 הכשרה מקצועית עמוקה בפיתוח, סייבר וטכנולוגיה - הבסיס לנכסים דיגיטליים חזקים.
               </p>
             </div>
@@ -74,24 +74,24 @@ const Experience: React.FC = () => {
                     <div className="hidden md:block w-5/12"></div>
 
                     {/* Timeline Node/Icon */}
-                    <div className="relative z-10 flex items-center justify-center w-12 h-12 rounded-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 shadow-lg group-hover:scale-110 group-hover:border-emerald-500 transition-all duration-300">
+                    <div className="relative z-10 flex items-center justify-center w-12 h-12 rounded-full bg-white border border-slate-200 shadow-lg group-hover:scale-110 group-hover:border-emerald-500 transition-all duration-300">
                       <item.icon size={20} className={item.color} />
                     </div>
 
                     {/* Content Card */}
                     <div className="w-full md:w-5/12">
-                      <div className="bg-white/80 dark:bg-slate-900/40 backdrop-blur-sm p-6 rounded-2xl border border-slate-200 dark:border-slate-800 hover:border-purple-500/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg relative overflow-hidden">
+                      <div className="bg-white/80 backdrop-blur-sm p-6 rounded-2xl border border-slate-200 hover:border-purple-500/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg relative overflow-hidden">
                         {/* Hover Gradient */}
                         <div className="absolute inset-0 bg-gradient-to-r from-pink-600/5 to-purple-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                         
                         <div className="relative z-10 text-center md:text-right">
-                          <span className={`inline-block px-3 py-1 rounded-full bg-slate-100/80 dark:bg-slate-800/80 text-xs font-bold mb-3 ${item.color} border border-slate-200 dark:border-slate-700 transition-colors duration-300`}>
+                          <span className={`inline-block px-3 py-1 rounded-full bg-slate-100/80 text-xs font-bold mb-3 ${item.color} border border-slate-200 transition-colors duration-300`}>
                             {item.year}
                           </span>
-                          <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-1 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
+                          <h3 className="text-xl font-bold text-slate-900 mb-1 group-hover:text-emerald-600 transition-colors">
                             {item.title}
                           </h3>
-                          <p className="text-slate-600 dark:text-gray-400 text-sm transition-colors duration-300">
+                          <p className="text-slate-600 text-sm transition-colors duration-300">
                             {item.institution}
                           </p>
                         </div>

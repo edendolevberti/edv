@@ -133,7 +133,7 @@ const ScrollProgressLine: React.FC = () => {
         {/* --- MOBILE PATH (More waves added to cover extended height) --- */}
         <path 
           ref={mobilePathRef}
-          className="lg:hidden text-slate-300 dark:text-slate-600 transition-colors duration-300"
+          className="lg:hidden text-slate-300 transition-colors duration-300"
           d="M 50 0 C 10 4, 10 4, 50 8 S 90 12, 50 16 S 10 20, 50 24 S 90 28, 50 32 S 10 36, 50 40 S 90 44, 50 48 S 10 52, 50 56 S 90 60, 50 64 S 10 68, 50 72 S 90 76, 50 80 S 10 84, 50 88 S 90 92, 50 96 S 10 100, 50 100"
           fill="none"
           stroke="currentColor" 
@@ -145,7 +145,7 @@ const ScrollProgressLine: React.FC = () => {
         {/* --- DESKTOP PATH (More waves added to cover extended height) --- */}
         <path 
           ref={desktopPathRef}
-          className="hidden lg:block text-slate-300 dark:text-slate-600 transition-colors duration-300"
+          className="hidden lg:block text-slate-300 transition-colors duration-300"
           d="M 50 0 C 5 4, 5 4, 50 8 S 95 12, 50 16 S 5 20, 50 24 S 95 28, 50 32 S 5 36, 50 40 S 95 44, 50 48 S 5 52, 50 56 S 95 60, 50 64 S 5 68, 50 72 S 95 76, 50 80 S 5 84, 50 88 S 95 92, 50 96 S 5 100, 50 100"
           fill="none"
           stroke="currentColor" 

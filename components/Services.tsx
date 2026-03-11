@@ -14,18 +14,18 @@ const Services: React.FC = () => {
       <div className="container mx-auto px-4 relative z-10">
         
         {/* Frame / Card Container - Made more transparent */}
-        <div className="relative rounded-3xl border border-slate-200 dark:border-slate-700/50 bg-white/50 dark:bg-gradient-to-b dark:from-slate-800/10 dark:to-slate-900/60 backdrop-blur-md p-8 md:p-12 shadow-2xl overflow-hidden transition-colors duration-300">
+        <div className="relative rounded-3xl border border-slate-200 bg-white/50 backdrop-blur-md p-8 md:p-12 shadow-2xl overflow-hidden transition-colors duration-300">
           
           {/* Top Fade / Glow Effect */}
           <div className="absolute top-0 left-0 w-full h-1/2 bg-gradient-to-b from-emerald-500/5 to-transparent pointer-events-none"></div>
 
           <div className="relative z-10">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-5xl font-black text-slate-900 dark:text-white mb-4 transition-colors duration-300">
+              <h2 className="text-3xl md:text-5xl font-black text-slate-900 mb-4 transition-colors duration-300">
                 השירותים <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-purple-600">שלנו</span>
               </h2>
               <div className="w-24 h-1 bg-gradient-to-r from-pink-600 to-purple-600 mx-auto rounded-full"></div>
-              <p className="mt-4 text-slate-600 dark:text-gray-400 max-w-2xl mx-auto transition-colors duration-300">
+              <p className="mt-4 text-slate-600 max-w-2xl mx-auto transition-colors duration-300">
                 פתרונות דיגיטליים מקצה לקצה: מבניית האתר ועד לקידום בגוגל. אנחנו דואגים שהעסק שלך יראה מצוין ויעבוד בשבילך.
               </p>
             </div>
@@ -34,19 +34,19 @@ const Services: React.FC = () => {
               {SERVICES.map((service, index) => (
                 <div
                   key={service.id}
-                  className="group relative p-8 bg-white/80 dark:bg-slate-900/40 backdrop-blur-xl rounded-3xl border border-slate-200 dark:border-slate-800 hover:border-emerald-500/50 transition-all duration-500 hover:shadow-2xl hover:shadow-emerald-500/10 hover:-translate-y-2 flex flex-col items-center text-center lg:items-start lg:text-right"
+                  className="group relative p-8 bg-white/80 backdrop-blur-xl rounded-3xl border border-slate-200 hover:border-emerald-500/50 transition-all duration-500 hover:shadow-2xl hover:shadow-emerald-500/10 hover:-translate-y-2 flex flex-col items-center text-center lg:items-start lg:text-right"
                 >
                   <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/5 to-purple-500/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                   
                   <div className="relative z-10 w-full flex flex-col items-center lg:items-start">
-                    <div className="w-16 h-16 bg-slate-100 dark:bg-slate-950/50 rounded-2xl flex items-center justify-center mb-6 shadow-inner group-hover:scale-110 transition-transform duration-300 border border-slate-200 dark:border-slate-800 group-hover:border-emerald-500/30">
-                      <service.icon size={32} className="text-slate-500 dark:text-gray-500 group-hover:text-transparent group-hover:stroke-emerald-500 dark:group-hover:stroke-emerald-400 transition-all duration-300" />
+                    <div className="w-16 h-16 bg-slate-100 rounded-2xl flex items-center justify-center mb-6 shadow-inner group-hover:scale-110 transition-transform duration-300 border border-slate-200 group-hover:border-emerald-500/30">
+                      <service.icon size={32} className="text-slate-500 group-hover:text-transparent group-hover:stroke-emerald-500 transition-all duration-300" />
                     </div>
                     
-                    <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-3 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
+                    <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-emerald-600 transition-colors">
                       {service.title}
                     </h3>
-                    <p className="text-slate-600 dark:text-gray-400 leading-relaxed text-sm transition-colors duration-300">
+                    <p className="text-slate-600 leading-relaxed text-sm transition-colors duration-300">
                       {service.description}
                     </p>
                   </div>

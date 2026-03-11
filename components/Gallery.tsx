@@ -12,10 +12,10 @@ const Gallery: React.FC = () => {
         
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-black text-slate-900 dark:text-white mb-4 transition-colors duration-300">
+          <h2 className="text-3xl md:text-5xl font-black text-slate-900 mb-4 transition-colors duration-300">
             פרויקטים <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-purple-600">נבחרים</span>
           </h2>
-          <p className="text-slate-600 dark:text-gray-400 max-w-2xl mx-auto mb-8 text-lg transition-colors duration-300">
+          <p className="text-slate-600 max-w-2xl mx-auto mb-8 text-lg transition-colors duration-300">
             לא רק אתרים יפים, אלא נכסים דיגיטליים שעובדים. הנה הצצה לחלק מהפרויקטים שביצענו, משלב האפיון ועד להשקה המוצלחת.
           </p>
         </div>
@@ -23,25 +23,25 @@ const Gallery: React.FC = () => {
         {/* Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {GALLERY_ITEMS.map((item) => (
-            <div key={item.id} className="group flex flex-col h-full bg-white/60 dark:bg-slate-900/40 backdrop-blur-sm rounded-xl p-4 border border-slate-200 dark:border-slate-800/50 hover:border-emerald-500/30 transition-all duration-300 shadow-sm dark:shadow-none">
+            <div key={item.id} className="group flex flex-col h-full bg-white/60 backdrop-blur-sm rounded-xl p-4 border border-slate-200 hover:border-emerald-500/30 transition-all duration-300 shadow-sm">
               
               {/* Marketing Results Header Simulation */}
-              <div className="relative bg-slate-100 dark:bg-slate-800 rounded-t-xl border-t border-x border-slate-200 dark:border-slate-700 p-3 flex items-center justify-between gap-2 shadow-sm dark:shadow-xl transition-colors duration-300">
+              <div className="relative bg-slate-100 rounded-t-xl border-t border-x border-slate-200 p-3 flex items-center justify-between gap-2 shadow-sm transition-colors duration-300">
                  <div className="flex items-center gap-2">
-                    <div className="bg-emerald-500/10 dark:bg-emerald-500/20 p-1.5 rounded-md">
-                        <CheckCircle size={16} className="text-emerald-600 dark:text-emerald-500" />
+                    <div className="bg-emerald-500/10 p-1.5 rounded-md">
+                        <CheckCircle size={16} className="text-emerald-600" />
                     </div>
-                    <span className="text-xs font-bold text-emerald-600 dark:text-emerald-400 uppercase tracking-wider">פרויקט פעיל</span>
+                    <span className="text-xs font-bold text-emerald-600 uppercase tracking-wider">פרויקט פעיל</span>
                  </div>
                  
                  {/* URL/Brand Name */}
-                 <div className="text-xs text-slate-500 dark:text-gray-400 font-mono hidden sm:block">
+                 <div className="text-xs text-slate-500 font-mono hidden sm:block">
                    {item.url?.replace('https://', '')}
                  </div>
               </div>
 
               {/* Image Container */}
-              <div className="relative w-full h-[300px] md:h-[400px] bg-slate-200 dark:bg-slate-900 border-x border-b border-slate-200 dark:border-slate-700 shadow-lg dark:shadow-2xl overflow-hidden rounded-b-xl group-hover:shadow-purple-500/20 transition-all duration-500">
+              <div className="relative w-full h-[300px] md:h-[400px] bg-slate-200 border-x border-b border-slate-200 shadow-lg overflow-hidden rounded-b-xl group-hover:shadow-purple-500/20 transition-all duration-500">
                  <div className="w-full h-full relative">
                     {item.image ? (
                       <img 
@@ -51,7 +51,7 @@ const Gallery: React.FC = () => {
                         loading="lazy"
                       />
                     ) : (
-                      <div className="w-full h-full flex items-center justify-center bg-slate-100 dark:bg-slate-800 text-slate-400 dark:text-gray-500 transition-colors duration-300">
+                      <div className="w-full h-full flex items-center justify-center bg-slate-100 text-slate-400 transition-colors duration-300">
                         תצוגה מקדימה לא זמינה
                       </div>
                     )}
@@ -76,13 +76,13 @@ const Gallery: React.FC = () => {
 
               {/* Description & Results */}
               <div className="mt-5 px-2 pb-2">
-                <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-2 flex items-center gap-2 transition-colors duration-300">
+                <h3 className="text-2xl font-bold text-slate-900 mb-2 flex items-center gap-2 transition-colors duration-300">
                   {item.title}
                 </h3>
-                <div className="bg-slate-100/50 dark:bg-slate-800/50 rounded-lg p-4 border border-slate-200 dark:border-slate-700/50 mt-2 transition-colors duration-300">
+                <div className="bg-slate-100/50 rounded-lg p-4 border border-slate-200 mt-2 transition-colors duration-300">
                     <div className="flex items-start gap-3">
-                        <BarChart className="text-purple-600 dark:text-purple-500 mt-1 flex-shrink-0" size={20} />
-                        <p className="text-slate-700 dark:text-gray-300 leading-relaxed text-sm transition-colors duration-300">
+                        <BarChart className="text-purple-600 mt-1 flex-shrink-0" size={20} />
+                        <p className="text-slate-700 leading-relaxed text-sm transition-colors duration-300">
                         {item.description}
                         </p>
                     </div>
@@ -95,8 +95,8 @@ const Gallery: React.FC = () => {
 
         {/* CTA */}
         <div className="mt-20 text-center relative z-20">
-          <div className="inline-block bg-white/80 dark:bg-slate-900/80 backdrop-blur-md p-6 rounded-2xl border border-slate-200 dark:border-slate-800 transition-colors duration-300 shadow-lg dark:shadow-none">
-             <p className="text-slate-700 dark:text-gray-300 mb-6 text-xl transition-colors duration-300">רוצים תוצאות כאלה לעסק שלכם? בואו נתחיל לעבוד.</p>
+          <div className="inline-block bg-white/80 backdrop-blur-md p-6 rounded-2xl border border-slate-200 transition-colors duration-300 shadow-lg">
+             <p className="text-slate-700 mb-6 text-xl transition-colors duration-300">רוצים תוצאות כאלה לעסק שלכם? בואו נתחיל לעבוד.</p>
               <a
                 href={whatsappUrl}
                 target="_blank"
