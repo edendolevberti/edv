@@ -2,8 +2,8 @@
 
 @font-face {
   font-family: 'FUP Begin';
-  src: url('./assets/fonts/light.woff2') format('woff2'),
-       url('./assets/fonts/light.woff') format('woff');
+  src: url('/fonts/light.woff2') format('woff2'),
+       url('/fonts/light.woff') format('woff');
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -11,8 +11,8 @@
 
 @font-face {
   font-family: 'FUP Begin';
-  src: url('./assets/fonts/regular.woff2') format('woff2'),
-       url('./assets/fonts/regular.woff') format('woff');
+  src: url('/fonts/regular.woff2') format('woff2'),
+       url('/fonts/regular.woff') format('woff');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -20,8 +20,8 @@
 
 @font-face {
   font-family: 'FUP Begin';
-  src: url('./assets/fonts/medium.woff2') format('woff2'),
-       url('./assets/fonts/medium.woff') format('woff');
+  src: url('/fonts/medium.woff2') format('woff2'),
+       url('/fonts/medium.woff') format('woff');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -29,8 +29,8 @@
 
 @font-face {
   font-family: 'FUP Begin';
-  src: url('./assets/fonts/semibold.woff2') format('woff2'),
-       url('./assets/fonts/semibold.woff') format('woff');
+  src: url('/fonts/semibold.woff2') format('woff2'),
+       url('/fonts/semibold.woff') format('woff');
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -38,8 +38,8 @@
 
 @font-face {
   font-family: 'FUP Begin';
-  src: url('./assets/fonts/bold.woff2') format('woff2'),
-       url('./assets/fonts/bold.woff') format('woff');
+  src: url('/fonts/bold.woff2') format('woff2'),
+       url('/fonts/bold.woff') format('woff');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -47,8 +47,8 @@
 
 @font-face {
   font-family: 'FUP Begin';
-  src: url('./assets/fonts/extrabold.woff2') format('woff2'),
-       url('./assets/fonts/extrabold.woff') format('woff');
+  src: url('/fonts/extrabold.woff2') format('woff2'),
+       url('/fonts/extrabold.woff') format('woff');
   font-weight: 800;
   font-style: normal;
   font-display: swap;
