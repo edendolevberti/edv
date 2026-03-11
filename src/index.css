@@ -1,13 +1,66 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@font-face {
+  font-family: 'FUP Begin';
+  src: url('/fonts/light.woff2') format('woff2'),
+       url('/fonts/light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'FUP Begin';
+  src: url('/fonts/regular.woff2') format('woff2'),
+       url('/fonts/regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'FUP Begin';
+  src: url('/fonts/medium.woff2') format('woff2'),
+       url('/fonts/medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'FUP Begin';
+  src: url('/fonts/semibold.woff2') format('woff2'),
+       url('/fonts/semibold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'FUP Begin';
+  src: url('/fonts/bold.woff2') format('woff2'),
+       url('/fonts/bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'FUP Begin';
+  src: url('/fonts/extrabold.woff2') format('woff2'),
+       url('/fonts/extrabold.woff') format('woff');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
 
 @theme {
-  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "FUP Begin", ui-sans-serif, system-ui, sans-serif;
 }
 
 @layer base {
   body, html, button, input, select, textarea, .font-sans, h1, h2, h3, h4, h5, h6, p, a, span, div, li {
-    font-family: 'Outfit', sans-serif !important;
+    font-family: 'FUP Begin', sans-serif !important;
   }
 
   body {
