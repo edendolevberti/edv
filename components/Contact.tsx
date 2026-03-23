@@ -73,7 +73,7 @@ const Contact: React.FC = () => {
             
             {/* Contact Info */}
             <div className="text-right">
-              <h2 className="text-3xl md:text-5xl font-black text-slate-900 mb-6 transition-colors duration-300">
+              <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6 transition-colors duration-300">
                 בואו נבנה את <br/>
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-purple-600">
                   הנוכחות שלכם

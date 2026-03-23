@@ -80,7 +80,7 @@ const BottomNav: React.FC = () => {
                 >
                     <div className="w-full h-full rounded-full bg-slate-900 flex items-center justify-center border border-white/10">
                         <div className="flex flex-col items-center justify-center leading-none">
-                            <span className="text-white font-black text-[16px] md:text-2xl tracking-wider">EDEN</span>
+                            <span className="text-white font-bold text-[16px] md:text-2xl tracking-wider">EDEN</span>
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-purple-600 font-bold text-[13px] md:text-lg tracking-widest">DOLEV</span>
                         </div>
                     </div>

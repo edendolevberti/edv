@@ -61,7 +61,7 @@ const Header: React.FC = () => {
               onClick={(e) => handleScroll(e, '#hero')}
               className="flex items-center gap-2"
             >
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-pink-600 to-purple-600 font-black tracking-tighter">
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-pink-600 to-purple-600 font-bold tracking-tighter">
                 EDEN DOLEV
               </span>
               <span className={`${isScrolled ? 'text-slate-700 opacity-0 w-0' : 'text-white opacity-100 transition-opacity duration-500'} text-xs sm:text-sm font-light tracking-widest hidden sm:block`}>

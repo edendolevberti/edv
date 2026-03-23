@@ -1,12 +1,22 @@
 @import "tailwindcss";
+@import url('https://fonts.cdnfonts.com/css/google-sans');
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap');
 
 @theme {
-  --font-sans: "Google Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Google Sans", "Assistant", "Inter", ui-sans-serif, system-ui, sans-serif;
 }
 
 @layer base {
-  body, html, button, input, select, textarea, .font-sans, h1, h2, h3, h4, h5, h6, p, a, span, div, li {
-    font-family: 'Google Sans', sans-serif !important;
+  * {
+    font-family: 'Google Sans', 'Assistant', 'Inter', sans-serif !important;
+  }
+
+  h1, h2, h3, h4, h5, h6, p, span, a, button, input, textarea, label {
+    font-family: 'Google Sans', 'Assistant', 'Inter', sans-serif !important;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 700 !important; /* Google Sans Bold is 700, 900 might not be available */
   }
 
   body {

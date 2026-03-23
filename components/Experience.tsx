@@ -53,7 +53,7 @@ const Experience: React.FC = () => {
 
           <div className="relative z-10">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-5xl font-black text-slate-900 mb-4 transition-colors duration-300">
+              <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-4 transition-colors duration-300">
                 הניסיון <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-purple-600">והרקורד שלי</span>
               </h2>
               <div className="w-24 h-1 bg-gradient-to-r from-pink-600 to-purple-600 mx-auto rounded-full"></div>

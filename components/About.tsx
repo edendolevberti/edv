@@ -35,7 +35,7 @@ const About: React.FC = () => {
                     {/* Text Overlay */}
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-transparent to-transparent"></div>
                     <div className="absolute bottom-6 right-6 text-right z-10">
-                      <p className="text-white font-bold text-2xl drop-shadow-md">עדן דולב</p>
+              <p className="text-white font-bold text-2xl drop-shadow-md">עדן דולב</p>
                       <p className="text-emerald-400 font-medium drop-shadow-md">מומחה לנוכחות דיגיטלית</p>
                     </div>
                   </div>
@@ -44,7 +44,7 @@ const About: React.FC = () => {
 
             {/* Text Side */}
             <div className="w-full lg:w-1/2 text-right">
-              <h2 className="text-3xl md:text-5xl font-black text-slate-900 mb-6 transition-colors duration-300">
+              <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6 transition-colors duration-300">
                 מי <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-purple-600">אני?</span>
               </h2>
               <div className="w-20 h-1.5 bg-gradient-to-r from-pink-600 to-purple-600 rounded-full mb-8"></div>

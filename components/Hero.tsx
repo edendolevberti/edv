@@ -73,7 +73,7 @@ const Hero: React.FC = () => {
         </h2>
         
         {/* Name */}
-        <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-white mb-6 leading-tight drop-shadow-2xl transition-colors duration-300">
+        <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white mb-6 leading-tight drop-shadow-2xl transition-colors duration-300">
           EDEN DOLEV
         </h1>
 
