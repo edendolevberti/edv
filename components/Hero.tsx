@@ -79,7 +79,7 @@ const Hero: React.FC = () => {
 
         {/* Subtitle */}
         <p className="text-xl md:text-3xl text-gray-100 max-w-4xl mx-auto mb-10 font-light leading-relaxed drop-shadow-lg transition-colors duration-300">
-          🎯 מומחה לנוכחות דיגיטלית | בונים נכסים שמייצרים הכנסות
+          🎯 מומחה לנוכחות דיגיטלית | בונה נכסים שמייצרים הכנסות
         </p>
 
         {/* Feature List - Text Only (No Button Styling) - Moved Below Buttons */}

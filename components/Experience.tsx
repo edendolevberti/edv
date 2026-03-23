@@ -13,7 +13,7 @@ const EXPERIENCES = [
   {
     id: 2,
     year: '2023',
-    title: 'פיתוח Full Stack',
+    title: 'פיתוח Front End',
     institution: 'לימוד עצמי ופרויקטים מעשיים (React, Node.js)',
     icon: Code,
     color: 'text-purple-600'
