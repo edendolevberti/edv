@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Home, Laptop, Image, User, Mail, Briefcase, Star } from 'lucide-react';
+import { Home, Laptop, Image, User, Star, MessageCircle } from 'lucide-react';
 
 const BottomNav: React.FC = () => {
   const [activeSection, setActiveSection] = useState('hero');
@@ -105,13 +105,15 @@ const BottomNav: React.FC = () => {
                     <span className="text-[9px] md:text-base font-medium">המלצות</span>
                 </button>
 
-                 <button 
-                    onClick={() => scrollTo('contact')}
-                    className={`flex flex-col items-center gap-0.5 transition-all duration-300 ${activeSection === 'contact' ? 'text-yellow-400 scale-110' : 'text-slate-400 hover:text-slate-200'}`}
+                 <a 
+                    href={`https://api.whatsapp.com/send?phone=972547202011&text=${encodeURIComponent("היי עדן, הגעתי מהאתר ואשמח לשמוע פרטים על בניית אתר/חנות או ניהול GMB")}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`flex flex-col items-center gap-0.5 transition-all duration-300 text-slate-400 hover:text-[#25D366]`}
                 >
-                    <Mail className="w-5 h-5 md:w-9 md:h-9" strokeWidth={activeSection === 'contact' ? 2.5 : 2} />
-                    <span className="text-[9px] md:text-base font-medium">צור קשר</span>
-                </button>
+                    <MessageCircle className="w-5 h-5 md:w-9 md:h-9" strokeWidth={2} />
+                    <span className="text-[9px] md:text-base font-medium">בוואטסאפ</span>
+                </a>
             </div>
 
         </div>

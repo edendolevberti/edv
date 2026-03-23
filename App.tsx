@@ -9,6 +9,7 @@ import Contact from './components/Contact';
 import Gallery from './components/Gallery';
 import ScrollProgressLine from './components/ScrollProgressLine';
 import BottomNav from './components/BottomNav';
+import FloatingWhatsApp from './components/FloatingWhatsApp';
 import { ThemeProvider } from './context/ThemeContext';
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
           </div>
 
         </main>
+        <FloatingWhatsApp />
         <BottomNav />
       </div>
     </ThemeProvider>

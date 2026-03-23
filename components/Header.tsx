@@ -85,21 +85,6 @@ const Header: React.FC = () => {
             ))}
           </nav>
 
-          {/* CTA Button */}
-          <div className="hidden md:block ml-4">
-            <a
-              href="#contact"
-              onClick={(e) => handleScroll(e, '#contact')}
-              className={`px-6 py-2 rounded-full font-bold text-white bg-emerald-600 hover:bg-emerald-500 transition-all duration-300 transform hover:scale-105 shadow-lg ${
-                isScrolled
-                  ? 'text-sm'
-                  : 'shadow-emerald-600/30'
-              }`}
-            >
-              בואו נתחיל
-            </a>
-          </div>
-
           {/* Mobile Controls */}
           <div className={`flex items-center gap-4 md:hidden ${isMobileMenuOpen ? 'relative z-[80]' : 'z-50'}`}>
             {/* Mobile Menu Button */}
@@ -165,13 +150,6 @@ const Header: React.FC = () => {
         
         {/* Mobile Menu Footer */}
         <div className="p-8 border-t border-slate-200">
-           <a
-            href="#contact"
-            onClick={(e) => handleScroll(e, '#contact')}
-            className="block w-full text-center px-6 py-3 rounded-full font-bold text-white bg-emerald-600 hover:bg-emerald-500 shadow-lg"
-          >
-            בואו נתחיל
-          </a>
           <p className="text-center text-slate-500 text-xs mt-4 uppercase">Eden Dolev - Digital Presence Expert</p>
         </div>
       </div>

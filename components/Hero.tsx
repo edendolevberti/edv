@@ -82,45 +82,6 @@ const Hero: React.FC = () => {
           🎯 מומחה לנוכחות דיגיטלית | בונים נכסים שמייצרים הכנסות
         </p>
 
-        {/* CTA Section */}
-        <div className="flex flex-col items-center gap-8 mb-12">
-           <p className="text-lg md:text-xl text-gray-200 font-medium animate-pulse transition-colors duration-300">
-             רוצים אתר או חנות שמוכרים באמת? 👇
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-5 justify-center items-center w-full px-8 md:px-0">
-            
-            {/* Start Project Button with Prominent RGB Border Animation */}
-            <div className="relative group w-full sm:w-auto scale-100 hover:scale-105 transition-transform duration-300 z-20">
-                {/* 1. Outer Glow (Blurry) */}
-                <div className="absolute -inset-1 rounded-full opacity-70 blur-md group-hover:opacity-100 group-hover:blur-lg transition duration-200 animate-gradient"></div>
-                
-                {/* 2. Sharp Border (Slightly larger than button to act as frame) */}
-                <div className="absolute -inset-[2px] rounded-full opacity-100 animate-gradient"></div>
-                
-                {/* 3. The Button Content */}
-                <a
-                    href="#contact"
-                    onClick={(e) => handleScroll(e, '#contact')}
-                    className="relative block w-full sm:w-auto px-6 md:px-8 py-3 md:py-4 bg-slate-900 rounded-full leading-none flex items-center justify-center hover:bg-slate-800 transition-colors duration-200"
-                >
-                    <span className="text-white font-bold text-base md:text-lg tracking-wide drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]">בואו נתחיל 🚀</span>
-                </a>
-            </div>
-
-            {/* WhatsApp Button */}
-            <a
-                href={whatsappUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-6 md:px-8 py-3 md:py-4 bg-[#25D366] rounded-full text-white font-bold text-base md:text-lg shadow-lg shadow-green-500/30 hover:shadow-green-500/50 transform hover:-translate-y-1 transition-all duration-300 w-full sm:w-auto flex items-center justify-center gap-2 z-20"
-            >
-                <MessageCircle size={20} fill="white" />
-                ייעוץ בוואטסאפ
-            </a>
-            </div>
-        </div>
-
         {/* Feature List - Text Only (No Button Styling) - Moved Below Buttons */}
         <div className="flex flex-wrap justify-center gap-x-8 gap-y-4 mb-10">
           {quickServices.map((item, index) => (

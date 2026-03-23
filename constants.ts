@@ -48,10 +48,10 @@ export const SERVICES: ServiceItem[] = [
 export const TESTIMONIALS: TestimonialItem[] = [
   {
     id: 1,
-    name: 'Pulse Energy',
+    name: 'Pulse - הנדסה וקיימות',
     role: 'מנכ"ל',
     content: 'עדן בנה לנו אתר תדמית מדהים שמשדר בדיוק את הערכים שלנו. התהליך היה מקצועי, מהיר והתוצאה מעל ומעבר לציפיות.',
-    image: 'https://ui-avatars.com/api/?name=Pulse+Energy&background=0D8ABC&color=fff'
+    image: 'https://ui-avatars.com/api/?name=Pulse+Engineering&background=0D8ABC&color=fff'
   },
   {
     id: 2,
@@ -93,8 +93,8 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     id: 1,
     title: 'Pulse - הנדסה וקיימות',
     category: 'website',
-    url: 'https://pulsee.co.il',
-    image: 'https://i.postimg.cc/tgHY22kP/pulsee_co_il.png',
+    url: 'https://pulse-eng.co.il/',
+    image: 'https://image.thum.io/get/width/1000/crop/800/noanimate/https://pulse-eng.co.il/',
     description: 'אתר תדמית לחברת הנדסה וקיימות, עם דגש על חווית משתמש ומהירות טעינה.'
   },
   {
